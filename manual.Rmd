@@ -68,6 +68,8 @@ As vantagens das linguagens de marcação são muitas: elas tendem a ser mais po
 em máquinas, menos custosas a empresas de software particulares e mais
 estáveis ao longo do tempo do que os programas de processamento de texto WYSIWYG. R Markdown é gratuito (você nunca pagará um dólar para usá-lo) e livre (a documentação está completamente aberta a todos). Mesmo que você prefira o Word, a pura estabilidade das linguagens de marcação as torna superiores para documentos científicos.
 
+[**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma linguagem de marcação simples inventada por John Gruber. Hoje, existem muitos programas para traduzir documentos escritos em Markdown para documentos em formato HTML, PDF ou mesmo Word (entre outros). R Markdown, por sua vez, é uma extensão do Markdown para incorporar código em execução, em R, e incluindo a saída do documento. Este documento mostra, por sua vez, três aspectos do R Markdown: como incluir formatação básica; como incluir o código R e a saída; e como incluir código matemático.
+
 [**Markdown**](http://daringfireball.net/projects/markdown/basics) is a
 low-overhead mark-up language invented by John Gruber.  There are now many
 programs for translating documents written in Markdown into documents in HTML,
