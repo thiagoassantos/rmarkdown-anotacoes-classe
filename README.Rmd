@@ -1,2 +1,2 @@
 # rmarkdown-anotacoes-classe
-[Usando R Markdown para anotações de aula](!http://www.stat.cmu.edu/~cshalizi/rmarkdown/) (Tradução) - Apostila Minicurso R Markdown.
+[Usando R Markdown para anotações de aula](http://www.stat.cmu.edu/~cshalizi/rmarkdown/) (Tradução) - Apostila Minicurso R Markdown.
