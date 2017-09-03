@@ -103,16 +103,15 @@ próprio arquivo. (Ver abaixo.)
 
 # Formatação Básica em R Markdown
 
-For the most part, text is just text.  One advantage of R Markdown is that the
-vast majority of your document will be stuff you just type as you ordinarily
-would.
+Na maior parte do documento, texto é apenas texto. Uma vantagem do R Markdown é que a
+você digita seu documento como você normalmente faz.
 
-### Paragraph Breaks and Forced Line Breaks
+### Quebra de Parágrafos e Quebra Forçada de Linhas
 
-To insert a break between paragraphs, include a single completely blank line.
+Para inserir uma quebra entre os paragráfiso, inclua uma linha comum em branco.
 
-To force a line break, put _two_ blank  
-spaces at the end of a line.
+Para forçar uma quebra de linha, ponha _dois_ espaços  
+em branco ao final da linha.
 
 ```
 To insert a break between paragraphs, include a single completely blank line.
