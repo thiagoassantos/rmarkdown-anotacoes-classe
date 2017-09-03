@@ -64,16 +64,9 @@ Durante várias décadas, os sistemas realmente sérios de escrita basearam-se e
 ```
 Cada linguagem de marcação é *renderizada* em um formato que inclui uma bela formatação, imagens, matemática, códigos, etc., etc., especificadas pela marcação. No caso do HTML, o programa de renderização é chamado de "web browser" (navegador web). A maioria dos computadores que interpretam o Markdown sabe como convertê-lo para HTML (visualizando o documento Markdown no navegador), PDF (visualizand o documento num leitor de PDF, como Acrobat ou outros), ou o Word (finalmente na abominação de Redmond).
 
-
-
-The advantages of mark-up languages are many: they tend to be more portable
-across machines, less beholden to particular software companies, and more
-stable over time than WYSIWYG word processing programs.  R Markdown is, in
-particular, both "free as in beer" (you will never pay a dollar for software to
-use it) and "free as in speech" (the specification is completely open to all to
-inspect).  Even if you are completely OK with making obeisance to the
-Abomination of Redmond every time you want to read your own words, the sheer
-stability of mark-up languages makes them superior for scientific documents.
+As vantagens das linguagens de marcação são muitas: elas tendem a ser mais portáteis
+em máquinas, menos custosas a empresas de software particulares e mais
+estáveis ao longo do tempo do que os programas de processamento de texto WYSIWYG. R Markdown é gratuito (você nunca pagará um dólar para usá-lo) e livre (a documentação está completamente aberta a todos). Mesmo que você prefira o Word, a pura estabilidade das linguagens de marcação as torna superiores para documentos científicos.
 
 [**Markdown**](http://daringfireball.net/projects/markdown/basics) is a
 low-overhead mark-up language invented by John Gruber.  There are now many
