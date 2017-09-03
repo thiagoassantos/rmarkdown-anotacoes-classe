@@ -68,23 +68,15 @@ As vantagens das linguagens de marcação são muitas: elas tendem a ser mais po
 em máquinas, menos custosas a empresas de software particulares e mais
 estáveis ao longo do tempo do que os programas de processamento de texto WYSIWYG. R Markdown é gratuito (você nunca pagará um dólar para usá-lo) e livre (a documentação está completamente aberta a todos). Mesmo que você prefira o Word, a pura estabilidade das linguagens de marcação as torna superiores para documentos científicos.
 
-[**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma linguagem de marcação simples inventada por John Gruber. Hoje, existem muitos programas para traduzir documentos escritos em Markdown para documentos em formato HTML, PDF ou mesmo Word (entre outros). R Markdown, por sua vez, é uma extensão do Markdown para incorporar código em execução, em R, e incluindo a saída do documento. Este documento mostra, por sua vez, três aspectos do R Markdown: como incluir formatação básica; como incluir o código R e a saída; e como incluir código matemático.
+[**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma linguagem de marcação simples inventada por John Gruber. Hoje, existem muitos programas que traduzem documentos escritos em Markdown para documentos em formato HTML, PDF ou mesmo Word (entre outros). 
+[**R Markdown**](http://rmarkdown.rstudio.com), por sua vez, é uma extensão do Markdown para incorporar código em execução, em R, incluindo o resultado no documento. O presente guia mostra, por sua vez, três aspectos do R Markdown: como incluir formatação básica; como incluir o código R e sua saída; e como incluir código matemático.
 
-[**Markdown**](http://daringfireball.net/projects/markdown/basics) is a
-low-overhead mark-up language invented by John Gruber.  There are now many
-programs for translating documents written in Markdown into documents in HTML,
-PDF or even Word format (among others).
-[**R Markdown**](http://rmarkdown.rstudio.com) is an extension of Markdown to
-incorporate running code, in R, and including its output in the document.  This
-document look in turn at three aspects of R Markdown: how to include basic
-formatting; how to include R code and its output; and how to include
-mathematics.
 
-# Rendering and Editing
+# Renderizando e Editando
 
-To write R Markdown, you will need a text editor, a program which lets you read
-and write plain text files.  You will also need R, and the package `rmarkdown`
-(and all the packages it depends on).
+Para escrever em R Markdon, você precisará de um editor de texto: programa que permite ler
+e escreva arquivos de texto simples. Você também precisará do R e do pacote `rmarkdown`
+(bem como todos os pacotes que dependem dele).
 
 * Most computers come with a text editor (TextEdit on the Mac, Notepad on Windows machines, etc.).
 * There are also lots of higher-powered text editors; I use [Emacs](http://www.gnu.org/software/emacs/emacs.html), but I admit it has a harsh learning curve.
