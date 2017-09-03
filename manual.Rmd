@@ -42,4 +42,4 @@ output: html_document
 * Juntando tudo: Escrevendo seu Relatório em R Markdown
 * Troubleshooting/O que evitar
 * Leitura adicional
-  * Agradecimentos
+    * Agradecimentos
