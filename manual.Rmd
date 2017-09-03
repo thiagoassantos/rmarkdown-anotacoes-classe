@@ -1,0 +1,45 @@
+---
+title: "Usando R Markdown para anotações de aula"
+author: "Thiago de Araújo, Steven Dutt Ross"
+date: "2 de setembro de 2017"
+output: html_document
+---
+
+* Overview
+* *Mark Up*, Markdown
+* Renderização e Edição
+    * Renderização no R Studio
+    * Renderização no R sem usar o R Studio
+    * Renderização via linha de comando (Unix-type sistemas)
+* Formatação Básica em R Markdown
+    * Quebra de Parágrafos e quebra forçada de linhas.
+    * Cabeçalhos
+    * Itálico, Negrito
+    * Citações
+    * Tipo de Computador
+    * Listas não-ordenadas
+    * Listas numeradas
+    * Título, Autor, Data, Formato de Saída, Tabela de Conteúdos
+* Hyperlinks e Imagens
+    * Hyperlinks
+    * Imagens
+    * Includindo Código
+    * Trechos de Código e seus Resultados
+    * Código incorporado <!-- MENCIONAR O INLINE -->
+    * Visto, mas não ouvido
+    * Nomeando pedaços de código
+    * Alterando Tamanho de Imagens e Alinhamentos
+    * Tabelas
+    * Pedaços de Código em Cache (rodando somente com mudanças)
+    * Configuração de Padrões para todos os pedações de código
+    * Mais opções
+* Matemática no R Markdown
+    * Elementos da Matemática <!-- Elements of Math Mode -->
+    * Matemática para ```LaTeX```
+    * ```LaTeX``` não verifica corretude
+    * Mais recursos avançados de Matemática: Novos Comandos
+    * Instalando ```LaTeX```
+* Juntando tudo: Escrevendo seu Relatório em R Markdown
+* Troubleshooting/O que evitar
+* Leitura adicional
+  * Agradecimentos
