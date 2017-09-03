@@ -57,39 +57,14 @@ Este guia está em http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd. Po
 
 # Mark Up, Markdown
 
-Você provavelmente está acostumado a usar programas de processamento de texto, como o Microsoft Word, que empregam o princípio do "o que você vê é o que você obtém" (WYSIWYG): você deseja que algumas palavras sejam impressas em itálico e, com um clique, logo estão em itálico lá na tela. Você quer que outras palavras tenham uma fonte maior e diferente e você apenas selecione a fonte, e assim por diante. Isso funciona bem o suficiente para <del>n00bs</del> leigos, mas não é uma base viável para um sistema de formatação de texto, porque depende de um programa específico: (a) saber o que você quer dizer e (b) implementá-lo bem. Durante várias décadas, os sistemas realmente sérios para a escrita basearam-se em um princípio muito diferente, o da marcação de texto. A idéia essencial em uma **linguagem de marcação** é que ela consiste em texto comum, além de sinais que indicam como alterar a formatação ou o significado do texto. Alguns idiomas de marcação, como o HTML (Hyper-Text Markup Language), utilizam uma marcação muito intrusiva; outros, como o idioma chamado **Markdown**, são mais sutis. Por exemplo, as últimas frases no Markdown se parecem com isto:
-
-You are probably used to word processing programs, like Microsoft Word, which
-employ the "what you see is what you get" (WYSIWYG) principle: you want some
-words to be printed in italics, and, lo, they're in italics right there on the
-screen.  You want some to be in a bigger, different font and you just select
-the font, and so on.  This works well enough for n00bs but is not a viable
-basis for a system of text formatting, because it depends on a particular
-program (a) knowing what you mean and (b) implementing it well.  For several
-decades, really serious systems for writing have been based on a very different
-principle, that of _marking up_ text.  The essential idea in a **mark-up
-language** is that it consists of ordinary text, _plus_ signs which indicate
-how to change the formatting or meaning of the text.  Some mark-up languages,
-like HTML (Hyper-Text Markup Language) use very obtrusive markup; others,
-like the language called **Markdown**, are more subtle.  For instance, the
-last few sentences in Markdown look like this:
+Provavelmente Você esteja acostumado a usar programas de processamento de texto, como o Microsoft Word, que empregam o princípio do "o que você vê é o que você obtém" (WYSIWYG): você deseja que algumas palavras sejam impressas em itálico e, com um clique, logo estão em itálico lá na tela. Você quer que outras palavras tenham uma fonte maior e diferente, então você apenas seleciona a fonte e seu tamanho, e assim por diante. Isso funciona bem o suficiente para <del>n00bs</del> leigos, mas não é uma base viável para um sistema de formatação de texto, porque depende de um programa específico: (a) saber o que você quer dizer e (b) implementá-lo bem. Durante várias décadas, os sistemas realmente sérios de escrita basearam-se em um princípio muito diferente, o da marcação de texto. A idéia essencial em uma **linguagem de marcação** é que ela trabalha em texto comum, além de sinais que indicam como alterar a formatação ou o significado do texto. Algumas linguagens de marcação, como o HTML (Hyper-Text Markup Language), utilizam uma sintaxe muito técnica; outras, como o chamado **Markdown**, são mais sutis. Por exemplo, as frases anteriores no Markdown se parecem com isto:
 
 ```
-For several decades, really serious systems for writing have been based on a
-very different principle, that of _marking up_ text.  The essential idea in a
-**mark-up language** is that it consists of ordinary text, _plus_ signs which
-indicate how to change the formatting or meaning of the text.  Some mark-up
-languages, like HTML (Hyper-Text Markup Language) use very obtrusive markup;
-others, like the language called **Markdown**, are more subtle.
+Durante várias décadas, os sistemas realmente sérios de escrita basearam-se em um princípio muito diferente, o da marcação de texto. A idéia essencial em uma **linguagem de marcação** é que ela trabalha em texto comum, além de sinais que indicam como alterar a formatação ou o significado do texto. Algumas linguagens de marcação, como o HTML (Hyper-Text Markup Language), utilizam uma sintaxe muito técnica; outras, como o chamado **Markdown**, são mais sutis.
 ```
+Cada linguagem de marcação é *renderizada* em um formato que inclui uma bela formatação, imagens, matemática, códigos, etc., etc., especificadas pela marcação. No caso do HTML, o programa de renderização é chamado de "web browser" (navegador web). A maioria dos computadores que interpretam o Markdown sabe como convertê-lo para HTML (visualizando o documento Markdown no navegador), PDF (visualizand o documento num leitor de PDF, como Acrobat ou outros), ou o Word (finalmente na abominação de Redmond).
 
-Every mark-up language needs to be **rendered** somehow into a format which
-actually includes the fancy formatting, images, mathematics, computer code,
-etc., etc., specified by the mark-up.  For HTML, the rendering program is
-called a "web browswer".  Most computers which know how to work with Markdown
-at all know how to render it as HTML (which you can then view in a browser),
-PDF (which you can then view in Acrobat or the like), or Word (which you can
-then view in the abomination of Redmond).
+
 
 The advantages of mark-up languages are many: they tend to be more portable
 across machines, less beholden to particular software companies, and more
