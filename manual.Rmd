@@ -78,6 +78,11 @@ Para escrever em R Markdon, você precisará de um editor de texto: programa que
 e escreva arquivos de texto simples. Você também precisará do R e do pacote `rmarkdown`
 (bem como todos os pacotes que dependem dele).
 
+* A maioria dos computadores vem com um editor de texto (TextEdit no Mac, Notepad em máquinas Windows, etc.).
+* Há também muitos outros editores mais robustos; Eu uso [Emacs](http://www.gnu.org/software/emacs/emacs.html), mas admito que tem uma curva de aprendizado áspera.
+* Você _pode_ usar o Word (ou qualquer outro processador de texto WYSIWYG), tomando cuidado apenas de salvar o seu documento em formato de texto simples. Entretanto, eu não recomendo isso.
+* [R Studio](http://www.rstudio.com) vem com um editor de textos próprio, apropriado, e com muitas ferramentas para se trabalhar com documentos R Markdown.
+
 * Most computers come with a text editor (TextEdit on the Mac, Notepad on Windows machines, etc.).
 * There are also lots of higher-powered text editors; I use [Emacs](http://www.gnu.org/software/emacs/emacs.html), but I admit it has a harsh learning curve.
 * You _could_ use Word (or some other WYSIWYG word processor), taking care to always save your document in plain text format.  I do not recommend this.
