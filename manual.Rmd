@@ -57,6 +57,8 @@ Este guia está em http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd. Po
 
 # Mark Up, Markdown
 
+Você provavelmente está acostumado a usar programas de processamento de texto, como o Microsoft Word, que empregam o princípio do "o que você vê é o que você obtém" (WYSIWYG): você deseja que algumas palavras sejam impressas em itálico e, com um clique, logo estão em itálico lá na tela. Você quer que outras palavras tenham uma fonte maior e diferente e você apenas selecione a fonte, e assim por diante. Isso funciona bem o suficiente para -[n00bs] leigos, mas não é uma base viável para um sistema de formatação de texto, porque depende de um programa específico: (a) saber o que você quer dizer e (b) implementá-lo bem. Durante várias décadas, os sistemas realmente sérios para a escrita basearam-se em um princípio muito diferente, o da marcação de texto. A idéia essencial em uma linguagem de marcação é que ela consiste em texto comum, além de sinais que indicam como alterar a formatação ou o significado do texto. Alguns idiomas de marcação, como o HTML (Hyper-Text Markup Language), utilizam uma marcação muito intrusiva; outros, como o idioma chamado Markdown, são mais sutis. Por exemplo, as últimas frases no Markdown se parecem com isto:
+
 You are probably used to word processing programs, like Microsoft Word, which
 employ the "what you see is what you get" (WYSIWYG) principle: you want some
 words to be printed in italics, and, lo, they're in italics right there on the
