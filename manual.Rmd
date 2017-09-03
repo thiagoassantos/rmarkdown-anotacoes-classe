@@ -83,31 +83,25 @@ e escreva arquivos de texto simples. Você também precisará do R e do pacote `
 * Você _pode_ usar o Word (ou qualquer outro processador de texto WYSIWYG), tomando cuidado apenas de salvar o seu documento em formato de texto simples. Entretanto, eu não recomendo isso.
 * [R Studio](http://www.rstudio.com) vem com um editor de textos próprio, apropriado, e com muitas ferramentas para se trabalhar com documentos R Markdown.
 
-* Most computers come with a text editor (TextEdit on the Mac, Notepad on Windows machines, etc.).
-* There are also lots of higher-powered text editors; I use [Emacs](http://www.gnu.org/software/emacs/emacs.html), but I admit it has a harsh learning curve.
-* You _could_ use Word (or some other WYSIWYG word processor), taking care to always save your document in plain text format.  I do not recommend this.
-* [R Studio](http://www.rstudio.com) comes with a built-in text editor, which knows about, and has lots of tools for, working with R Markdown documents.
+Se esta é sua primeira vez usando um editor de texto para algo sério, eu recomendo usar o R Studio.
 
-If this is your first time using a text editor for something serious, I recommend using R Studio.
+### Renderizando no R Studio
 
-### Rendering in R Studio
+Supondo que você tenha o documento R Markdown aberto no editor de texto,
+clique no botão "knit".
 
-Assuming you have the document you're working on open in the text editor,
-click the button that says "knit".
+### Renderizando no R sem usar o R Studio
 
-### Rendering in R without using R Studio
+Use o comando `render` no pacote `rmarkdown`.
 
-See the `render` command in the package `rmarkdown`.
+### Renderizando via linha de comando (sistemas tipo Unix)
 
-### Rendering from the command line (Unix-type systems)
+Se você preferir renderizar via linha de comando, o script Perl [`rmarkdown.pl`] (http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.pl)
+Poderá fazer todo o trabalho. O uso é `rmarkdown.pl nome_do_arquivo`, e
+resulta na saída `nome_do_arquivo.html` ou` nome_do_arquivo.pdf`, conforme especificado no
+próprio arquivo. (Ver abaixo.)
 
-If you prefer to render from the command line, the Perl script [`rmarkdown.pl`](http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.pl)
-accompanying this will do the job.  The usage is `rmarkdown.pl filename`, and
-results in the output `filename.html` or `filename.pdf`, as specified in the
-file itself.  (See below.)
-
-
-# Basic Formatting in R Markdown
+# Formatação Básica em R Markdown
 
 For the most part, text is just text.  One advantage of R Markdown is that the
 vast majority of your document will be stuff you just type as you ordinarily
