@@ -40,6 +40,6 @@ output: html_document
     * Mais recursos avançados de Matemática: Novos Comandos
     * Instalando ```LaTeX```
 * Juntando tudo: Escrevendo seu Relatório em R Markdown
-* Troubleshooting/O que evitar
+* Troubleshooting/O que evitar <!-- TRADUZIR TROUBLESHOOTING -->
 * Leitura adicional
     * Agradecimentos
