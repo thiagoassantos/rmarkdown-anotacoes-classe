@@ -129,17 +129,19 @@ parágrafo foi precedido por `###`. Não separe cabeçalhos por quebra de linhas
 
 ### Itálico, Negrito
 
-Para um texto ficar _italizado_ ele deve estar dentro de um _único conjunto de underscores_ ou
+Para um texto ficar em _itálico_ ele deve estar dentro de um _único conjunto de underscores_ ou
 *asteriscos*. Para usar **negrito**, coloque o texto dentro de um __duplo conjunto de underscores__ 
 ou **asteriscos**.
 
 ```
-Text to be _italicized_ goes inside _a single set of underscores_ or *asterisks*.  Text to be **boldfaced** goes inside a __double set of underscores__  or **asterisks**.
+Para um texto ficar em _itálico_ ele deve estar dentro de um _único conjunto de underscores_ ou
+*asteriscos*. Para usar **negrito**, coloque o texto dentro de um __duplo conjunto de underscores__ 
+ou **asteriscos**.
 ```
 
-### Quotations
+### Citações
 
-Set-off quoted paragraphs are indicated by an initial `>`:
+Parágrafos citados são iniciados por `>` (sinal maior que):
 
 > In fact, all epistemological value of the theory of probability is based on this: that large-scale random phenomena in their collective action create strict, nonrandom regularity.  [Gnedenko and Kolmogorov, _Limit Distributions for Sums of Independent Random Variables_, p. 1]
 
