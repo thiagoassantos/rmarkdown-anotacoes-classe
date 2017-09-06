@@ -141,7 +141,7 @@ ou **asteriscos**.
 
 ### Citações
 
-Parágrafos citados são iniciados por `>` (sinal maior que):
+Para citar um texto, o parágrafo deve ser iniciado por `>` (sinal maior que):
 
 > In fact, all epistemological value of the theory of probability is based on this: that large-scale random phenomena in their collective action create strict, nonrandom regularity.  [Gnedenko and Kolmogorov, _Limit Distributions for Sums of Independent Random Variables_, p. 1]
 
