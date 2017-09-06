@@ -114,26 +114,24 @@ Para forçar uma quebra de linha, ponha _dois_ espaços
 em branco ao final da linha.
 
 ```
-To insert a break between paragraphs, include a single completely blank line.
+Para inserir uma quebra entre os paragráfiso, inclua uma linha comum em branco.
 
-To force a line break, put _two_ blank  
-spaces at the end of a line.
+Para forçar uma quebra de linha, ponha _dois_ espaços  
+em branco ao final da linha.
 ```
 
-### Headers
+### Cabeçalhos
 
-The character `#` at the beginning of a line means that the rest of the line is
-interpreted as a section header.  The number of `#`s at the beginning of the
-line indicates whether it is treated as a section, sub-section,
-sub-sub-section, etc. of the document.  For instance, `Basic Formatting in R
-Markdown` above is preceded by a single `#`, but `Headers` at the start of this
-paragraph was preceded by `###`.  Do not interrupt these headers by line-breaks.
+O caractere `#` no início de uma linha significa que o resto da linha será interpretado
+como um cabeçalho de seção. O número de `#`s no começo da linha indica, respectivamente,
+o número de seção, sub-seção, sub-sub-seção, etc. do documento. Por exemplo, o `Formatação Básica em R Markdown` acima é precedido por um único `#` mas o `Cabeçalhos` do começo deste
+parágrafo foi precedido por `###`. Não separe cabeçalhos por quebra de linhas.
 
-### Italics, Boldface
+### Itálico, Negrito
 
-Text to be _italicized_ goes inside _a single set of underscores_ or
-*asterisks*.  Text to be **boldfaced** goes inside a __double set of
-underscores__ or **asterisks**.
+Para um texto ficar _italizado_ ele deve estar dentro de um _único conjunto de underscores_ ou
+*asteriscos*. Para usar **negrito**, coloque o texto dentro de um __duplo conjunto de underscores__ 
+ou **asteriscos**.
 
 ```
 Text to be _italicized_ goes inside _a single set of underscores_ or *asterisks*.  Text to be **boldfaced** goes inside a __double set of underscores__  or **asterisks**.
