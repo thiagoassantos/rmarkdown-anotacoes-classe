@@ -415,7 +415,7 @@ library(knitr)
 # _ou_ um bloco de código anterior relevante seja modificado (autodep), mas não o re-executa se o
 # única coisa que mudou forem comentários (cache.comments)
 # - Não obstrua a saída R com mensagens ou avisos (mensagem, aviso)
-   # Este _ deixará mensagens de erro aparecendo no relatório gerado
+   # Isto _deixará_ mensagens de erro aparecendo no relatório gerado
 opts_chunk$set(echo=FALSE,
                cache=TRUE, autodep=TRUE, cache.comments=FALSE,
                message=FALSE, warning=FALSE)
