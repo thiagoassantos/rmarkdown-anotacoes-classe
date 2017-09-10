@@ -405,77 +405,77 @@ trecho depende desse fragmento anterior", mas geralmente é mais fácil deixar e
 Você pode dizer para o R definir alguns padrões para se aplicar a todos os pedaços onde você não faz
 especificamente sobrecarregá-los. Aqui estão os que eu geralmente uso:   
 
-### Setting Defaults for All Chunks
-
-You can tell R to set some defaults to apply to all chunks where you don't
-specifically over-ride them.  Here are the ones I generally use:
-
 ```{r, eval=FALSE}
-# Need the knitr package to set chunk options
+# Precisamos do pacote knitr para definir opções de trechos de código
 library(knitr)
 
-# Set knitr options for knitting code into the report:
-# - Don't print out code (echo)
-# - Save results so that code blocks aren't re-run unless code changes (cache),
-# _or_ a relevant earlier code block changed (autodep), but don't re-run if the
-# only thing that changed was the comments (cache.comments)
-# - Don't clutter R output with messages or warnings (message, warning)
-  # This _will_ leave error messages showing up in the knitted report
+# Seta opções do knitr para gerar código no relatório
+# - Não imprime código
+# - Salva os resultados para que os blocos de código não sejam executados novamente, a menos que o código mude (cache),
+# _ou_ um bloco de código anterior relevante seja modificado (autodep), mas não o re-executa se o
+# única coisa que mudou forem comentários (cache.comments)
+# - Não obstrua a saída R com mensagens ou avisos (mensagem, aviso)
+   # Este _ deixará mensagens de erro aparecendo no relatório gerado
 opts_chunk$set(echo=FALSE,
                cache=TRUE, autodep=TRUE, cache.comments=FALSE,
                message=FALSE, warning=FALSE)
 ```
 
-This sets some additional options beyond the ones I've discussed, like not
-re-running a chunk if only the comments have changed (`cache.comments =
-FALSE`), and leaving out messages and warnings.  (I'd only recommend
-suppressing warnings once you're sure your code is in good shape.)  I would
-typically give this set-up chunk itself the option `include=FALSE`.
+Assim definimos algumas opções adicionais além das que eu discuti, como não
+re-executar um pedaço se apenas os comentários mudaram (`cache.comments =
+FALSE`), e deixando de receber mensagens e avisos. (Eu só recomendaria
+suprimir avisos se você tem a certeza de que seu código está ok.) Eu, normalmente,
+também atribuiria a este ponto de configuração a opção `include = FALSE`.
 
-You can over-ride these defaults by setting options for individual chunks.
+Você pode sobrescrever estes padrões definindo opções para trechos específicos.
 
-### More Options
+### Mais Opções
 
-See [http://yihui.name/knitr/options/] for a complete listing of possible chunk options.
+Veja em [http://yihui.name/knitr/options/] para obter uma listagem completa das opções possíveis.
 
 
-# Math in R Markdown
+# Matemática no R Markdown
 
-Since this is a statistics class, you need to be able to write out mathematical
-expressions, often long series of them.  R Markdown gives you the syntax to
-render complex mathematical formulas and derivations, and have them displayed
-_very_ nicely.  Like code, the math can either be inline or set off
-(**displays**).
+Como esta é uma aula de Estatística, é importante que você seja capaz de escrever expressões matemáticas,
+muitas vezes longas séries delas. O R Markdown oferece a sintaxe para
+tornar fórmulas e derivações matemáticas complexas, e exibi-las _muito_ lindamente. Assim como o código,
+a matemática pode ser inline ou como (**apresentações**). <- ???
 
-Inline math is marked off witha pair of dollar
-signs (`$`), as $\pi r^2$ or $e^{i\pi}$.
+O código de matemática inline é marcado com um par de dólares
+(`$`), as $\pi r^2$ or $e^{i\pi}$.
 
 ```
-Inline math is marked off witha pair of dollar
-signs (`$`), as $\pi r^2$ or $e^{i\pi}$.
+O código de matemática inline é marcado com um par de dólares
+(`$`), as $\pi r^2$ or $e^{i\pi}$.
 ```
 
-Mathematical displays are marked off with `\[` and `\]`, as in
+??? --> Exibições matemáticas são marcadas com `\[` and `\]`, como em
 \[
 e^{i \pi} = -1
 \]
 
 ```
-Mathematical displays are marked off with `\[` and `\]`, as in
+??? --> Exibições matemáticas são marcadas com `\[` and `\]`, como em
 \[
 e^{i \pi} = -1
 \]
 ```
 
-Once your text has entered math mode, R Markdown turns over the job of
-converting your text into math to a different program, called LaTeX[^latex].
-This is the most common system for typesetting mathematical documents
-throughout the sciences, and has been for decades.  It is extremely powerful,
-stable, available on basically every computer, and completely free.  It is
-also, in its full power, pretty complicated.  Fortunately, the most useful
-bits, for our purposes, are actually rather straightforward.
+Uma vez que seu texto está no modo matemático, o R Markdown faz o trabalho de
+converter seu texto matemático para um programa diferente, chamado LaTeX[^latex].
+Ele é o sistema mais comum para a composição de documentos matemáticos
+em todas as ciências, e tem sido há décadas. Ele é extremamente poderoso,
+estável, disponível basicamente em todos as plataformas e completamente gratuito. 
+Mas isso também o torná-lo, em seu poder total, muito complicado. Felizmente, para nossos propósitos, 
+é bastante simples. <-- ???
 
-### Elements of Math Mode
+
+### Elementos do Modo Matemático
+
+* A maioria das letras será renderizada em itálico (compare: a vs. `a` vs. $a$; apenas
+o último está em modo matemático). O espaçamento entre as letras também segue as convenções da matemática, então não a trate como só outra maneira de obter itálico. (Compare _speed_, em itálico simples, com $speed$, no modo matemático.)
+* Letras gregas podem ser acessadas com a barra na frente de seus nomes, como `\alpha` para $\alpha$. Fazer a primeira letra em maiúscula te dá a letra maiúscula, como em `\Gamma` para $\Gamma$ vs. `\gamma` para $\gamma$. (As maiúsculas e minúsculas são as mesmas que Roman A e B, portanto, nenhum comando especial para elas.)
+* Existem outros comandos "cortados" (ou "escapados") para outros símbolos matemáticos:
 
 * Most letters will be rendered in italics (compare: a vs. `a` vs. $a$; only
 the last is in math mode).  The spacing between letters also follows the conventions for math, so don't treat it as just another way of getting italics.  (Compare _speed_, in simple italics, with $speed$, in math mode.)
