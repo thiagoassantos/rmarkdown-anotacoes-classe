@@ -474,21 +474,16 @@ Mas isso também o torná-lo, em seu poder total, muito complicado. Felizmente, 
 
 * A maioria das letras será renderizada em itálico (compare: a vs. `a` vs. $a$; apenas
 o último está em modo matemático). O espaçamento entre as letras também segue as convenções da matemática, então não a trate como só outra maneira de obter itálico. (Compare _speed_, em itálico simples, com $speed$, no modo matemático.)
-* Letras gregas podem ser acessadas com a barra na frente de seus nomes, como `\alpha` para $\alpha$. Fazer a primeira letra em maiúscula te dá a letra maiúscula, como em `\Gamma` para $\Gamma$ vs. `\gamma` para $\gamma$. (As maiúsculas e minúsculas são as mesmas que Roman A e B, portanto, nenhum comando especial para elas.)
+* Letras gregas podem ser acessadas com a barra na frente de seus nomes, como `\alpha` para $\alpha$. Fazer a primeira letra em maiúscula te dá a letra maiúscula, como em `\Gamma` para $\Gamma$ vs. `\gamma` para $\gamma$. (As maiúsculas alpha e beta são as mesmas que as Romanas A e B, portanto, não precisa de comando especial para elas.)
 * Existem outros comandos "cortados" (ou "escapados") para outros símbolos matemáticos:
-
-* Most letters will be rendered in italics (compare: a vs. `a` vs. $a$; only
-the last is in math mode).  The spacing between letters also follows the conventions for math, so don't treat it as just another way of getting italics.  (Compare _speed_, in simple italics, with $speed$, in math mode.)
-* Greek letters can be accessed with the slash in front of their names, as `\alpha` for $\alpha$.  Making the first letter upper case gives the upper-case letter, as in `\Gamma` for $\Gamma$ vs. `\gamma` for $\gamma$.  (Upper-case alpha and beta are the same as Roman A and B, so no special commands for them.)
-* There are other "slashed" (or "escaped") commands for other mathematical symbols:
-    + `\times` for $\times$
-    + `\cdot` for $\cdot$
-    + `\leq` and `\geq` for $\leq$ and $\geq$
-    + `\subset` and `\subseteq` for $\subset$ and $\subseteq$
-    + `\leftarrow`, `\rightarrow`, `\Leftarrow`, `\Rightarrow` for $\leftarrow$, $\rightarrow$, $\Leftarrow$, $\Rightarrow$
+    + `\times` para $\times$
+    + `\cdot` para $\cdot$
+    + `\leq` e `\geq` para $\leq$ and $\geq$
+    + `\subset` e `\subseteq` para $\subset$ and $\subseteq$
+    + `\leftarrow`, `\rightarrow`, `\Leftarrow`, `\Rightarrow` para $\leftarrow$, $\rightarrow$, $\Leftarrow$, $\Rightarrow$
     + `\approx`, `\sim`, `\equiv` for $\approx$, $\sim$, $\equiv$
-    + See, e.g., http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html for a fuller
-listing of available symbols.  (http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf lists _all_ symbols available in `LaTeX`, including many non-mathematical special chracters)
+    + Veja, também, http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html para uma
+lista completa dos símbolos.  (http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf lista de _todos_ os símbolos disponíveis no `LaTeX`, incluindo muitos caracteres especiais não-matemáticos)
 * Subscripts go after an underscore character, `_`, and superscripts go after a caret, `^`, as `\beta_1` for $\beta_1$ or `a^2` for $a^2$.
 * Curly braces are used to create groupings that should be kept together, e.g., `a_{ij}` for $a_{ij}$ (vs. `a_ij` for $a_ij$).
 * If you need something set in ordinary (Roman) type within math mode, use `\mathrm`, as `t_{\mathrm{in}}^2` for $t_{\mathrm{in}}^2$.
