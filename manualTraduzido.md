@@ -484,18 +484,19 @@ o último está em modo matemático). O espaçamento entre as letras também seg
     + `\approx`, `\sim`, `\equiv` for $\approx$, $\sim$, $\equiv$
     + Veja, também, http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html para uma
 lista completa dos símbolos.  (http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf lista de _todos_ os símbolos disponíveis no `LaTeX`, incluindo muitos caracteres especiais não-matemáticos)
-* Subscripts go after an underscore character, `_`, and superscripts go after a caret, `^`, as `\beta_1` for $\beta_1$ or `a^2` for $a^2$.
-* Curly braces are used to create groupings that should be kept together, e.g., `a_{ij}` for $a_{ij}$ (vs. `a_ij` for $a_ij$).
-* If you need something set in ordinary (Roman) type within math mode, use `\mathrm`, as `t_{\mathrm{in}}^2` for $t_{\mathrm{in}}^2$.
-* If you'd like something set in an outline font ("blackboard bold"), use `\mathbb`, as `\mathbb{R}` for $\mathbb{R}$.
-* For bold face, use `\mathbf`, as
+* Subscritos vêm depois de um caractere underscore, `_`, e sobrescritos vêm depois de um circunflexo, `^`, como `\beta_1` para $\beta_1$ ou `a^2` para $a^2$.
+* As chaves são usadas para criar agrupamentos que devem ser mantidos em conjunto, como, por exemplo, `a_{ij}` para $a_{ij}$ (vs. `a_ij` para $a_ij$).
+* Se você precisa de algo em fonte normal (romana) no modo matemático, use `\mathrm`, como `t_{\mathrm{in}}^2` para $t_{\mathrm{in}}^2$.
+* Se você quiser algo em uma fonte de estrutura de tópicos ("quadro-negro" ou "negrito") <- ??? use `\mathbb`, as `\mathbb{R}` para $\mathbb{R}$.
+* Para texto negrito, use `\mathbf`, como
 ```
 (\mathbf{x}^T\mathbf{x})^{-1}\mathbf{x}^T\mathbf{y}
 ```
-for
+para
 \[
 (\mathbf{x}^T\mathbf{x})^{-1}\mathbf{x}^T\mathbf{y}
 \]
+* Acentos nos caracteres funcionam como mudanças de fonte: `\vec{a}` produz
 * Accents on characters work rather like changes of font: `\vec{a}` produces
   $\vec{a}$, `\hat{a}` produces $\hat{a}$.  Some accents, particularly hats,
   work better if they space out, as with `\widehat{\mathrm{Var}}` producing
