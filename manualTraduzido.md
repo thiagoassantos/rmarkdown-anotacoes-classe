@@ -537,13 +537,13 @@ como
 ```
 \left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}
 ```
-renders as
+será renderizado como
 \[
 \left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}
 \]
-   + To use curly braces as delimiters, precede them with slashes, as `\{` and `\}` for $\{$ and $\}$.
-* Multiple equations, with their equals signs lined up, can be created
-using `eqnarray`, as follows.
+   + Para usar chaves como delimitadores, anteceda-os com barras como `\{` e `\}` para $\{$ e $\}$.
+* Múltiplas equações, com seus sinais iguais alinhados, podem ser criadas
+usando `eqnarray`, da seguinte forma:
 ```
 \[
 \begin{eqnarray}
@@ -561,7 +561,7 @@ Y & \sim & \chi^2_{n-p}\\
 R & \equiv & X/Y \sim t_{n-p}
 \end{eqnarray}
 \]
-Notice that `&` surrounds what goes in the middle on each line, and each line (except the last) is terminated with `\\`.  The left or right hand side of the equation can be blank, and space will be made:
+Observe que `&` envolve o que se passa no meio em cada linha e cada linha (exceto a última) é encerrada com `\\`. O lado esquerdo ou direito da equação pode estar em branco que o espaço será feito:
 ```
 \[
 \begin{eqnarray}
@@ -580,27 +580,27 @@ P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\
 \end{eqnarray}
 \]
 
-(In full `LaTeX`, `\begin{eqnarray}` automatically enters math mode, but
-R Markdown needs the hint.)
+(Resumindamente `LaTeX`, `\begin{eqnarray}` entra automaticamente no modo matemático, mas o
+R Markdown precisa de um empurrãozinho.)
 
-### Translating Math into `LaTeX`
+### Traduzindo Matemática para `LaTeX`
 
-`LaTeX` is designed so that every part of a mathematical expression has a
-reasonably straightforward counterpart in what you write.  Still, it can be a
-bit intimidating at first.  What many people find useful to to start by taking
-some page of printed or hand-written math and then deliberately translate that,
-line by line, into `LaTeX`, and then rendering it to see whether it came out
-right (and, if not, where to fix things).  If you need to do any math for an
-assignment, it can be a good idea to write the math out by hand, and then turn
-it into `LaTeX`, whether the class requires it (like this one) or not.
-Eventually, with practice, the translation will become quite automatic, and
-some people even do new math by writing out the `LaTeX`.
+O `LaTeX` é projetado para que cada parte de uma expressão matemática tenha uma
+relação razoavelmente <-- direta ao que você escreve. Ainda assim, ele pode ser um
+um pouco intimidador no início. O que muitas pessoas acham útil é começar com
+alguma página com código matemático impresso ou manuscrito e depois traduzi-la,
+linha por linha, no `LaTeX`, processando para ver se ele saiu
+direito (e, caso contrário, entender onde consertar coisas). Se você precisa fazer expressões matemáticas para um
+trabalho, pode ser uma boa ideia escrever as contas à mão e depois aproveitá-lo 
+no `LaTeX`, se a aula o exige (como este), ou não.
+Eventualmente, com a prática, a tradução se tornará fluida e automática.
+Algumas pessoas inovam ainda a matemática escrevendo no `LaTeX`.
 
-### `LaTeX` Does Not Check Correctness
+### `LaTeX` não verifica a correção
 
-`LaTeX` does not check whether your math is _right_; it just checks whether
-it can figure out what you're trying to say well enough to type-set it.
-Thus for instance it has no problem at all with the following:
+`LaTeX` não verifica se sua matemática está _certa_; ele apenas verifica se
+descobre o que você está tentando dizer bem o suficiente para digitar e configurá-lo.
+Assim, por exemplo, não tem nenhum problema com o seguinte:
 
 \[
 \begin{eqnarray}
@@ -612,10 +612,10 @@ n^2 -1 & = & n^2\\
 \end{eqnarray}
 \]
 
-(There _are_ computer programs for doing symbolic mathematics which, in effect,
-do check whether your math is right, at least if you're working in the sub-area
-of math they're designed to handle.  So far as I know, no one has ever really
-combined them with `LaTeX`.)
+(Existem programas de computador para matemática simbólica que, de fato,
+verifique se sua operação matemática está correta, pelo menos se você estiver trabalhando na sub-área
+de matemática a qual eles são projetados para lidar. Até onde eu sei, ninguém realmente
+os combinou com `LaTeX`.)
 
 ### More Advanced Math-Mode Stuff: New Commands
 
