@@ -496,45 +496,44 @@ para
 \[
 (\mathbf{x}^T\mathbf{x})^{-1}\mathbf{x}^T\mathbf{y}
 \]
-* Acentos nos caracteres funcionam como mudanças de fonte: `\vec{a}` produz
-* Accents on characters work rather like changes of font: `\vec{a}` produces
-  $\vec{a}$, `\hat{a}` produces $\hat{a}$.  Some accents, particularly hats,
-  work better if they space out, as with `\widehat{\mathrm{Var}}` producing
+* Acentos nos caracteres funcionam como mudanças de fonte: `\vec{a}` gera
+  $\vec{a}$, `\hat{a}` gera $\hat{a}$.  Alguns acentos, particularmente os "chapéus",
+  funcionam melhor com espaços, como `\widehat{\mathrm{Var}}` produzindo
   $\widehat{\mathrm{Var}}$.
-* Function names are typically written in romans, and spaced differently: thus
-  $\log{x}$, not $log x$.  `LaTeX`, and therefore `R Markdown`, knows about a
-  lot of such functions, and their names all begin with `\`.  For instance:
-  `\log`, `\sin`, `\cos`, `\exp`, `\min`, etc.  Follow these function names
-  with the argument in curly braces; this helps `LaTeX` figure out what exactly
-  the argument is, and keep it grouped together with the function name when
-  it's laying out the text.  Thus `\log{(x+1)}` is better than `\log (x+1)`.
-* Fractions can be created with `\frac`, like so:
+* Nomes de funções são, geralmente, escritos em fonte normal e espaçados de forma diferente: 
+  $\log{x}$, não $log x$. O `LaTeX` e, por consequência, o `R Markdown` também, conhece muitas
+  dessas funções e seus nomes iniciam com `\`.  Por exemplo:
+  `\log`, `\sin`, `\cos`, `\exp`, `\min`, etc.  Siga estes nomes de funções
+  com o argumento em chaves; isso ajuda o `LaTeX` a descobrir o que exatamente
+  o argumento é, e mantê-lo agrupado com o nome da função quando
+  está colocando o texto.  Então `\log{(x+1)}` é melhor que `\log (x+1)`.
+* Frações podem ser criadas com `\frac`, como:
 ```
 \frac{a+b}{b} = 1 + \frac{a}{b}
 ```
-produces
+produz
 \[
 \frac{a+b}{b} = 1 + \frac{a}{b}
 \]
-* Sums can be written like so:
+* Somas podem ser escritas como:
 ```
 \sum_{i=1}^{n}{x_i^2}
 ```
-will produce
+produzirá
 \[
 \sum_{i=1}^{n}{x_i^2}
 \]
-The lower and upper limits of summation after the `\sum` are both optional.
-Products and integrals work similarly, only with `\prod` and `\int`:
+Os limites inferior e superior do somatório após a `\sum` são ambos opcionais.
+Produtos e integrais funcionam de forma semelhante, apenas com `\prod` e `\int`:
 \[
 n! = \prod_{i=1}^{n}{i}
 \]
 \[
 \log{b} - \log{a} = \int_{x=a}^{x=b}{\frac{1}{x} dx}
 \]
-`\sum`, `\prod` and `\int` all automatically adjust to the size of the expression being summed, producted or integrated.
-* "Delimiters", like parentheses or braces, can automatically re-size to match what they're surrounding.  To do this, you need to use `\left` and `\right`,
-as
+`\sum`, `\prod` and `\int` se ajustam automaticamente ao tamanho da expressão a qual são somados, multiplicados ou integrados.
+* "Delimitadores", como parênteses ou chaves, podem se redimensionar automaticamente para corresponder ao que eles têm ao redor.   Para fazer isso, você precisa usar `\left` e `\right`,
+como
 ```
 \left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}
 ```
