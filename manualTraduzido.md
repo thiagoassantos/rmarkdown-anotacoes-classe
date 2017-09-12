@@ -660,6 +660,49 @@ It is also possible to define new function names which act like `\log`,
 new mathematical operators, draw diagrams, etc., etc., but that goes way
 beyond the scope of these notes.
 
+### More Advanced Math-Mode Stuff: New Commands
+
+One of the things you can do in `LaTeX` is create your own commands.
+This is useful if you find yourself writing out the same complicated expression
+repeatedly, or, alternatively, if you want to make sure that the same
+symbol is always used for the same concept.  For instance, in some areas of
+statistics, the generic parameter of a model is $\theta$, in others $\beta$,
+in yet others $\psi$.  If you do something like this early on
+```
+\[
+\newcommand{\MyParameter}{\theta}
+\]
+```
+then in later bits of math mode you can write `\MyParameter`, and `LaTeX` will
+translate this to `\theta`.  If you later decide that you want your parameter
+to be `\beta`, or even `\mathrm{fred}`, you just change that initial definition
+of the new command, rather than having to track down each `\theta`.
+
+New commands can also take one or more arguments.  Here is a useful command
+for writing expectations:
+```
+\[
+\newcommand{\Expect}[1]{\mathbb{E}\left[ #1 \right]}
+\]
+```
+And here is a command for writing covariances:
+```
+\[
+\newcommand{\Cov}[2]{\mathrm{Cov}\left[ #1, #2\right]}
+\]
+```
+
+Defining commands like this not only saves you typing, and makes it easier to
+make changes; it also makes your math-mode text easier for you, or others, to
+read even if it isn't rendered.  This is like using comprehensible
+variable and function names in your programs, and for that matter like
+using functions rather than long strings of commands in the first place.
+
+
+It is also possible to define new function names which act like `\log`,
+new mathematical operators, draw diagrams, etc., etc., but that goes way
+beyond the scope of these notes.
+
 ### Installing `LaTeX`
 
 If you render your R Markdown document to HTML, you do not need to install
