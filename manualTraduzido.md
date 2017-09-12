@@ -655,7 +655,7 @@ Isto é como usar nomes compreensíveis para variáveis e funções em seus prog
 preterívei criar funções em vez de codificar longas linhas de comandos.
 
 
-Também é possível definir novos nomes de funções que funcionam como `\ log`,
+Também é possível definir nomes novos para as funções que funcionam como `\ log`,
 novos operadores matemáticos, diagramas de desenho, etc., etc., mas isso vai caminho
 além do alcance dessas notas.
 
