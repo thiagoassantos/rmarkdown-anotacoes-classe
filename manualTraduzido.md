@@ -655,70 +655,20 @@ Isto é como usar nomes compreensíveis para variáveis e funções em seus prog
 preterívei criar funções em vez de codificar longas linhas de comandos.
 
 
-Também é possível definir nomes novos para as funções que funcionam como `\ log`,
-novos operadores matemáticos, diagramas de desenho, etc., etc., mas isso vai caminho
-além do alcance dessas notas.
+Também é possível definir novos nomes às funções que funcionem como `\log`,
+novos operadores matemáticos, diagramas de desenho, etc., etc., mas isso vai além do alcance dessas notas.
 
-It is also possible to define new function names which act like `\log`,
-new mathematical operators, draw diagrams, etc., etc., but that goes way
-beyond the scope of these notes.
+### Instalando `LaTeX`
 
-### More Advanced Math-Mode Stuff: New Commands
+Se você exportar seu documento R Markdown para HTML, não precisará instalar
+`LaTeX` em seu computador. Isso acontece porque o HTML inclui instruções para
+navegadores, que falam (por assim dizer) "Envie os bits de aparência engraçada com todos os
+slashes para [mathjax.org](http://www.mathjax.org), e ele irá enviar você de volta
+belas imagens de equações". O site realmente executa o `LaTeX`. <--- ???
 
-One of the things you can do in `LaTeX` is create your own commands.
-This is useful if you find yourself writing out the same complicated expression
-repeatedly, or, alternatively, if you want to make sure that the same
-symbol is always used for the same concept.  For instance, in some areas of
-statistics, the generic parameter of a model is $\theta$, in others $\beta$,
-in yet others $\psi$.  If you do something like this early on
-```
-\[
-\newcommand{\MyParameter}{\theta}
-\]
-```
-then in later bits of math mode you can write `\MyParameter`, and `LaTeX` will
-translate this to `\theta`.  If you later decide that you want your parameter
-to be `\beta`, or even `\mathrm{fred}`, you just change that initial definition
-of the new command, rather than having to track down each `\theta`.
-
-New commands can also take one or more arguments.  Here is a useful command
-for writing expectations:
-```
-\[
-\newcommand{\Expect}[1]{\mathbb{E}\left[ #1 \right]}
-\]
-```
-And here is a command for writing covariances:
-```
-\[
-\newcommand{\Cov}[2]{\mathrm{Cov}\left[ #1, #2\right]}
-\]
-```
-
-Defining commands like this not only saves you typing, and makes it easier to
-make changes; it also makes your math-mode text easier for you, or others, to
-read even if it isn't rendered.  This is like using comprehensible
-variable and function names in your programs, and for that matter like
-using functions rather than long strings of commands in the first place.
-
-
-It is also possible to define new function names which act like `\log`,
-new mathematical operators, draw diagrams, etc., etc., but that goes way
-beyond the scope of these notes.
-
-### Installing `LaTeX`
-
-If you render your R Markdown document to HTML, you do not need to install
-`LaTeX` on your computer.  This is because the HTML includes instructions to
-browsers, which say (as it were) "Send the funny-looking bits with all the
-slashes to [mathjax.org](http://www.mathjax.org), and it will send you back
-pretty pictures of equations".  The website actually runs the `LaTeX`.
-
-If you want to produce PDF, you need to have `LaTeX` installed on your
-computer.  How you actually do this depends on the precise kind of computer.
-For Macs, I recommend using the `MacTeX` package, available from
-https://tug.org/mactex/mactex-download.html.  For other systems, follow the
-links from http://www.tug.org/begin.html.
+Já se você quer produzir um PDF, aí, sim, você precisa ter o `LaTeX` instalado no seu
+computador. A instalação depende da máquina. Para Macs, recomendo usar o pacote `MacTeX`, disponível em
+https://tug.org/mactex/mactex-download.html. Para outros sistemas, veja os links de http://www.tug.org/begin.html.
 
 # Putting It All Together: Writing Your Report in R Markdown
 
