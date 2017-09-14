@@ -672,26 +672,27 @@ https://tug.org/mactex/mactex-download.html. Para outros sistemas, veja os links
 
 # Juntando tudo: redigindo seu relatório em R Markdown
 
-* Você instalou o pacote `rmarkdown` e todas as suas dependências.
-* Você instalou o `LaTeX`, se precisa produzir um PDF.
-* Você instalou e configurou seu editor de texto favorito.
-* Você abrirá um novo documento.
-    + Você deu um título, um autor e uma data.
-* Você usa cabeçalhos para dividi-lo em seções apropriadas, tituladas e, possivelmente, sub-seções.
-    + Um padrão comum: "Introdução", "Dados e Perguntas de Pesquisa", "Análise", "Resultados", "Conclusão".
-    + Outro padrão comum: "Problema 1", "Problema 2", ..., "Crédito extra".
-* Você escreveu texto.
-* Quando você precisa disso, você insere matemática no texto, ou mesmo monitores matemáticos inteiros.
-* Quando você precisar, você insira o código em seu documento.
+Você:
+* instala o pacote `rmarkdown` e todas as suas dependências.
+* instala o `LaTeX`, se precisa produzir um PDF.
+* instala e configurou seu editor de texto favorito.
+* cria um novo documento.
+    + atribui-lhe um título, um autor e uma data.
+* usa cabeçalhos para dividi-lo em seções específicas, seções entituladas e, possivelmente, sub-seções.
+    + Segue im padrão comum: "Introdução", "Dados e Questões de Pesquisa", "Análise", "Resultados", "Conclusão".
+    + Outro padrão comum: "Problema 1", "Problema 2", ..., "Créditos extra".
+* Você escreve texto.
+* Quando precisar, pode inserir notação matemática no texto ou mesmo elaboradas apresentações do tipo.
+* Se precisar também, poderá inserir código em seu documento.
     + O código é executado (conforme necessário) quando você processa o documento.
     + Figuras, tabelas e outros resultados são inseridos automaticamente no documento e acompanham as alterações em seu código.
 * De vez em quando, tente renderizar seu documento.
-    + Quando você (pensar que você) terminou, uma seção é um bom momento para fazê-lo.
-    + Outro bom momento é que você fez alterações não triviais ao código ou ao texto.
-* Ou seu documento foi processado com sucesso ou não.
-    + Se o fizesse, e você gosta dos resultados, felicite-se e alegremente vá para sua próxima tarefa.
-    + Se isso acontecesse, mas você não gosta dos resultados, pense sobre o motivo e tente corrigi-lo.
-    + Se não processou, R irá dizer-lhe onde desistiu, então tente depurar de lá.
+    + Quando (pensar que você) termina uma seção, aproveite para já criar outra.
+    + Outra boa opção é se você fez alterações não triviais no código ou no texto.
+* Seu documento foi processado com sucesso ou não.
+    + Se o fez, e você gostou dos resultados, comemore alegremente e vá para sua próxima tarefa.
+    + Se processou mas você não gostou dos resultados, pense sobre e tente corrigi-lo.
+    + Se não processou, o R lhe dirá onde ele parou e, então, tente depurar de lá.
 
 # Solução de problemas / coisas a se evitar
 
@@ -709,14 +710,14 @@ https://tug.org/mactex/mactex-download.html. Para outros sistemas, veja os links
 
 Para mais informações sobre o R Markdown, consulte http://rmarkdown.rstudio.com, em particular as páginas de ajuda mais detalhadas (em vez dos primeiros guias).
 
-Para o `LaTeX`, a referência clássica é o livro de Leslie Lamport, *LaTeX: A Document Preparation System* (2ª edição, Reading, Mass .: Addison-Wesley, 1994). Esta não é, reconhecidamente, a leitura mais fácil do mundo. LaTeX, de Wikibooks, é mais acessível e gratuito online em pequenos pedaços de tamanho de mordida.
+Para o `LaTeX`, a referência clássica é o livro de Leslie Lamport, *LaTeX: A Document Preparation System* (2ª edição, Reading, Mass .: Addison-Wesley, 1994). Esta não é, reconhecidamente, a leitura mais fácil do mundo. LaTeX, de Wikibooks, é mais acessível, online e gratuito.
 
-O R Markdown se baseia no pacote `knitr`, desenvolvido por Yihui Xie, para R integrado com `LaTeX`; veja http://yihui.name/knitr/ e, para obter documentação completa, o livro de Xie *Dynamic Documents with R and knitr* (2ª edição, Boca Raton, Flórida, CRC Press, 2016).
+O R Markdown baseia-se no pacote `knitr`, desenvolvido por Yihui Xie, para integração do R com `LaTeX`; veja http://yihui.name/knitr/ e, para obter a documentação completa, o livro de Xie *Dynamic Documents with R and knitr* (2ª edição, Boca Raton, Flórida, CRC Press, 2016).
 
-Para uma explicação completa, divertida e completamente correta de porque "O processador de texto é uma ferramenta estúpida e grosseiramente ineficiente para preparar texto para comunicação com outros", veja http://ricardo.ecn.wfu.edu/~cottrell/wp. html.
+Para uma explicação completa, divertida e completamente correta de porque "O processador de texto é uma ferramenta estúpida e grosseiramente ineficiente de se preparar texto para comunicação com os outros", veja http://ricardo.ecn.wfu.edu/~cottrell/wp. html.
 
-[^latex]: na década de 1970, o grande cientista da computação, Donald Knuth, escreveu uma linguagem de marcação e um programa de renderização para essa linguagem, chamado `TeX` (pronuncia-se como "tec"), para escrever documentos matemáticos complexos. Na década de 1980, a cientista de computação Leslie Lamport estendeu o `TeX` de maneiras que o tornaram bastante mais fácil de usar, e chamou o resultado LaTeX (pronunciando-se "la-tec").
+[^latex]: na década de 1970, o grande cientista da computação Donald Knuth escreveu uma linguagem de marcação e um programa de renderização para essa linguagem, chamado `TeX` (pronuncia-se como "tec"), para escrever documentos matemáticos complexos. Na década de 1980, a cientista de computação Leslie Lamport aperfeiçoou o `TeX` de modo que ele se tornara bem mais fácil de usar e passou a se chamar LaTeX (pronunciando-se "la-tec").
 
 # Agradecimentos
 
-Graças ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; ao [Dr. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem do [Prof. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos de R literais.
+Ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; ao [Dr. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem do [Prof. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos de R literais.
