@@ -670,75 +670,53 @@ Já se você quer produzir um PDF, aí, sim, você precisa ter o `LaTeX` instala
 computador. A instalação depende da máquina. Para Macs, recomendo usar o pacote `MacTeX`, disponível em
 https://tug.org/mactex/mactex-download.html. Para outros sistemas, veja os links de http://www.tug.org/begin.html.
 
-# Putting It All Together: Writing Your Report in R Markdown
+# Juntando tudo: redigindo seu relatório em R Markdown
 
-* You have installed the `rmarkdown` package and all its dependencies.
-* You have installed `LaTeX`, if you're producing a PDF.
-* You have installed and fired up your favorite text editor.
-* You open it up to a new document.
-    + You give it a title, an author, and a date.
-* You use headers to divide it into appropriate, titled sections, and possibly sub-sections.
-    + One common pattern: "Introduction", "Data and Research Questions", "Analysis", "Results", "Conclusion".
-    + Another common pattern: "Problem 1", "Problem 2", ... , "Extra Credit".
-* You write text.
-* When you need it, you insert math into the text, or even whole mathematical
-  displays.
-* When you need it, you insert code into your document.
-    + The code runs (as needed) when you render the document.
-	+ Figures, tables, and other output are automatically inserted into the document, and track changes in your code.
-* Every so often, try to render your document.
-    + When you (think you) have finished a section is a good time to do so.
-	+ Another good time is once you've made any non-trivial change to the code or the text.
-* Either your document rendered successfully or it didn't.
-    + If it did, and you like the results, congratulate yourself and cheerfully go on to your next task.
-	+ If it rendered but you don't like the results, think about why and try to fix it.
-	+ If it didn't render, R will tell you where it gave up, so try to debug from around there.
+* Você instalou o pacote `rmarkdown` e todas as suas dependências.
+* Você instalou o `LaTeX`, se precisa produzir um PDF.
+* Você instalou e configurou seu editor de texto favorito.
+* Você abrirá um novo documento.
+    + Você deu um título, um autor e uma data.
+* Você usa cabeçalhos para dividi-lo em seções apropriadas, tituladas e, possivelmente, sub-seções.
+    + Um padrão comum: "Introdução", "Dados e Perguntas de Pesquisa", "Análise", "Resultados", "Conclusão".
+    + Outro padrão comum: "Problema 1", "Problema 2", ..., "Crédito extra".
+* Você escreveu texto.
+* Quando você precisa disso, você insere matemática no texto, ou mesmo monitores matemáticos inteiros.
+* Quando você precisar, você insira o código em seu documento.
+    + O código é executado (conforme necessário) quando você processa o documento.
+    + Figuras, tabelas e outros resultados são inseridos automaticamente no documento e acompanham as alterações em seu código.
+* De vez em quando, tente renderizar seu documento.
+    + Quando você (pensar que você) terminou, uma seção é um bom momento para fazê-lo.
+    + Outro bom momento é que você fez alterações não triviais ao código ou ao texto.
+* Ou seu documento foi processado com sucesso ou não.
+    + Se o fizesse, e você gosta dos resultados, felicite-se e alegremente vá para sua próxima tarefa.
+    + Se isso acontecesse, mas você não gosta dos resultados, pense sobre o motivo e tente corrigi-lo.
+    + Se não processou, R irá dizer-lhe onde desistiu, então tente depurar de lá.
 
-# Troubleshooting/Stuff to Avoid
+# Solução de problemas / coisas a se evitar
 
-- Do not call `View` or `help` in your document; these are interactive commands which don't work well in scripts.
-- "It worked in the console but it wouldn't knit": You have almost certainly done something somewhat different _before_ the code chunk that's giving you trouble.  Clear your workspace in the console and re-run.
-    + R Studio keeps _two_ environments or workspaces which it uses to evaluate R expressions, look up function or variable names, etc.  One is the "usual" global environment of the console, which builds cumulatively from the start of your session.  (Unless you deliberately manipulate it; don't do that unless you know what you're doing.)  Every time you knit, however, it re-runs your code in clean workspace, as though you had just started R from scratch.  This means knitted code does what you say it should, and _only_ that.  If your code knits, it should work on any computer; getting something to run in the console which you can't reproduce is just dumb luck.
-- "It works when I source it, but it won't knit": This is basically the same problem as "it worked in the console".
-- Avoid `attach` in both the console and in your file; using it is a recipe for creating hard-to-find errors.  You can still shorten expressions using `with` instead.
-- You need LaTeX to create PDFs.  If you are having trouble doing so, try switching the output format to HTML.
-    + Do try to fix your LaTeX installation later, when you don't have such time pressure; it's really useful.
-	+ LaTeX will complain if you try to print out truly enormous things.  Errors about "out of stack", or "pandoc 43", are often caused by this. Don't print out enormous things.  (Suppressing warnings and other messages may help.)
-- When you need to load data files or source someone else's code, use full URLs, rather than creating local copies and loading them from your disk.
+* Não ligue para `View` ou `help` no seu documento; estes são comandos interativos que não funcionam bem em scripts.
+* "Funcionou no console, mas não tricotaria": Você quase certamente fez algo diferente antes do pedaço do código que está dando problemas. Limpe seu espaço de trabalho no console e re-execute.
+    + O R Studio mantém dois ambientes ou espaços de trabalho que ele usa para avaliar as expressões R, a função de busca ou os nomes das variáveis, etc. Um deles é o ambiente global "usual" do console, que é compilado cumulativamente desde o início da sessão. (A menos que você manipule deliberadamente, não faça isso a menos que você saiba o que está fazendo.) Toda vez que você tricô, no entanto, ele re-executa seu código no espaço de trabalho limpo, como se você tivesse começado R do zero. Isso significa que o código de malha faz o que você diz, e só isso. Se o seu código tricô, ele deve funcionar em qualquer computador; Conseguir algo para correr no console que você não pode reproduzir é apenas uma sorte tonta.
+* "Funciona quando a fonte, mas não vai ser malha": basicamente é o mesmo problema que "funcionou no console".
+* Evite `anexar` no console e no seu arquivo; Usá-lo é uma receita para criar erros difíceis de encontrar. Você ainda pode encurtar expressões usando `with`em vez disso.
+* Você precisa do LaTeX para criar PDFs. Se você está tendo problemas para fazer isso, tente mudar o formato de saída para HTML.
+    + Tente corrigir a instalação do LaTeX mais tarde, quando você não tiver essa pressão de tempo; é realmente útil.
+    + LaTeX reclamará se você tentar imprimir coisas realmente enormes. Erros sobre "fora da pilha", ou "pandoc 43", são muitas vezes causados por isso. Não imprima enormes coisas. (Supressão de avisos e outras mensagens podem ajudar.)
+* Quando você precisa carregar arquivos de dados ou criar o código de outra pessoa, use URLs completos, em vez de criar cópias locais e carregá-las em seu disco.
 
+# Leitura adicional
 
-# Further Reading
+Para mais informações sobre o R Markdown, consulte http://rmarkdown.rstudio.com, em particular as páginas de ajuda mais detalhadas (em vez dos primeiros guias).
 
-For more on R Markdown, see http://rmarkdown.rstudio.com, particularly the
-more detailed help pages (rather than the first-guides).
+Para o `LaTeX`, a referência clássica é o livro de Leslie Lamport, *LaTeX: A Document Preparation System* (2ª edição, Reading, Mass .: Addison-Wesley, 1994). Esta não é, reconhecidamente, a leitura mais fácil do mundo. LaTeX, de Wikibooks, é mais acessível e gratuito online em pequenos pedaços de tamanho de mordida.
 
-For `LaTeX`, the classic reference is the book by Leslie Lamport, _LaTeX: A
-Document Preparation System_ (2nd ed., Reading, Mass.: Addison-Wesley, 1994).
-This is not, admittedly, the easiest read in the world.
-[_LaTeX_](https://en.wikibooks.org/wiki/LaTeX), from Wikibooks, is more
-accessible, and free online in easy bite-sized chunks.
+O R Markdown se baseia no pacote `knitr`, desenvolvido por Yihui Xie, para R integrado com `LaTeX`; veja http://yihui.name/knitr/ e, para obter documentação completa, o livro de Xie *Dynamic Documents with R and knitr* (2ª edição, Boca Raton, Flórida, CRC Press, 2016).
 
-R Markdown is based on the `knitr` package, developed by Yihui Xie, for
-integrated R with `LaTeX`; see http://yihui.name/knitr/, and, for
-full documentation, Xie's book _Dynamic Documents with R and knitr_ (2nd
-edition, Boca Raton, Florida; CRC Press, 2016).
+Para uma explicação completa, divertida e completamente correta de porque "O processador de texto é uma ferramenta estúpida e grosseiramente ineficiente para preparar texto para comunicação com outros", veja http://ricardo.ecn.wfu.edu/~cottrell/wp. html.
 
-For an thorough, entertaining, and completely correct explanation of why "The
-word processor is a stupid and grossly inefficient tool for preparing text for
-communication with others", see http://ricardo.ecn.wfu.edu/~cottrell/wp.html.
+[^latex]: na década de 1970, o grande cientista da computação, Donald Knuth, escreveu uma linguagem de marcação e um programa de renderização para essa linguagem, chamado `TeX` (pronuncia-se como "tec"), para escrever documentos matemáticos complexos. Na década de 1980, a cientista de computação Leslie Lamport estendeu o `TeX` de maneiras que o tornaram bastante mais fácil de usar, e chamou o resultado LaTeX (pronunciando-se "la-tec").
 
-[^latex]: In the 1970s, the great computer scientist Donald Knuth wrote a
-mark-up language, and a rendering program for that language, called `TeX`
-(pronounced "tech"), for writing complex mathematical documents.  In the 1980s,
-the computer scientist Leslie Lamport extended `TeX` in ways that made it
-rather more user-friendly, and called the result `LaTeX` (pronounced
-"la-tech").
+# Agradecimentos
 
-### Acknowledgments
-
-Thanks to Prof. [Howard
-Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) for suggestions; to
-Dr. [Uma Ravat](http://www.math.uiuc.edu/~umaravat/) for showing me the trick
-for re-sizing images; and to an old post by Prof. [Jenny
-Bryan](http://www.stat.ubc.ca/~jenny/) on [how to include verbatim R
-chunks](http://rmarkdown.rstudio.com/articles_verbatim.html).
+Graças ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; ao [Dr. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem do [Prof. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos de R literais.
