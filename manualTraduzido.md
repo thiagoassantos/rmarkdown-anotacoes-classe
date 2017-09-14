@@ -62,7 +62,7 @@ Provavelmente Você esteja acostumado a usar programas de processamento de texto
 ```
 Durante várias décadas, os sistemas realmente sérios de escrita basearam-se em um princípio muito diferente, o da marcação de texto. A idéia essencial em uma **linguagem de marcação** é que ela trabalha em texto comum, além de sinais que indicam como alterar a formatação ou o significado do texto. Algumas linguagens de marcação, como o HTML (Hyper-Text Markup Language), utilizam uma sintaxe muito técnica; outras, como o chamado **Markdown**, são mais sutis.
 ```
-Cada linguagem de marcação é *renderizada* em um formato que inclui uma bela formatação, imagens, matemática, códigos, etc., etc., especificadas pela marcação. No caso do HTML, o programa de renderização é chamado de "web browser" (navegador web). A maioria dos computadores que interpretam o Markdown sabe como convertê-lo para HTML (visualizando o documento Markdown no navegador), PDF (visualizand o documento num leitor de PDF, como Acrobat ou outros), ou o Word (finalmente na abominação de Redmond).
+Cada linguagem de marcação é *renderizada* em um formato que inclui uma bela formatação, imagens, notação matemática, códigos, etc., etc., especificadas pela marcação. No caso do HTML, o programa de renderização é chamado de "web browser" (navegador web). A maioria dos computadores que interpretam o Markdown sabe como convertê-lo para HTML (visualizando o documento Markdown no navegador), PDF (visualizand o documento num leitor de PDF, como Acrobat ou outros), ou o Word (finalmente na abominação de Redmond).
 
 As vantagens das linguagens de marcação são muitas: elas tendem a ser mais portáteis, menos custosas a empresas de software e mais estáveis ao longo do tempo do que os programas de processamento de texto WYSIWYG. R Markdown é gratuito (você nunca pagará um dólar para usá-lo) e livre (a documentação está completamente aberta a todos). Mesmo que você prefira o Word, a pura estabilidade das linguagens de marcação as torna superiores para documentos científicos.
 
@@ -438,24 +438,24 @@ Veja em [http://yihui.name/knitr/options/] para obter uma listagem completa das 
 
 Como esta é uma aula de Estatística, é importante que você seja capaz de escrever expressões matemáticas,
 muitas vezes longas séries delas. O R Markdown oferece a sintaxe para
-tornar fórmulas e derivações matemáticas complexas, e exibi-las _muito_ lindamente. Assim como o código,
-a matemática pode ser inline ou como (**apresentações**). <- ???
+exibir fórmulas e derivações matemáticas complexas, e exibi-las _muito_ lindamente. Assim como o código,
+a notação matemática pode ser disposta inline ou como as **exibições** (destacadas) propriamente ditas.
 
-O código de matemática inline é marcado com um par de dólares
-(`$`), as $\pi r^2$ or $e^{i\pi}$.
+O código de matemática inline é marcado com um par de cifrões
+(`$`), como em $\pi r^2$ or $e^{i\pi}$.
 
 ```
-O código de matemática inline é marcado com um par de dólares
-(`$`), as $\pi r^2$ or $e^{i\pi}$.
+O código de matemática inline é marcado com um par de cifrões
+(`$`), como em $\pi r^2$ or $e^{i\pi}$.
 ```
 
-??? --> Exibições matemáticas são marcadas com `\[` and `\]`, como em
+Exibições matemáticas são marcadas com `\[` e `\]`, como em
 \[
 e^{i \pi} = -1
 \]
 
 ```
-??? --> Exibições matemáticas são marcadas com `\[` and `\]`, como em
+Exibições matemáticas são marcadas com `\[` e `\]`, como em
 \[
 e^{i \pi} = -1
 \]
@@ -704,7 +704,7 @@ Você:
 * Você precisa do LaTeX para criar PDFs. Se você está tendo problemas ao fazer isso, tente mudar o formato de saída para HTML.
     + Tente corrigir a instalação do LaTeX mais tarde, quando você não tiver pressão de tempo; isto é realmente útil.
     + O LaTeX irá reclamar se você tentar imprimir coisas realmente enormes. Erros sobre "out of stack" ("fora da pilha"), ou "pandoc 43", são muitas vezes causados por isso. Não imprima coisas enormes. (Supressão de avisos e outras mensagens podem ajudar.)
-* Quando você precisa carregar arquivos de dados ou criar o código de outra pessoa, use URLs completos, em vez de criar cópias locais e carregá-las em seu disco.
+* Quando você precisa carregar arquivos de dados ou usar o código de outra pessoa, use URLs absolutas, ao invés de criar cópias locais e carregá-las em seu disco.
 
 # Leitura adicional
 
