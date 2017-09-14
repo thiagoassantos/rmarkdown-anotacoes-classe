@@ -461,13 +461,13 @@ e^{i \pi} = -1
 \]
 ```
 
-Uma vez que seu texto está no modo matemático, o R Markdown faz o trabalho de
-converter seu texto matemático para um programa diferente, chamado LaTeX[^latex].
-Ele é o sistema mais comum para a composição de documentos matemáticos
-em todas as ciências, e tem sido há décadas. Ele é extremamente poderoso,
-estável, disponível basicamente em todos as plataformas e completamente gratuito. 
-Mas isso também o torná-lo, em seu poder total, muito complicado. Felizmente, para nossos propósitos, 
-é bastante simples. <-- ???
+Uma vez que seu texto está em modo matemático, o R Markdown faz o trabalho de
+converter o trecho matemático para um programa diferente, chamado LaTeX[^latex].
+Ele é o sistema mais comum de composição de documentos matemáticos
+nas ciências, e o tem sido há décadas. Ele é extremamente poderoso,
+estável, disponível basicamente a todas as plataformas e completamente gratuito. 
+Mas ele também pode se tornar, em seu poder total, um tanto complicado. Felizmente, para nossos propósitos, 
+é bastante simples.
 
 
 ### Elementos do Modo Matemático
@@ -598,8 +598,8 @@ Algumas pessoas inovam ainda a matemática escrevendo no `LaTeX`.
 
 ### `LaTeX` não verifica a correção
 
-`LaTeX` não verifica se sua matemática está _certa_; ele apenas verifica se
-descobre o que você está tentando dizer bem o suficiente para digitar e configurá-lo.
+`LaTeX` não verifica se sua notação matemática está _certa_; ele apenas verifica se
+descobre o que você está tentando dizer, bem o suficiente para digitar e melhorá-lo.
 Assim, por exemplo, não tem nenhum problema com o seguinte:
 
 \[
@@ -613,11 +613,10 @@ n^2 -1 & = & n^2\\
 \]
 
 (Existem programas de computador para matemática simbólica que, de fato,
-verifique se sua operação matemática está correta, pelo menos se você estiver trabalhando na sub-área
-de matemática a qual eles são projetados para lidar. Até onde eu sei, ninguém realmente
-os combinou com `LaTeX`.)
+verificam se sua operação matemática está correta. Pelo menos se você estiver trabalhando com a ciência da Matemática,
+a qual eles são projetados para lidar. Até onde eu sei, ninguém realmente os combinou com `LaTeX`.)
 
-### Um pouco mais de conteúdo avançado no modo matemátioc: Novos Comandos
+### Um pouco mais de conteúdo avançado no modo matemáticp: Novos Comandos
 
 Uma das coisas que você pode fazer no `LaTeX` é criar seus próprios comandos.
 Isso é útil se você se encontrar escrevendo a mesma expressão complicada
