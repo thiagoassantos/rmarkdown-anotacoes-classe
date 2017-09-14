@@ -694,16 +694,16 @@ Você:
     + Se processou mas você não gostou dos resultados, pense sobre e tente corrigi-lo.
     + Se não processou, o R lhe dirá onde ele parou e, então, tente depurar de lá.
 
-# Solução de problemas / coisas a se evitar
+# Solução de problemas/coisas a se evitar
 
 * Não ligue para `View` ou `help` no seu documento; estes são comandos interativos que não funcionam bem em scripts.
-* "Funcionou no console, mas não tricotaria": Você quase certamente fez algo diferente antes do pedaço do código que está dando problemas. Limpe seu espaço de trabalho no console e re-execute.
-    + O R Studio mantém dois ambientes ou espaços de trabalho que ele usa para avaliar as expressões R, a função de busca ou os nomes das variáveis, etc. Um deles é o ambiente global "usual" do console, que é compilado cumulativamente desde o início da sessão. (A menos que você manipule deliberadamente, não faça isso a menos que você saiba o que está fazendo.) Toda vez que você tricô, no entanto, ele re-executa seu código no espaço de trabalho limpo, como se você tivesse começado R do zero. Isso significa que o código de malha faz o que você diz, e só isso. Se o seu código tricô, ele deve funcionar em qualquer computador; Conseguir algo para correr no console que você não pode reproduzir é apenas uma sorte tonta.
-* "Funciona quando a fonte, mas não vai ser malha": basicamente é o mesmo problema que "funcionou no console".
-* Evite `anexar` no console e no seu arquivo; Usá-lo é uma receita para criar erros difíceis de encontrar. Você ainda pode encurtar expressões usando `with`em vez disso.
-* Você precisa do LaTeX para criar PDFs. Se você está tendo problemas para fazer isso, tente mudar o formato de saída para HTML.
-    + Tente corrigir a instalação do LaTeX mais tarde, quando você não tiver essa pressão de tempo; é realmente útil.
-    + LaTeX reclamará se você tentar imprimir coisas realmente enormes. Erros sobre "fora da pilha", ou "pandoc 43", são muitas vezes causados por isso. Não imprima enormes coisas. (Supressão de avisos e outras mensagens podem ajudar.)
+* "Funcionou no console do R, mas não gerou o documento": Quase certamente, você fez alguma coisa diferente *antes* do pedaço do código que está dando problema. Limpe seu espaço de trabalho no console e re-execute.
+    + O R Studio mantém dois ambientes, ou espaços de trabalho, que ele usa para avaliar as expressões do R, a função de busca ou os nomes das variáveis, etc. Um deles é o ambiente global "usual" do console, que é compilado cumulativamente desde o início da sessão (a menos que você manipule deliberadamente, não faça isso a menos que você saiba o que está fazendo.) Toda vez que você usar o knit, no entanto, ele re-executa seu código no espaço de trabalho limpo, como se você tivesse começado R do zero. Isso significa que o código no knit faz o que você diz, e apenas isso. Se o seu código foi renderizado no knit, ele deve funcionar em qualquer computador; Fazer algo para rodar no console e que você não pode reproduzir é tentar a sorte.
+* "Funciona quando eu rodo (abre a aplicação), mas não gera o documento": basicamente é o mesmo problema do "funcionou no console...". <-----
+* Evite `attach` no console e no seu arquivo; Usá-lo é uma receita para criar erros difíceis de encontrar. Você ainda pode encurtar expressões usando `with`em vez disso.
+* Você precisa do LaTeX para criar PDFs. Se você está tendo problemas ao fazer isso, tente mudar o formato de saída para HTML.
+    + Tente corrigir a instalação do LaTeX mais tarde, quando você não tiver pressão de tempo; isto é realmente útil.
+    + O LaTeX irá reclamar se você tentar imprimir coisas realmente enormes. Erros sobre "out of stack" ("fora da pilha"), ou "pandoc 43", são muitas vezes causados por isso. Não imprima coisas enormes. (Supressão de avisos e outras mensagens podem ajudar.)
 * Quando você precisa carregar arquivos de dados ou criar o código de outra pessoa, use URLs completos, em vez de criar cópias locais e carregá-las em seu disco.
 
 # Leitura adicional
@@ -716,8 +716,8 @@ O R Markdown baseia-se no pacote `knitr`, desenvolvido por Yihui Xie, para integ
 
 Para uma explicação completa, divertida e completamente correta de porque "O processador de texto é uma ferramenta estúpida e grosseiramente ineficiente de se preparar texto para comunicação com os outros", veja http://ricardo.ecn.wfu.edu/~cottrell/wp. html.
 
-[^latex]: na década de 1970, o grande cientista da computação Donald Knuth escreveu uma linguagem de marcação e um programa de renderização para essa linguagem, chamado `TeX` (pronuncia-se como "tec"), para escrever documentos matemáticos complexos. Na década de 1980, a cientista de computação Leslie Lamport aperfeiçoou o `TeX` de modo que ele se tornara bem mais fácil de usar e passou a se chamar LaTeX (pronunciando-se "la-tec").
+[^latex]: na década de 1970, o grande cientista da computação Donald Knuth escreveu uma linguagem de marcação e o programa de renderização dessa linguagem, chamado `TeX` (pronuncia-se como "tec"), para escrever documentos matemáticos complexos. Na década de 1980, a cientista de computação Leslie Lamport aperfeiçoou o `TeX` de modo que ele se tornara bem mais fácil de usar e passou a se chamar LaTeX (pronunciando-se "la-tec").
 
 # Agradecimentos
 
-Ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; ao [Dr. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem do [Prof. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos de R literais.
+Ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; à [Drª. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem da [Prof. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos literais de R.
