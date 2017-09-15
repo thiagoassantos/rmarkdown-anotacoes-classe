@@ -236,9 +236,9 @@ entre parênteses](http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd).
 ### Imagens
 
 As imagens começam com um ponto de exclamação e depois vem o texto a ser usado
-caso a imagem nAAAo possa ser carregada. Em seguida, o endereço do arquivo da imagem
+caso a imagem não possa ser carregada. Em seguida, o endereço do arquivo da imagem
 (no mesmo diretório do seu documento) ou uma URL direto para ela (remotamente). Aqui estão dois
-exemplos, um para uma imagem no diretório e outro para uma URL.
+exemplos, um para uma imagem no diretório e outro para uma URL externa.
 
 ```
 ![Uma imagem local](cena-local.jpg)
@@ -249,8 +249,8 @@ exemplos, um para uma imagem no diretório e outro para uma URL.
 ![A remote image](http://apod.nasa.gov/apod/image/1302/ringshexagon_cassini_1016.jpg)
 -->
 
-Não existe uma maneira de redimensionar imagens usando comandos prOOOprios Markdown. 
-No R Markdown, no entanto, você pode usar o seguinte hack:
+Não existe uma maneira de redimensionar imagens usando comandos próprios Markdown. 
+No entanto, você pode usar o seguinte hack:
 
 <pre><code>```{r, fig.retina=NULL, out.width=100, echo=FALSE}
 knitr::include_graphics("http://apod.nasa.gov/apod/image/1302/ringshexagon_cassini_1016.jpg")
@@ -259,20 +259,20 @@ knitr::include_graphics("http://apod.nasa.gov/apod/image/1302/ringshexagon_cassi
 ```{r, fig.retina=NULL, out.width=100, echo=FALSE}
 knitr::include_graphics("http://apod.nasa.gov/apod/image/1302/ringshexagon_cassini_1016.jpg")
 ```
-Esse cOOOdigo chama um comando R incluído no pacote `knitr`, com algumas opções sobre como o R é executado (descrito abaixo).
+Esse código chama um comando R incluído no pacote `knitr`, com algumas opções sobre como o R será executado (descrito abaixo).
 
-# Incluindo Código
+# Incluindo código
 
-O legal do R Markdown é que ele tambEEEm permite que você inclua seu código e o
-executa automaticamente quando seu documento é processado e, de forma incomparável, inclui
+O legal do R Markdown é que ele também permite a você incluir seu código e o
+executar automaticamente quando o documento for processado. E, de forma incomparável, inclui
 os resultados desse código em seu documento. O código vem em duas variedades:
 **chunks** (pedaços) de código ou código **inline**.
 
 ### Pedaços de código e seus resultados
 
-Um **pedaço** de código é simplesmente um trecho de código isolado. Ele EEE precedido
-por ` ``` {r} ` em uma linha e termina por uma linha que apenas diz ` ``` `.
-O código entra no meio. Aqui, por exemplo, é algum código que
+Um **pedaço** de código é simplesmente um trecho isolado de código. Ele é precedido
+por ` ``` {r} ` em uma linha e termina outra linha que diz ` ``` `.
+O código fica no meio. Aqui, por exemplo, é um código que
 carrega um conjunto de dados de uma biblioteca e faz um gráfico de dispersão.
 
 <pre><code>```{r}
@@ -295,18 +295,18 @@ incluídos:
 with(cats, cor(Hwt, Bwt))
 ```
 
-### Código Inline
+### Código inline
 
 A saída do seu código também pode ser muito bem incorporada no texto, usando o 
-modo **inline**. Este é o código não iniciado em uma linha, mas começando com
-` `r ` e terminando com ` ` `. Usar o código inline é como este documento
+modo **inline**. Este código não é iniciado em uma linha, mas começa com
+` `r ` e terminando com ` ` `. Usar o código inline é como este documento <-----
 sabe que o conjunto de dados `cats` contém linhas `r nrow (cats)`
 (` contém ` r nrow(gatos) ` linhas `), e que o peso médio dos corações das fêmeas
 dos gatos é `r median(cats$Hwt[cats$Sex=="F"])` gramas (` `r median(cats$Hwt[cats$Sex=="F"])` `).
 
 Observe que o código inline não exibe os comandos executados, apenas a saída deles.
 
-### Visto mas não ouvido
+### Visto, mas não ouvido
 
 Os pedaços de código (exceto código inline) podem ter um monte de **opções** que modificam
 a forma como eles são executados e como eles aparecem no documento. Estas opções vão depois
