@@ -62,19 +62,19 @@ Provavelmente você já esteja acostumado a usar programas de processamento de t
 ```
 Durante várias décadas, os sistemas realmente sérios de escrita basearam-se em um princípio muito diferente: o da marcação de texto. A ideia essencial em uma **linguagem de marcação** é que ela funciona em texto comum, além de sinais que indicam como alterar a formatação ou o significado do texto. Algumas linguagens de marcação, como o HTML (Hyper-Text Markup Language), utilizam uma sintaxe muito técnica; outras, como o **Markdown**, são mais sutis.
 ```
-Cada linguagem de marcação é *renderizada* em um formato que inclui uma bela formatação, imagens, notação matemática, códigos, etc., etc., especificadas pela marcação. No caso do HTML, o programa de renderização é chamado de "web browser" (navegador web). A maioria dos computadores que interpretam o Markdown sabe como convertê-lo para HTML (visualizando o documento Markdown no navegador), PDF (visualizand o documento num leitor de PDF, como Acrobat ou outros), ou o Word (finalmente na abominação de Redmond).
+Cada linguagem de marcação é *processada* em um formato que lhe inclui uma bela formatação, imagens, notação matemática, códigos, etc., etc., especificadas pela marcação. No caso do HTML, seu programa de renderização (processamento) é chamado de "web browser" (navegador web). A maioria dos computadores que interpretam o Markdown podem convertê-lo para: HTML (visualizando o documento Markdown no navegador), PDF (visualizando o documento num leitor de PDF, como Acrobat ou outros) ou o Word (finalmente, a abominação de Redmond<sup>[1](#nota1)</sup>).
 
-As vantagens das linguagens de marcação são muitas: elas tendem a ser mais portáteis, menos custosas a empresas de software e mais estáveis ao longo do tempo do que os programas de processamento de texto WYSIWYG. R Markdown é gratuito (você nunca pagará um dólar para usá-lo) e livre (a documentação está completamente aberta a todos). Mesmo que você prefira o Word, a pura estabilidade das linguagens de marcação as torna superiores para documentos científicos.
+As vantagens das linguagens de marcação são muitas: elas tendem a ser mais portáteis, sem gastos com licença e mais estáveis ao longo do tempo do que os programas de processamento de texto WYSIWYG. R Markdown é gratuito (você nunca pagará para usá-lo) e livre (a documentação está completamente aberta a todos). Mesmo que você prefira o Word, a pura estabilidade dessas linguagens as torna superiores a documentos científicos.
 
-[**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma linguagem de marcação simples inventada por John Gruber. Hoje, existem muitos programas que traduzem documentos escritos em Markdown para documentos em formato HTML, PDF ou mesmo Word (entre outros). 
-[**R Markdown**](http://rmarkdown.rstudio.com), por sua vez, é uma extensão do Markdown para incorporar código em execução, em R, incluindo o resultado no documento. O presente guia mostra, por sua vez, três aspectos do R Markdown: como incluir formatação básica; como incluir o código R e sua saída; e como incluir código matemático.
+[**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma linguagem de marcação simples criada por John Gruber. Hoje, existem muitos programas que traduzem documentos escritos em Markdown para documentos em formato HTML, PDF ou mesmo Word (entre outros formatos). 
+[**R Markdown**](http://rmarkdown.rstudio.com), por sua vez, é uma extensão do Markdown para incorporar código em execução (em R), incluindo o resultado no documento. O presente guia mostra três aspectos do R Markdown: como incluir formatação básica; como incluir o código R e sua saída; e, como incluir notação matemática.
 
 
 # Renderizando e Editando
 
-Para escrever em R Markdown, você precisará de um editor de texto: programa que permite ler
-e escreva arquivos de texto simples. Você também precisará do R e do pacote `rmarkdown`
-(bem como todos os pacotes que dependem dele).
+Para escrever em R Markdown, você precisará de um editor de texto: um programa que permite ler
+e escrever arquivos de texto simples. Você também precisará do R instalado e do pacote `rmarkdown`
+(bem como todos os pacotes que dependam dele).
 
 * A maioria dos computadores vem com um editor de texto (TextEdit no Mac, Notepad em máquinas Windows, etc.).
 * Há também muitos outros editores mais robustos; Eu uso [Emacs](http://www.gnu.org/software/emacs/emacs.html), mas admito que tem uma curva de aprendizado áspera.
@@ -720,3 +720,5 @@ Para uma explicação completa, divertida e completamente correta de porque "O p
 # Agradecimentos
 
 Ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; à [Drª. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem da [Profª. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos literais de R.
+
+<a name="nota1">Alusão à Microsoft.</a>
