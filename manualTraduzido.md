@@ -308,20 +308,20 @@ Observe que o código inline não exibe os comandos executados, apenas a saída 
 
 ### Visto, mas não ouvido
 
-Os pedaços de código (exceto código inline) podem ter um monte de **opções** que modificam
-a forma como eles são executados e como eles aparecem no documento. Estas opções vão depois
-o `r` inicial e antes do fechamento `}` que representa o início de um pedaço código. 
-Uma das opções mais comuns desativa a impressão do código, porEEEm, deixa os resultados isolados:
+Os pedaços de código (exceto código inline) têm um monte de **opções** que modificam
+a forma como eles são executados e como eles aparecem no documento. Estas opções podem vir depois
+o `r` inicial e antes do fechamento `}`, que representa o início de um pedaço código. 
+Uma das opções mais comuns desativa a impressão do código, porém, deixa os resultados isolados:
  ` ```{r, echo=FALSE} `
 
 Outra opção executa o código, mas não inclui nem o texto do código nem a saída.
  ` ```{r, include=FALSE} `
   
-Isso pode parecer bobo, mas pode ser útil para pedaços de código que *configuram
-como carregar arquivos de dados*, ou estimativas do modelo inicial, etc.
+Isso pode parecer bobo, mas pode ser útil para pedaços de código que configuram (setam) algo,
+como carregar arquivos de dados ou estimativas de modelo inicial etc.
 
 
-Outra opção imprime o código no documento mas não o executa:
+Outra opção imprime o código no documento, mas não o executa:
  ` ```{r, eval=FALSE} `
 Isso também é útil se você quiser comentar sobre o código (de modo que ele fique bem formatado).
 
