@@ -44,7 +44,7 @@ output: html_document
 * Leitura adicional
     * Agradecimentos
     
-# Visão Geral
+# Visão geral
 
 Usar R Markdown é uma maneira muito simples de escrever relatórios, além de rodar seu código R neles automaticamente.
 Ele também te permite usar notação matemática, hiperlinks, imagens e entre outras formatações básicas. O objetivo deste guia é explicar, com exemplos, como usar os recursos mais essenciais do R Markdown. Não é uma referência abrangente (para isso, veja: http://rmarkdown.rstudio.com)
@@ -55,7 +55,7 @@ O guia original está em http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.R
 
 
 
-# *Mark Up*, Markdown
+# *Mark up*, Markdown
 
 Provavelmente você já esteja acostumado a usar programas de processamento de texto, como o Microsoft Word, que empregam o princípio do "what you see is what you get" (que pode ser traduzido como "o que se vê é o que se obtém" (WYSIWYG): você deseja que algumas palavras sejam impressas em itálico e, com um clique, logo estão em itálico lá na tela. Quer que outras palavras tenham uma fonte maior e diferente, então você apenas seleciona o tipo de fonte e seu tamanho e assim por diante. Isso funciona bem o suficiente para <del>n00bs</del> leigos, mas não é uma forma viável para um sistema de formatação de texto, porque aí se depende de um programa específico que: (a) saiba o que você quer dizer; e, (b): implemente-o muito bem. Durante várias décadas, os sistemas realmente sérios de escrita basearam-se em um princípio muito diferente: o da marcação de texto. A ideia essencial em uma **linguagem de marcação** é que ela funciona em texto comum, além de sinais que indicam como alterar a formatação ou o significado do texto. Algumas linguagens de marcação, como o HTML (Hyper-Text Markup Language), utilizam uma sintaxe muito técnica; outras, como o **Markdown**, são mais sutis. Por exemplo, as frases anteriores no Markdown são literalmente escritas assim:
 
@@ -66,22 +66,22 @@ Cada linguagem de marcação é *processada* em um formato que lhe inclui uma be
 
 As vantagens das linguagens de marcação são muitas: elas tendem a ser mais portáteis, sem gastos com licença e mais estáveis ao longo do tempo do que os programas de processamento de texto WYSIWYG. R Markdown é gratuito (você nunca pagará para usá-lo) e livre (a documentação está completamente aberta a todos). Mesmo que você prefira o Word, a pura estabilidade dessas linguagens as torna superiores a documentos científicos.
 
-O [**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma linguagem de marcação simples criada por John Gruber. Hoje, existem muitos programas que traduzem documentos escritos em Markdown para documentos em formato HTML, PDF ou mesmo Word (entre outros formatos). 
+O [**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma linguagem de marcação simples criada por John Gruber. Hoje, existem muitos programas que traduzem documentos escritos em Markdown para documentos em formato HTML, PDF ou mesmo Word (entre outros formatos).<br> 
 [**R Markdown**](http://rmarkdown.rstudio.com), por sua vez, é uma extensão do Markdown para incorporar código em execução (em R), incluindo o resultado no documento. O presente guia mostra três aspectos do R Markdown: como incluir formatação básica; como incluir o código R e sua saída; e, como incluir notação matemática.
 
 
 # Renderizando e Editando
 
 Para escrever em R Markdown, você precisará de um editor de texto: um programa que permite ler
-e escrever arquivos de texto simples. Você também precisará do R instalado e do pacote `rmarkdown`
+e escrever arquivos de texto simples. Você também precisará do R instalado e de seu pacote `rmarkdown`
 (bem como todos os pacotes que dependam dele).
 
 * A maioria dos computadores vem com um editor de texto (TextEdit no Mac, Notepad em máquinas Windows, etc.).
-* Há também muitos outros editores mais robustos; Eu uso [Emacs](http://www.gnu.org/software/emacs/emacs.html), mas admito que tem uma curva de aprendizado áspera.
+* Há também muitos outros editores mais robustos. Eu uso [Emacs](http://www.gnu.org/software/emacs/emacs.html), mas admito que ele tem uma curva de aprendizado áspera.
 * Você _pode_ usar o Word (ou qualquer outro processador de texto WYSIWYG), tomando cuidado apenas de salvar o seu documento em formato de texto simples. Entretanto, eu não recomendo isso.
-* [R Studio](http://www.rstudio.com) vem com um editor de textos próprio, apropriado, e com muitas ferramentas para se trabalhar com documentos R Markdown.
+* O [R Studio](http://www.rstudio.com) vem com um editor de textos próprio, apropriado, e com muitas ferramentas para se trabalhar com documentos R Markdown.
 
-Se esta é sua primeira vez usando um editor de texto para algo sério, eu recomendo usar o R Studio.
+Se é sua primeira vez usando um editor de texto para algo sério, eu recomendo usar o R Studio.
 
 ### Renderizando no R Studio
 
@@ -90,29 +90,29 @@ clique no botão "knit".
 
 ### Renderizando no R sem usar o R Studio
 
-Use o comando `render` no pacote `rmarkdown`.
+Use o comando `render` do pacote `rmarkdown`.
 
-### Renderizando via linha de comando (sistemas tipo Unix)
+### Renderizando via linha de comando (tipo sistemas UNIX)
 
-Se você preferir renderizar via linha de comando, o script Perl [`rmarkdown.pl`] (http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.pl)
-Poderá fazer todo o trabalho. O uso é `rmarkdown.pl nome_do_arquivo`, e
-resulta na saída `nome_do_arquivo.html` ou` nome_do_arquivo.pdf`, conforme especificado no
-próprio arquivo. (Ver abaixo.)
+Se você preferir renderizar via linha de comando, o script Perl [`rmarkdown.pl`](http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.pl)
+poderá fazer todo o trabalho. Para usá-lo, há o seguinte comando `rmarkdown.pl nome_do_arquivo`, e
+resultará na saída `nome_do_arquivo.html` ou` nome_do_arquivo.pdf`, conforme especificado no
+próprio arquivo. (ver abaixo.)
 
-# Formatação Básica em R Markdown
+# Formatação básica em R Markdown
 
 Na maior parte do documento, texto é apenas texto. Uma vantagem do R Markdown é que a
 você digita seu documento como você normalmente faz.
 
-### Quebra de Parágrafos e Quebra Forçada de Linhas
+### Quebra de parágrafos e quebra forçada de linhas
 
-Para inserir uma quebra entre os paragráfos, inclua uma linha comum em branco.
+Para inserir uma quebra de linha entre os paragráfos, deixe uma linha em branco entre eles.
 
 Para forçar uma quebra de linha, ponha _dois_ espaços  
 em branco ao final da linha.
 
 ```
-Para inserir uma quebra entre os paragráfos, inclua uma linha comum em branco.
+Para inserir uma quebra de linha entre os paragráfos, deixe uma linha em branco entre eles.
 
 Para forçar uma quebra de linha, ponha _dois_ espaços  
 em branco ao final da linha.
@@ -122,10 +122,10 @@ em branco ao final da linha.
 
 O caractere `#` no início de uma linha significa que o resto da linha será interpretado
 como um cabeçalho de seção. O número de `#`s no começo da linha indica, respectivamente,
-o número da seção, sub-seção, sub-sub-seção, etc. do documento. Por exemplo, o `Formatação Básica em R Markdown` acima é precedido por um único `#` mas o `Cabeçalhos` do começo deste
+o número da seção, sub-seção, sub-sub-seção, etc. do documento. Por exemplo, o `Formatação Básica em R Markdown` acima é precedido por um único `#`, mas o `Cabeçalhos` do começo deste
 parágrafo foi precedido por `###`. Não separe cabeçalhos por quebra de linhas.
 
-### Itálico, Negrito
+### Itálico, negrito
 
 Para deixar um texto em _itálico_ ele deve ficar dentro de um _único conjunto de underscores_ ou
 *asteriscos*. Para usar **negrito**, coloque o texto dentro de um __duplo conjunto de underscores__ 
@@ -147,26 +147,26 @@ Para citar um texto, o parágrafo deve ser iniciado por `>` (sinal maior que):
 > In fact, all epistemological value of the theory of probability is based on this: that large-scale random phenomena in their collective action create strict, nonrandom regularity.  [Gnedenko and Kolmogorov, _Limit Distributions for Sums of Independent Random Variables_, p. 1]
 ```
 
-### Fonte de console
+### Fonte estilo console
 
-Para imprimir um texto com fonte de largura fixa (estilo cOOOdigo-fonte), deve-se iniciAAA-lo e termina-lo com
+Para imprimir um texto com fonte de largura fixa (estilo de código-fonte), deve-se iniciá-lo e terminá-lo com
 um sinal de crase, sem quebras de linha no texto. (Por exemplo, `R` vs. R.) 
-Se você quiser exibir várias linhas como um prOOOprio texto, insira três crases no comeCCCO e ao final do texto:
+Se você quiser exibir várias linhas como um texto, insira três crases no começo e ao final do texto:
 
 ```
 O texto a ser impresso em uma fonte de largura fixa, inicia e termina com
 um sinal de crase, sem quebras de linha no texto. (Por exemplo, `R` vs. R.)
 ```
 
-### Lista de Marcadoress
+### Lista de marcadores
 
-* Esta EEE uma lista de marcadores (lista nAAAo ordenada) onde os itens sAAAo marcos com pontos (bullets).
-* Cada item da lista deve comeCCCar com um `*` (asterisco) ou um UUUnico hIIIfen (`-`).
+* Esta é uma lista de marcadores (lista não ordenada) onde os itens são marcados com pontos (bullets).
+* Cada item da lista deve começar com um `*` (asterisco) ou um único hífen (`-`).
 * Cada item deve estar em uma nova linha.
-    + Para sub-bullets, idente as linhas (recue AAA direita) e as inicie com `+`.
-    + Sub-sub-bullets nAAAo sAAAo realmente importantes em R Markdown.
+    + Para sub-itens, idente as linhas (recue à direita) e as inicie com `+`.
+    + Sub-sub-itens não são realmente importantes em R Markdown.
     
-### Listas Numeradas
+### Listas numeradas
 
 1. As linhas que começam com um número (de 0--9), seguido de um texto, serão interpretadas como itens em uma lista enumerada.
 2. O R Markdown lida com a numeração ao processar automaticamente.
@@ -174,32 +174,32 @@ um sinal de crase, sem quebras de linha no texto. (Por exemplo, `R` vs. R.)
      a. VocEEE pode criar sub-listas de listas enumeradas com letras para cada sub-item.
      b. No entanto, são uma coisa frágil, o que é melhor você não forCCCar demais.
 
-### Título, Autor, Data, Formato de saída, Índice
+### Título, autor, data, formato de saída, índice
 
-Você pode especificar conteUUUdos como título, autor e data no **cabeçalho** do seu
-arquivo R Markdown (atributos em inglEEEs). Isso vai no início do arquivo, precedido e seguido por três hIIIfens. 
-Assim, o início deste arquivo ficarAAA como:
+Você pode especificar conteúdos como título, autor e data no **cabeçalho** do seu
+arquivo R Markdown (atributos em inglês). Isso vai no início do arquivo, precedido e seguido por três hífens. 
+Assim, o início deste arquivo ficará como:
 
 ```
 ---
 title: Usando R Markdown para anotações de aula
 author: CRS
-date: Primeira versAAAo 7 janeiro de 2016, revisado em 22 agosto de 2016
+date: Primeira versão: 7 janeiro de 2016, revisado em 22 agosto de 2016
 ---
 ```
 
-Você também pode usar o cabeçalho para dizer ao R Markdown se deseja que ele seja processado para
+Você também pode usar o cabeçalho para dizer ao R Markdown que ele seja processado para
 HTML (padrão), PDF ou outro formato. Para que ele seja transformado em PDF, por exemplo, eu escrevi:
 
 ```
 ---
 title: Usando R Markdown para anotações de aula
 author: CRS
-date: Primeira versAAAo 7 janeiro de 2016, revisado em 22 agosto de 2016
+date: Primeira versão 7 janeiro de 2016, revisado em 22 agosto de 2016
 output: pdf_document
 ---
 ```
-VocEEE pode adicionar uma tabela de conteúdos como uma opção para o tipo de saída.
+Você pode adicionar uma tabela de conteúdos como uma opção para o tipo de saída.
 
 ```
 ---
@@ -722,4 +722,4 @@ Para uma explicação completa, divertida e completamente correta de porque "O p
 Ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; à [Drª. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem da [Profª. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos literais de R.
 
 ## Notas da tradução
-1. Alusão à <a name="nota1" href="https://en.wikipedia.org/wiki/Microsoft_Redmond_campus">Microsoft.</a>
+1. Alusão à <a name="nota1" href="https://en.wikipedia.org/wiki/Microsoft_Redmond_campus">Microsoft</a>
