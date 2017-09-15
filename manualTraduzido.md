@@ -212,9 +212,8 @@ output:
 ---
 ```
 
-* Para criar PDFs, um programa chamado `LaTeX` (veja abaixo) deve ser instalado
-no seu computador.
-* Outros formatos de saída podem estar disponíveis. Veja `help (render)` no pacote `rmarkdown`.
+* Para criar PDFs, um programa chamado `LaTeX` (veja abaixo) deve ser instalado no seu computador.
+* Outros formatos de saída devem estar disponíveis. Veja `help (render)` no pacote `rmarkdown`.
 * Existem muitas, muitas outras opções de formatação que podem ser dadas no
 cabeçalho; consulte os principais arquivos de ajuda do R Markdown on-line.
 
@@ -222,16 +221,16 @@ cabeçalho; consulte os principais arquivos de ajuda do R Markdown on-line.
 
 ### Hiperlinks
 
-Os hiperlinks (links) sAAAo ancorados por URLs e fáceis de usar: basta digitar a URL, como, por exemplo,
+Os hiperlinks (links) são ancorados (referenciados) por URLs e fáceis de usar: por exemplo, basta digitar a URL
 http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd para obter a fonte do arquivo
 deste documento. 
 
-Os hiperlinks ancorados no texto têm a [âncora entre colchetes e o link
-entre parênteses] (http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd).
+Hiperlinks referenciados no texto têm a [âncora entre colchetes e o link
+entre parênteses](http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd).
 
 ```
-Os hiperlinks ancorados no texto têm a [âncora entre colchetes e o link
-entre parênteses] (http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd)
+Hiperlinks referenciados no texto têm a [âncora entre colchetes e o link
+entre parênteses](http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd).
 ```
 
 ### Imagens
