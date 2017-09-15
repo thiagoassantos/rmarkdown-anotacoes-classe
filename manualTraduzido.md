@@ -70,7 +70,7 @@ O [**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma ling
 [**R Markdown**](http://rmarkdown.rstudio.com), por sua vez, é uma extensão do Markdown para incorporar código em execução (em R), incluindo o resultado no documento. O presente guia mostra três aspectos do R Markdown: como incluir formatação básica; como incluir o código R e sua saída; e, como incluir notação matemática.
 
 
-# Renderizando e Editando
+# Renderizando e editando
 
 Para escrever em R Markdown, você precisará de um editor de texto: um programa que permite ler
 e escrever arquivos de texto simples. Você também precisará do R instalado e de seu pacote `rmarkdown`
@@ -160,7 +160,7 @@ um sinal de crase, sem quebras de linha no texto. (Por exemplo, `R` vs. R.)
 
 ### Lista de marcadores
 
-* Esta é uma lista de marcadores (lista não ordenada) onde os itens são marcados com pontos (bullets).
+* Esta é uma lista de marcadores (lista não-ordenada) onde os itens são marcados com pontos (bullets).
 * Cada item da lista deve começar com um `*` (asterisco) ou um único hífen (`-`).
 * Cada item deve estar em uma nova linha.
     + Para sub-itens, idente as linhas (recue à direita) e as inicie com `+`.
@@ -189,7 +189,7 @@ date: Primeira versão: 7 janeiro de 2016, revisado em 22 agosto de 2016
 ```
 
 Você também pode usar o cabeçalho para dizer ao R Markdown que ele seja processado para
-HTML (padrão), PDF ou outro formato. Para que ele seja transformado em PDF, por exemplo, eu escrevi:
+HTML (padrão), PDF ou algum outro formato. Para que ele seja transformado em PDF, por exemplo, eu escrevi:
 
 ```
 ---
@@ -205,7 +205,7 @@ Você pode adicionar uma tabela de conteúdos como uma opção para o tipo de sa
 ---
 title: Usando R Markdown para anotações de aula
 author: CRS
-date: Primeira versAAAo 7 janeiro de 2016, revisado em 22 agosto de 2016
+date: Primeira versão 7 janeiro de 2016, revisado em 22 agosto de 2016
 output:
   html_document:
     toc: true
@@ -217,7 +217,7 @@ output:
 * Existem muitas, muitas outras opções de formatação que podem ser dadas no
 cabeçalho; consulte os principais arquivos de ajuda do R Markdown on-line.
 
-# Hiperlinks e Imagens
+# Hiperlinks e imagens
 
 ### Hiperlinks
 
