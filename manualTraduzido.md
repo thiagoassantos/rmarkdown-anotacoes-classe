@@ -722,4 +722,4 @@ Para uma explicação completa, divertida e completamente correta de porque "O p
 Ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; à [Drª. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem da [Profª. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos literais de R.
 
 ## Notas da tradução
-<a name="nota1" href="https://en.wikipedia.org/wiki/Microsoft_Redmond_campus">Alusão à Microsoft.</a>
+1. Alusão à <a name="nota1" href="https://en.wikipedia.org/wiki/Microsoft_Redmond_campus">Microsoft.</a>
