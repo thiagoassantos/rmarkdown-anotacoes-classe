@@ -46,16 +46,16 @@ output: html_document
     
 # Visão Geral
 
-R Markdown é uma maneira muito simples de escrever relatórios, além de rodar seu código em R automaticamente.
-Ele também permite que você use linguagem matemática, hiperlinks, imagens e outras formatações básicas. O objetivo deste documento é explicar, com exemplos, como usar seus recursos mais essenciais. Não é uma referência abrangente. (Para isso, veja: http://rmarkdown.rstudio.com)
+Usar R Markdown é uma maneira muito simples de escrever relatórios, além de rodar seu código R neles automaticamente.
+Ele também te permite usar notação matemática, hiperlinks, imagens e entre outras formatações básicas. O objetivo deste guia é explicar, com exemplos, como usar os recursos mais essenciais do R Markdown. Não é uma referência abrangente (para isso, veja: http://rmarkdown.rstudio.com)
 
 Este guia pressupõe que você conheça, ao menos, um pouco de R.
 
-Este guia está em http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd. Por favor, veja a versão mais recente. Correções e sugestões são bem-vindas.
+O guia original está em http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd. Por favor, consulte a versão mais recente. Correções e sugestões são bem-vindas.
 
 
 
-# Mark Up, Markdown
+# *Mark Up*, Markdown
 
 Provavelmente Você esteja acostumado a usar programas de processamento de texto, como o Microsoft Word, que empregam o princípio do "o que você vê é o que você obtém" (WYSIWYG): você deseja que algumas palavras sejam impressas em itálico e, com um clique, logo estão em itálico lá na tela. Você quer que outras palavras tenham uma fonte maior e diferente, então você apenas seleciona a fonte e seu tamanho, e assim por diante. Isso funciona bem o suficiente para <del>n00bs</del> leigos, mas não é uma base viável para um sistema de formatação de texto, porque depende de um programa específico: (a) saber o que você quer dizer e (b) implementá-lo bem. Durante várias décadas, os sistemas realmente sérios de escrita basearam-se em um princípio muito diferente, o da marcação de texto. A idéia essencial em uma **linguagem de marcação** é que ela trabalha em texto comum, além de sinais que indicam como alterar a formatação ou o significado do texto. Algumas linguagens de marcação, como o HTML (Hyper-Text Markup Language), utilizam uma sintaxe muito técnica; outras, como o chamado **Markdown**, são mais sutis. Por exemplo, as frases anteriores no Markdown se parecem com isto:
 
@@ -719,4 +719,4 @@ Para uma explicação completa, divertida e completamente correta de porque "O p
 
 # Agradecimentos
 
-Ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; à [Drª. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem da [Prof. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos literais de R.
+Ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; à [Drª. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem da [Profª. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos literais de R.
