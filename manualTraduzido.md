@@ -96,7 +96,7 @@ Use o comando `render` do pacote `rmarkdown`.
 
 Se você preferir renderizar via linha de comando, o script Perl [`rmarkdown.pl`](http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.pl)
 poderá fazer todo o trabalho. Para usá-lo, há o seguinte comando `rmarkdown.pl nome_do_arquivo`, e
-resultará na saída `nome_do_arquivo.html` ou` nome_do_arquivo.pdf`, conforme especificado no
+resultará na saída `nome_do_arquivo.html` ou `nome_do_arquivo.pdf`, conforme especificado no
 próprio arquivo. (ver abaixo.)
 
 # Formatação básica em R Markdown
