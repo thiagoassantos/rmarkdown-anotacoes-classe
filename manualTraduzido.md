@@ -66,7 +66,7 @@ Cada linguagem de marcação é *processada* em um formato que lhe inclui uma be
 
 As vantagens das linguagens de marcação são muitas: elas tendem a ser mais portáteis, sem gastos com licença e mais estáveis ao longo do tempo do que os programas de processamento de texto WYSIWYG. R Markdown é gratuito (você nunca pagará para usá-lo) e livre (a documentação está completamente aberta a todos). Mesmo que você prefira o Word, a pura estabilidade dessas linguagens as torna superiores a documentos científicos.
 
-[**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma linguagem de marcação simples criada por John Gruber. Hoje, existem muitos programas que traduzem documentos escritos em Markdown para documentos em formato HTML, PDF ou mesmo Word (entre outros formatos). 
+O [**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma linguagem de marcação simples criada por John Gruber. Hoje, existem muitos programas que traduzem documentos escritos em Markdown para documentos em formato HTML, PDF ou mesmo Word (entre outros formatos). 
 [**R Markdown**](http://rmarkdown.rstudio.com), por sua vez, é uma extensão do Markdown para incorporar código em execução (em R), incluindo o resultado no documento. O presente guia mostra três aspectos do R Markdown: como incluir formatação básica; como incluir o código R e sua saída; e, como incluir notação matemática.
 
 
@@ -721,4 +721,5 @@ Para uma explicação completa, divertida e completamente correta de porque "O p
 
 Ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; à [Drª. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem da [Profª. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos literais de R.
 
-<a name="nota1">Alusão à Microsoft.</a>
+## Notas da tradução
+<a name="nota1" href="https://en.wikipedia.org/wiki/Microsoft_Redmond_campus">Alusão à Microsoft.</a>
