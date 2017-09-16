@@ -147,7 +147,7 @@ Para citar um texto, o parágrafo deve ser iniciado por `>` (sinal maior que):
 > In fact, all epistemological value of the theory of probability is based on this: that large-scale random phenomena in their collective action create strict, nonrandom regularity.  [Gnedenko and Kolmogorov, _Limit Distributions for Sums of Independent Random Variables_, p. 1]
 ```
 
-### Fonte estilo console
+### Fonte em estilo console
 
 Para imprimir um texto com fonte de largura fixa (estilo de código-fonte), deve-se iniciá-lo e terminá-lo com
 um sinal de crase, sem quebras de linha no texto. (Por exemplo, `R` vs. R.) 
@@ -168,11 +168,11 @@ um sinal de crase, sem quebras de linha no texto. (Por exemplo, `R` vs. R.)
     
 ### Listas numeradas
 
-1. As linhas que começam com um número (de 0--9), seguido de um texto, serão interpretadas como itens em uma lista enumerada.
+1. As linhas que começam com um número (de 0--9), seguido de um texto, são interpretadas como itens em uma lista enumerada.
 2. O R Markdown lida com a numeração ao processar automaticamente.
-2. Isso pode ser útil quando você perde a contagem ou não atualiza os números sozinho ao editar. (Consulte atentamente o arquivo .Rmd para este item.)
-     a. VocEEE pode criar sub-listas de listas enumeradas com letras para cada sub-item.
-     b. No entanto, são uma coisa frágil, o que é melhor você não forCCCar demais.
+2. Isso pode ser útil quando você perde a contagem ou não atualiza os números sozinho ao editar (consulte atentamente o arquivo .Rmd para este item.)
+     a. Você pode criar sub-listas de listas enumeradas com letras para cada sub-item. <---
+     b. No entanto, elas são uma coisa "frágil", o que é melhor você não forçar demais.
 
 ### Título, autor, data, formato de saída, índice
 
@@ -310,7 +310,7 @@ Observe que o código inline não exibe os comandos executados, apenas a saída 
 
 Os pedaços de código (exceto código inline) têm um monte de **opções** que modificam
 a forma como eles são executados e como eles aparecem no documento. Estas opções podem vir depois
-o `r` inicial e antes do fechamento `}`, que representa o início de um pedaço código. 
+do `r` inicial e antes do fechamento `}`, que representa o início de um pedaço código. 
 Uma das opções mais comuns desativa a impressão do código, porém, deixa os resultados isolados:
  ` ```{r, echo=FALSE} `
 
@@ -339,9 +339,9 @@ ou centro).
 
 Ao produzir PDF, as opções `out.height` e` out.width` permitem que você especifique
 a altura ou largura desejada da figura em polegadas, centímetros ou múltiplos
-de comprimentos pré-definidos (do `LaTeX`). Então, por exemplo, ` ``` r,
+de comprimentos pré-definidos (`LaTeX`). Então, por exemplo, ` ``` r,
 out.height = "3in"} ` força a imagem a 3 polegadas de altura, enquanto que ` ```r,
-out.width = "0.48 \\ textwidth"} ` força a largura da imagem a ser um pouco menos do que
+out.width = "0.48 \\ textwidth"} ` força a largura da imagem a ser um pouco menor do que
 metade da largura total do texto na página (de modo que duas dessas imagens
 se encaixam lado a lado). As próximas figuras ilustram isso.
 
@@ -374,8 +374,8 @@ library(knitr) # Only need this the first time!
 kable(coefficients(summary(lm(Hwt ~ Bwt, data=cats))))
 ```
 
---- Pois é, os padrões do R imprimem um número louco de casas decimais, mas
-este não é o momento de discutir dígitos significativos, ou a função `signif`.
+--- Pois é, os padrões do R fazem imprimir um número louco de casas decimais, mas
+este não é o momento de discutir dígitos significativos, ou a função `signif`. <---
 
 ### "Caching" de pedaços de código (re-executando somente com modificações)
 
