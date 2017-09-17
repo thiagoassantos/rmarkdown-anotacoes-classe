@@ -706,17 +706,17 @@ Você:
 
 Para mais informações sobre o R Markdown, consulte http://rmarkdown.rstudio.com, em particular as páginas de ajuda mais detalhadas (em vez dos primeiros guias).
 
-Para o `LaTeX`, a referência clássica é o livro de Leslie Lamport, *LaTeX: A Document Preparation System* (2ª edição, Reading, Mass .: Addison-Wesley, 1994). Esta não é, reconhecidamente, a leitura mais fácil do mundo. LaTeX, de Wikibooks, é mais acessível, online e gratuito.
+Para o `LaTeX`, a referência clássica é o livro de Leslie Lamport: *LaTeX: A Document Preparation System* (2ª edição, Reading, Mass .: Addison-Wesley, 1994). Esta não é, reconhecidamente, a leitura mais fácil do mundo. LaTeX no Wikibooks é mais acessível, online e gratuito.
 
 O R Markdown baseia-se no pacote `knitr`, desenvolvido por Yihui Xie, para integração do R com `LaTeX`; veja http://yihui.name/knitr/ e, para obter a documentação completa, o livro de Xie *Dynamic Documents with R and knitr* (2ª edição, Boca Raton, Flórida, CRC Press, 2016).
 
-Para uma explicação completa, divertida e completamente correta de porque "O processador de texto é uma ferramenta estúpida e grosseiramente ineficiente de se preparar texto para comunicação com os outros", veja http://ricardo.ecn.wfu.edu/~cottrell/wp. html.
+Para uma explicação completa, divertida e completamente correta de porque "O processador de texto é uma ferramenta estúpida e grosseiramente ineficiente de se preparar texto para comunicação com os outros", veja http://ricardo.ecn.wfu.edu/~cottrell/wp.html.
 
-[^latex]: na década de 1970, o grande cientista da computação Donald Knuth escreveu uma linguagem de marcação e o programa de renderização dessa linguagem, chamado `TeX` (pronuncia-se como "tec"), para escrever documentos matemáticos complexos. Na década de 1980, a cientista de computação Leslie Lamport aperfeiçoou o `TeX` de modo que ele se tornara bem mais fácil de usar e passou a se chamar LaTeX (pronunciando-se "la-tec").
+[^latex]: na década de 1970, o grande cientista da computação Donald Knuth escreveu uma linguagem de marcação e o programa de renderização dessa linguagem, chamado `TeX` (pronuncia-se como "tec"), para escrever documentos matemáticos complexos. Na década de 1980, o cientista de computação Leslie Lamport aperfeiçoou o `TeX` de modo que ele se tornara bem mais fácil de usar e passou a se chamar LaTeX (pronunciando-se "la-tec").
 
 # Agradecimentos
 
-Ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; à [Drª. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque para re-dimensionar imagens; e a uma antiga postagem da [Profª. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos literais de R.
+Ao [Prof. Howard Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) por sugestões; à [Drª. Uma Ravat](http://www.math.uiuc.edu/~umaravat/) por me mostrar o truque de re-dimensionar imagens; e a uma antiga postagem da [Profª. Jenny Bryan](http://www.stat.ubc.ca/~jenny/) sobre como incluir trechos literais de R.
 
 ## Notas da tradução
 1. Alusão à <a name="nota1" href="https://en.wikipedia.org/wiki/Microsoft_Redmond_campus">Microsoft</a>
