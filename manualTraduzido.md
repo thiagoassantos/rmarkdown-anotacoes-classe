@@ -447,7 +447,7 @@ O código de matemática inline é marcado com um par de cifrões
 (`$`), como em $\pi r^2$ ou $e^{i\pi}$.
 ```
 
-Expressões matemáticas são marcadas com `\[` e `\]`, como em
+Já as expressões matemáticas são marcadas entre `\[` e `\]`, como em
 \[
 e^{i \pi} = -1
 \]
@@ -498,13 +498,12 @@ para
   $\vec{a}$, `\hat{a}` gera $\hat{a}$.  Alguns acentos, particularmente os "chapéus",
   funcionam melhor com espaços, como `\widehat{\mathrm{Var}}` produzindo
   $\widehat{\mathrm{Var}}$.
-* Nomes de funções são, geralmente, escritos em fonte normal e espaçados de forma diferente: 
-  $\log{x}$, não $log x$. O `LaTeX` e, por consequência, o `R Markdown` também, conhece muitas
+* Nomes de funções são escritos, geralmente, em fonte normal mas espaçados de forma diferente: 
+  ou seja, $\log{x}$, não $log x$. O `LaTeX` e, por consequência, o `R Markdown` também, tem muitas
   dessas funções e seus nomes iniciam com `\`.  Por exemplo:
-  `\log`, `\sin`, `\cos`, `\exp`, `\min`, etc.  Siga estes nomes de funções
-  com o argumento em chaves; isso ajuda o `LaTeX` a descobrir o que exatamente
-  o argumento é, e mantê-lo agrupado com o nome da função quando
-  está colocando o texto.  Então `\log{(x+1)}` é melhor que `\log (x+1)`.
+  `\log`, `\sin`, `\cos`, `\exp`, `\min`, etc.  Use estas funções
+  com o argumento entre chaves; isso permite ao `LaTeX` descobrir qual
+  argumento usar e mantê-lo agrupado com o nome da função.  Então `\log{(x+1)}` é melhor que `\log (x+1)`.
 * Frações podem ser criadas com `\frac`, como:
 ```
 \frac{a+b}{b} = 1 + \frac{a}{b}
@@ -517,12 +516,12 @@ produz
 ```
 \sum_{i=1}^{n}{x_i^2}
 ```
-produzirá
+que produzirá produzirá
 \[
 \sum_{i=1}^{n}{x_i^2}
 \]
-Os limites inferior e superior do somatório após a `\sum` são ambos opcionais.
-Produtos e integrais funcionam de forma semelhante, apenas com `\prod` e `\int`:
+Os limites inferior e superior do somatório, após a `\sum`, são ambos opcionais.
+Produtos e integrais funcionam de forma semelhante, com `\prod` e `\int`:
 \[
 n! = \prod_{i=1}^{n}{i}
 \]
@@ -530,16 +529,16 @@ n! = \prod_{i=1}^{n}{i}
 \log{b} - \log{a} = \int_{x=a}^{x=b}{\frac{1}{x} dx}
 \]
 `\sum`, `\prod` and `\int` se ajustam automaticamente ao tamanho da expressão a qual são somados, multiplicados ou integrados.
-* "Delimitadores", como parênteses ou chaves, podem se redimensionar automaticamente para corresponder ao que eles têm ao redor.   Para fazer isso, você precisa usar `\left` e `\right`,
+* "Delimitadores", como parênteses ou chaves, podem se redimensionar automaticamente para se adaptar ao que eles têm em volta.   Para fazer isso, você precisa usar `\left` e `\right`,
 como
 ```
 \left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}
 ```
-será renderizado como
+e será renderizado assim
 \[
 \left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}
 \]
-   + Para usar chaves como delimitadores, anteceda-os com barras como `\{` e `\}` para $\{$ e $\}$.
+   + Para usar chaves como delimitadores, anteceda-as com barras como `\{` e `\}` para $\{$ e $\}$.
 * Múltiplas equações, com seus sinais iguais alinhados, podem ser criadas
 usando `eqnarray`, da seguinte forma:
 ```
@@ -559,7 +558,7 @@ Y & \sim & \chi^2_{n-p}\\
 R & \equiv & X/Y \sim t_{n-p}
 \end{eqnarray}
 \]
-Observe que `&` envolve o que se passa no meio em cada linha e cada linha (exceto a última) é encerrada com `\\`. O lado esquerdo ou direito da equação pode estar em branco que o espaço será feito:
+Observe que `&` envolve o meio de cada linha e cada uma delas (exceto a última) é encerrada com `\\`. Os lados esquerdo ou direito da equação podem estar em branco e o espaço será gerado:
 ```
 \[
 \begin{eqnarray}
@@ -578,27 +577,27 @@ P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\
 \end{eqnarray}
 \]
 
-(Resumindamente `LaTeX`, `\begin{eqnarray}` entra automaticamente no modo matemático, mas o
-R Markdown precisa de um empurrãozinho.)
+(No `LaTeX`, o comando `\begin{eqnarray}` entra automaticamente no modo matemático, mas no
+R Markdown precisa-se de um empurrãozinho.)
 
-### Traduzindo Matemática para `LaTeX`
+### Traduzindo matemática para o `LaTeX`
 
 O `LaTeX` é projetado para que cada parte de uma expressão matemática tenha uma
-relação razoavelmente <-- direta ao que você escreve. Ainda assim, ele pode ser um
-um pouco intimidador no início. O que muitas pessoas acham útil é começar com
+relação próxima ao que você escreve. Ainda assim, de início, ele pode ser um
+um pouco intimidador. O que muitos acham interessante é começar 
 alguma página com código matemático impresso ou manuscrito e depois traduzi-la,
-linha por linha, no `LaTeX`, processando para ver se ele saiu
-direito (e, caso contrário, entender onde consertar coisas). Se você precisa fazer expressões matemáticas para um
+linha a linha, no `LaTeX`, processando para ver se ele saiu
+direito (e, caso contrário, entender onde consertar). Se você precisa fazer expressões matemáticas para um
 trabalho, pode ser uma boa ideia escrever as contas à mão e depois aproveitá-lo 
-no `LaTeX`, se a aula o exige (como este), ou não.
+no `LaTeX`, se a aula o exige (como esta), ou não.
 Eventualmente, com a prática, a tradução se tornará fluida e automática.
 Algumas pessoas inovam ainda a matemática escrevendo no `LaTeX`.
 
-### `LaTeX` não verifica a correção
+### `LaTeX` não verifica a corretude
 
-`LaTeX` não verifica se sua notação matemática está _certa_; ele apenas verifica se
-descobre o que você está tentando dizer, bem o suficiente para digitar e melhorá-lo.
-Assim, por exemplo, não tem nenhum problema com o seguinte:
+`LaTeX` não verifica se sua notação matemática está _certa_; ele apenas tenta
+descobrir o que você está tentando dizer, bem o suficiente para re-digitar e melhorá-lo.
+Assim, por exemplo, não há nenhum problema com o seguinte código:
 
 \[
 \begin{eqnarray}
@@ -611,12 +610,12 @@ n^2 -1 & = & n^2\\
 \]
 
 (Existem programas de computador para matemática simbólica que, de fato,
-verificam se sua operação matemática está correta. Pelo menos se você estiver trabalhando com a ciência da Matemática,
+verificam se sua operação matemática está correta. Pelo menos se você estiver trabalhando na subárea da Matemática,
 a qual eles são projetados para lidar. Até onde eu sei, ninguém realmente os combinou com `LaTeX`.)
 
-### Um pouco mais de conteúdo avançado no modo matemáticp: Novos Comandos
+### Um pouco mais de conteúdo avançado no modo matemático: Novos Comandos
 
-Uma das coisas que você pode fazer no `LaTeX` é criar seus próprios comandos.
+Uma das coisas que você pode fazer no `LaTeX` é criar seus próprios comandos (atalhos).
 Isso é útil se você se encontrar escrevendo a mesma expressão complicada
 repetidamente, ou, alternativamente, se você quiser ter certeza de que o mesmo
 símbolo sempre será usado para a mesma ocasião. Por exemplo, em algumas áreas da 
@@ -627,13 +626,13 @@ em outros $\psi$. Se você quiser, pode fazer algo como
 \novocomando{\MeuParametro}{\theta}
 \]
 ```
-e então, em bits mais recentes de modo matemático <- ???, você pode escrever `\MeuParametro` e o `LaTeX` irá
+e então no modo matemático você pode escrever `\MeuParametro` e o `LaTeX` irá
 traduzir isto para `\theta`. Se você decidir mais tarde que o seu parâmetro
-seja `\beta`, ou mesmo `\mathrm{fred}`, basta alterar essa definição inicial
-do novo comando, em vez de ter que usar cada `\theta`. <<<<---- ???
+vire `\beta`, ou mesmo `\mathrm{fred}`, basta alterar essa definição inicial
+do novo comando, em vez de ter que usar cada `\theta` outra vez.
 
 Novos comandos também podem receber um ou mais argumentos. Aqui está um comando útil
-para escrever perspectivas <--- ???:
+para probabilidade:
 ```
 \[
 \novocomando{\Expect}[1]{\mathbb{E}\left[ #1 \right]}
@@ -647,21 +646,21 @@ E aqui está um comando para escrever covariâncias:
 ```
 
 Definir comandos como este não só te poupa de digitar muito, como torna mais fácil
-gerir mudanças; também torna seu texto em modo matemático mais fácil para você e para os outros.
+gerir mudanças; também torna seu texto mais fácil para você e para os outros.
 Isto é como usar nomes compreensíveis para variáveis e funções em seus programas (da mesma forma que é
-preterívei criar funções em vez de codificar longas linhas de comandos.
+preterívei criar funções em vez de codificar longas linhas de comandos).
 
 
 Também é possível definir novos nomes às funções que funcionem como `\log`,
-novos operadores matemáticos, diagramas de desenho, etc., etc., mas isso vai além do alcance dessas notas.
+novos operadores matemáticos, diagramas de desenho, etc., etc., mas isso vai além do proposto nessas notas.
 
 ### Instalando `LaTeX`
 
 Se você exportar seu documento R Markdown para HTML, não precisará instalar
-`LaTeX` em seu computador. Isso acontece porque o HTML inclui instruções para
-navegadores, que falam (por assim dizer) "Envie os bits de aparência engraçada com todos os
-slashes para [mathjax.org](http://www.mathjax.org), e ele irá enviar você de volta
-belas imagens de equações". O site realmente executa o `LaTeX`. <--- ???
+`LaTeX` em seu computador. Sim, porque o HTML inclui instruções para
+navegadores, que então falam (por assim dizer) "Envie esses textos de aparência engraçada para 
+[mathjax.org](http://www.mathjax.org), e ele te enviará de volta
+belas imagens de equações". O site realmente executa o `LaTeX`.
 
 Já se você quer produzir um PDF, aí, sim, você precisa ter o `LaTeX` instalado no seu
 computador. A instalação depende da máquina. Para Macs, recomendo usar o pacote `MacTeX`, disponível em
