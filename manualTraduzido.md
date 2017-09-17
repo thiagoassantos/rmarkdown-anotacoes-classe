@@ -657,8 +657,8 @@ novos operadores matemáticos, diagramas de desenho, etc., etc., mas isso vai al
 ### Instalando `LaTeX`
 
 Se você exportar seu documento R Markdown para HTML, não precisará instalar
-`LaTeX` em seu computador. Sim, porque o HTML inclui instruções para
-navegadores, que então falam (por assim dizer) "Envie esses textos de aparência engraçada para 
+`LaTeX` em seu computador. Sim, porque o HTML instrui os navegadores
+falando (por assim dizer) "Envie esses textos de aparência engraçada para 
 [mathjax.org](http://www.mathjax.org), e ele te enviará de volta
 belas imagens de equações". O site realmente executa o `LaTeX`.
 
@@ -666,41 +666,41 @@ Já se você quer produzir um PDF, aí, sim, você precisa ter o `LaTeX` instala
 computador. A instalação depende da máquina. Para Macs, recomendo usar o pacote `MacTeX`, disponível em
 https://tug.org/mactex/mactex-download.html. Para outros sistemas, veja os links de http://www.tug.org/begin.html.
 
-# Juntando tudo: redigindo seu relatório em R Markdown
+# Juntando tudo (Resumão): redigindo seu relatório em R Markdown
 
 Você:
 * instala o pacote `rmarkdown` e todas as suas dependências.
 * instala o `LaTeX`, se precisa produzir um PDF.
-* instala e configurou seu editor de texto favorito.
+* instala e configura seu editor de texto favorito.
 * cria um novo documento.
     + atribui-lhe um título, um autor e uma data.
 * usa cabeçalhos para dividi-lo em seções específicas, seções entituladas e, possivelmente, sub-seções.
-    + Segue im padrão comum: "Introdução", "Dados e Questões de Pesquisa", "Análise", "Resultados", "Conclusão".
+    + Segue um padrão comum: "Introdução", "Dados e Questões de Pesquisa", "Análise", "Resultados", "Conclusão".
     + Outro padrão comum: "Problema 1", "Problema 2", ..., "Créditos extra".
 * Você escreve texto.
-* Quando precisar, pode inserir notação matemática no texto ou mesmo elaboradas apresentações do tipo.
+* Quando precisar, pode inserir notação matemática no texto ou mesmo elaboradas visualizações do tipo.
 * Se precisar também, poderá inserir código em seu documento.
     + O código é executado (conforme necessário) quando você processa o documento.
     + Figuras, tabelas e outros resultados são inseridos automaticamente no documento e acompanham as alterações em seu código.
 * De vez em quando, tente renderizar seu documento.
-    + Quando (pensar que você) termina uma seção, aproveite para já criar outra.
+    + Quando terminar uma seção (ou só de pensar em fazê-lo), aproveite para fazer isso.
     + Outra boa opção é se você fez alterações não triviais no código ou no texto.
 * Seu documento foi processado com sucesso ou não.
-    + Se o fez, e você gostou dos resultados, comemore alegremente e vá para sua próxima tarefa.
-    + Se processou mas você não gostou dos resultados, pense sobre e tente corrigi-lo.
-    + Se não processou, o R lhe dirá onde ele parou e, então, tente depurar de lá.
+    + Se foi e você gostou dos resultados, comemore alegremente e vá para sua próxima tarefa.
+    + Se processou mas você não gostou dos resultados, pense sobre isso e tente corrigi-lo.
+    + Se não processou, o R lhe dirá onde ele parou e, então, tente depurar (investigar).
 
 # Solução de problemas/coisas a se evitar
 
 * Não ligue para `View` ou `help` no seu documento; estes são comandos interativos que não funcionam bem em scripts.
 * "Funcionou no console do R, mas não gerou o documento": Quase certamente, você fez alguma coisa diferente *antes* do pedaço do código que está dando problema. Limpe seu espaço de trabalho no console e re-execute.
-    + O R Studio mantém dois ambientes, ou espaços de trabalho, que ele usa para avaliar as expressões do R, a função de busca ou os nomes das variáveis, etc. Um deles é o ambiente global "usual" do console, que é compilado cumulativamente desde o início da sessão (a menos que você manipule deliberadamente, não faça isso a menos que você saiba o que está fazendo.) Toda vez que você usar o knit, no entanto, ele re-executa seu código no espaço de trabalho limpo, como se você tivesse começado R do zero. Isso significa que o código no knit faz o que você diz, e apenas isso. Se o seu código foi renderizado no knit, ele deve funcionar em qualquer computador; Fazer algo para rodar no console e que você não pode reproduzir é tentar a sorte.
-* "Funciona quando eu rodo (abre a aplicação), mas não gera o documento": basicamente é o mesmo problema do "funcionou no console...". <-----
-* Evite `attach` no console e no seu arquivo; Usá-lo é uma receita para criar erros difíceis de encontrar. Você ainda pode encurtar expressões usando `with`em vez disso.
-* Você precisa do LaTeX para criar PDFs. Se você está tendo problemas ao fazer isso, tente mudar o formato de saída para HTML.
-    + Tente corrigir a instalação do LaTeX mais tarde, quando você não tiver pressão de tempo; isto é realmente útil.
-    + O LaTeX irá reclamar se você tentar imprimir coisas realmente enormes. Erros sobre "out of stack" ("fora da pilha"), ou "pandoc 43", são muitas vezes causados por isso. Não imprima coisas enormes. (Supressão de avisos e outras mensagens podem ajudar.)
-* Quando você precisa carregar arquivos de dados ou usar o código de outra pessoa, use URLs absolutas, ao invés de criar cópias locais e carregá-las em seu disco.
+    + O R Studio mantém dois ambientes, ou espaços de trabalho, que ele usa para avaliar as expressões do R, a função de busca ou os nomes das variáveis, etc. Um deles é o ambiente global "usual" do console, que é compilado cumulativamente desde o início da sessão (a menos que você manipule deliberadamente; não faça isso a menos que você saiba o que está fazendo). Toda vez que você usar o knitr, no entanto, ele re-executa seu código num espaço de trabalho limpo, como se você tivesse começado R do zero. Isso significa que o código no knitr faz o que você diz, e apenas isso. Se o seu código foi renderizado no knit, ele deve funcionar em qualquer computador; fazer algo para rodar no console, e que você não pode reproduzir, é tentar a sorte.
+* "Funciona quando eu rodo (abre a aplicação), mas não gera o documento": basicamente é o mesmo problema anterior.
+* Evite o `attach` no console e no seu arquivo; usá-lo é uma receita para criar erros difíceis de se encontrar. Você ainda pode encurtar expressões usando `with` em vez disso.
+* Você precisa do LaTeX para gerar PDFs com as notações matemáticas. Se você está tendo problemas ao fazer isso, tente mudar o formato de saída para HTML.
+    + Tente corrigir a instalação do LaTeX mais tarde, quando você tiver tempo; isto realmente poderá demandar tempo.
+    + O LaTeX irá reclamar se você tentar imprimir coisas realmente enormes. Erros como "out of stack" ("fora da pilha"), ou "pandoc 43", são muitas vezes causados por isso. Não imprima coisas enormes. (Supressão de avisos e outras mensagens podem ajudar.)
+* Quando você precisa carregar arquivos de dados ou usar o código de outra pessoa, use URLs absolutas (direto para a fonte), ao invés de criar cópias locais e carregá-las em seu disco.
 
 # Leitura adicional
 
