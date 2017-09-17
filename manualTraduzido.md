@@ -357,7 +357,7 @@ plot(Hwt ~ Bwt, data=cats, log="xy", xlab="Body weight (kg)",
 
 ### Tabelas
 
-A impressão padrão de matrizes, tabelas, etc., do R Markdown, sinceramente, é
+A impressão padrão de matrizes, tabelas e relacionados do R Markdown, sinceramente, é
 feia. O pacote `knitr` contém um comando muito básico, `kable`, que irá
 formatar uma matriz ou quadro de dados mais legalmente para exibição.
 
@@ -370,7 +370,7 @@ coefficients(summary(lm(Hwt ~ Bwt, data=cats)))
 com
 
 ```{r}
-library(knitr) # Only need this the first time!
+library(knitr) # Só precisa disso uma vez!
 kable(coefficients(summary(lm(Hwt ~ Bwt, data=cats))))
 ```
 
@@ -379,25 +379,25 @@ este não é o momento de discutir dígitos significativos, ou a função `signi
 
 ### "Caching" de pedaços de código (re-executando somente com modificações)
 
-Por padrão, o R Markdown executará de novo seu código toda vez que você renderizar o seu
-documento. Se algum código do seu código for lento, isso pode aumentar ainda mais o tempo de renderizaCCCAAAO.
-Você pode, no entanto, pedir ao R Markdown para monitorar se um pedaço de código foi modificado e apenas re-executar este pedaço. Isso é chamado **caching** do pedaço de código.
+Por padrão, o R Markdown executa seu código de novo toda vez que você renderiza o
+documento. Se algum trecho do seu código for lento, isso pode aumentar ainda mais o tempo de renderização.
+Você pode, no entanto, pedir ao R Markdown para monitorar se um pedaço de código foi modificado e apenas re-executar este pedaço. Isso é chamado **caching** de pedaço de código.
 
 ```{r, cache=TRUE}
 lm(Hwt ~ Bwt, data=cats)
 ```
 A questão é que um pedaço de código que não se alterou pode invocar
-resultados de pedaços anteriores, trechos modificados, e então nós _precisarIIIamos re-executar os
-pedaços desatualizados. Existem opções para informar manualmente o R Markdown que "este
-trecho depende desse fragmento anterior", mas geralmente é mais fácil deixar ele mesmo cuidar disso, definindo a opção `autodep = TRUE`.
+resultados de pedaços anteriores, trechos modificados e logo nós precisaríamos re-executar os
+pedaços desatualizados. Existem opções para informar manualmente ao R Markdown que "este
+trecho depende de um fragmento anterior", mas geralmente é mais fácil deixar ele mesmo cuidar disso, definindo a opção `autodep=TRUE`.
 
 1. Se você carregar um pacote com os comandos `library()` ou `require()`, o R
-   Markdown não é inteligente o suficiente para verificar se o pacote mudou
-   (ou realmente foi instalado, se você sem ele instalado). Então isso não vai
-   lanCCCar uma re-execução automática de um pedaço de código em cache.
+   Markdown não será inteligente o suficiente para verificar se o pacote mudou
+   (ou realmente foi instalado, se você não o tiver instalado). Então, isso não vai
+   lançar uma re-execução automática de um pedaço de código em cache.
 2. Para forçar manualmente a re-execução de todos os pedaços de código, o mais fácil a se fazer é
    excluir o diretório que o R Markdown cria (algo como 
-   _filename_`_cache`) para armazenar o estado de todos os pedaços de código.
+   _nome_do_arquivo_`_cache`) para armazenar o estado de todos os pedaços de código.
    
 ### Configuração de padrões para todos os pedaços de código
 
@@ -410,26 +410,26 @@ library(knitr)
 # Opções do knitr para gerar código no relatório
 # - Não imprime código
 # - Salva os resultados de modo que os blocos de código não sejam novamente executados, a menos que o código mude (ele fica no cache),
-# _ou_ um bloco relevante de código anterior seja modificado (autodep), mas não o re-executa se o
+# _ou_ um bloco relevante de código anterior seja modificado (autodep), mas não o re-executa se a
 # única coisa que mudou forem comentários (cache.comments)
-# - Não obstrua a saída R com mensagens ou avisos (mensagem, aviso)
+# - Não obstrua a saída do R com mensagens ou avisos (mensagem, aviso)
    # Isto _deixará_ mensagens de erro aparecendo no relatório gerado
 opts_chunk$set(echo=FALSE,
                cache=TRUE, autodep=TRUE, cache.comments=FALSE,
                message=FALSE, warning=FALSE)
 ```
 
-Assim, definimos algumas opções adicionais além das que eu discuti, como não
-re-executar um pedaço se somente comentários foram mudados (`cache.comments =
+Assim, temos algumas opções adicionais além das que eu discuti, como não
+re-executar um pedaço somente se os comentários foram mudados (`cache.comments =
 FALSE`), deixando de receber mensagens e avisos. (Eu só recomendaria
 suprimir avisos se você tiver certeza de que seu código está ok.) Eu, normalmente,
-também atribuiria a opção `include = FALSE` a este ponto de configuração.
+também usaria a opção `include = FALSE` a este ponto de configuração.
 
 Você pode sobrescrever estes padrões definindo opções para trechos específicos.
 
 ### Mais Opções
 
-Veja em [http://yihui.name/knitr/options/] para obter uma listagem completa das opções possíveis.
+Veja em [http://yihui.name/knitr/options/], para obter uma listagem completa das opções possíveis.
 
 
 # Matemática no R Markdown
@@ -437,17 +437,17 @@ Veja em [http://yihui.name/knitr/options/] para obter uma listagem completa das 
 Como esta é uma aula de Estatística, é importante que você seja capaz de escrever expressões matemáticas,
 muitas vezes longas séries delas. O R Markdown oferece a sintaxe para
 exibir fórmulas e derivações matemáticas complexas, e exibi-las _muito_ lindamente. Assim como o código,
-a notação matemática pode ser disposta inline ou como as **exibições** (destacadas) propriamente ditas.
+a notação matemática pode ser disposta inline ou como **exibições** (destacadas).
 
 O código de matemática inline é marcado com um par de cifrões
-(`$`), como em $\pi r^2$ or $e^{i\pi}$.
+(`$`), como em $\pi r^2$ ou $e^{i\pi}$.
 
 ```
 O código de matemática inline é marcado com um par de cifrões
-(`$`), como em $\pi r^2$ or $e^{i\pi}$.
+(`$`), como em $\pi r^2$ ou $e^{i\pi}$.
 ```
 
-Exibições matemáticas são marcadas com `\[` e `\]`, como em
+Expressões matemáticas são marcadas com `\[` e `\]`, como em
 \[
 e^{i \pi} = -1
 \]
@@ -461,19 +461,19 @@ e^{i \pi} = -1
 
 Uma vez que seu texto está em modo matemático, o R Markdown faz o trabalho de
 converter o trecho matemático para um programa diferente, chamado LaTeX[^latex].
-Ele é o sistema mais comum de composição de documentos matemáticos
-nas ciências, e o tem sido há décadas. Ele é extremamente poderoso,
+Este é o sistema mais comum de composição de documentos matemáticos
+nas ciências e tem sido usado há décadas. Ele é extremamente poderoso,
 estável, disponível basicamente a todas as plataformas e completamente gratuito. 
 Mas ele também pode se tornar, em seu poder total, um tanto complicado. Felizmente, para nossos propósitos, 
-é bastante simples.
+é bem simples.
 
 
-### Elementos do Modo Matemático
+### Elementos do modo matemático
 
 * A maioria das letras será renderizada em itálico (compare: a vs. `a` vs. $a$; apenas
-o último está em modo matemático). O espaçamento entre as letras também segue as convenções da matemática, então não a trate como só outra maneira de obter itálico. (Compare _speed_, em itálico simples, com $speed$, no modo matemático.)
-* Letras gregas podem ser acessadas com a barra na frente de seus nomes, como `\alpha` para $\alpha$. Fazer a primeira letra em maiúscula te dá a letra maiúscula, como em `\Gamma` para $\Gamma$ vs. `\gamma` para $\gamma$. (As maiúsculas alpha e beta são as mesmas que as Romanas A e B, portanto, não precisa de comando especial para elas.)
-* Existem outros comandos "cortados" (ou "escapados") para outros símbolos matemáticos:
+o último está em modo matemático). A composição das letras também segue as convenções da matemática, então, por exemplo, não as trate como só outra maneira de obter itálico. (Compare _velocidade_, em itálico simples, com $velocidade$, em notação matemática.)
+* Letras gregas podem ser acessadas com a barra na frente de seus nomes, como `\alpha` para $\alpha$. Fazer a primeira letra em maiúscula te dá a letra maiúscula, como em `\Gamma` para $\Gamma$ vs. `\gamma` para $\gamma$. (As maiúsculas alpha e beta são as mesmas que as latinas A e B, portanto, não se precisa de comando especial para elas.)
+* Existem outros para símbolos matemáticos de operações (em inglês):
     + `\times` para $\times$
     + `\cdot` para $\cdot$
     + `\leq` e `\geq` para $\leq$ and $\geq$
@@ -481,12 +481,12 @@ o último está em modo matemático). O espaçamento entre as letras também seg
     + `\leftarrow`, `\rightarrow`, `\Leftarrow`, `\Rightarrow` para $\leftarrow$, $\rightarrow$, $\Leftarrow$, $\Rightarrow$
     + `\approx`, `\sim`, `\equiv` for $\approx$, $\sim$, $\equiv$
     + Veja, também, http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html para uma
-lista completa dos símbolos.  (http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf lista de _todos_ os símbolos disponíveis no `LaTeX`, incluindo muitos caracteres especiais não-matemáticos)
+lista completa dos símbolos.  (http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf lista de _todos_ os símbolos disponíveis no `LaTeX`, incluindo muitos caracteres especiais não-matemáticos).
 * Subscritos vêm depois de um caractere underscore, `_`, e sobrescritos vêm depois de um circunflexo, `^`, como `\beta_1` para $\beta_1$ ou `a^2` para $a^2$.
 * As chaves são usadas para criar agrupamentos que devem ser mantidos em conjunto, como, por exemplo, `a_{ij}` para $a_{ij}$ (vs. `a_ij` para $a_ij$).
-* Se você precisa de algo em fonte normal (romana) no modo matemático, use `\mathrm`, como `t_{\mathrm{in}}^2` para $t_{\mathrm{in}}^2$.
-* Se você quiser algo em uma fonte de estrutura de tópicos ("quadro-negro" ou "negrito") <- ??? use `\mathbb`, as `\mathbb{R}` para $\mathbb{R}$.
-* Para texto negrito, use `\mathbf`, como
+* Se você precisa de fonte normal (romana) no modo matemático, use `\mathrm`, como `t_{\mathrm{in}}^2` para $t_{\mathrm{in}}^2$.
+* Se você quiser uma fonte estilo "quadro-negro" ou "cursiva" (ex.: conjuntos numéricos), use `\mathbb`, como `\mathbb{R}` para $\mathbb{R}$.
+* Para texto em negrito, use `\mathbf`, como
 ```
 (\mathbf{x}^T\mathbf{x})^{-1}\mathbf{x}^T\mathbf{y}
 ```
