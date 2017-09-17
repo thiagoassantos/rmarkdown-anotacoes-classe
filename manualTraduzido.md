@@ -235,7 +235,7 @@ entre parênteses](http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd).
 
 ### Imagens
 
-As imagens começam com um ponto de exclamação e depois vem o texto a ser usado
+As imagens começam com um ponto de exclamação e, depois, vem o texto a ser usado
 caso a imagem não possa ser carregada. Em seguida, o endereço do arquivo da imagem
 (no mesmo diretório do seu documento) ou uma URL direto para ela (remotamente). Aqui estão dois
 exemplos, um para uma imagem no diretório e outro para uma URL externa.
@@ -333,7 +333,7 @@ que são gerados quando o documento é processado.
 
 ### Alterando tamanhos de imagem e alinhamentos
 
-Há muitas opções para ajustar a colocação das figuras que o
+Há muitas opções para se ajustar as figuras que o
 R produz. `fig.align` controla o **alinhamento** horizontal (esquerda, direita,
 ou centro).
 
@@ -357,7 +357,7 @@ plot(Hwt ~ Bwt, data=cats, log="xy", xlab="Body weight (kg)",
 
 ### Tabelas
 
-A impressão padrão de matrizes, tabelas, etc., do R Markdown é, francamente,
+A impressão padrão de matrizes, tabelas, etc., do R Markdown, sinceramente, é
 feia. O pacote `knitr` contém um comando muito básico, `kable`, que irá
 formatar uma matriz ou quadro de dados mais legalmente para exibição.
 
@@ -395,23 +395,22 @@ trecho depende desse fragmento anterior", mas geralmente é mais fácil deixar e
    Markdown não é inteligente o suficiente para verificar se o pacote mudou
    (ou realmente foi instalado, se você sem ele instalado). Então isso não vai
    lanCCCar uma re-execução automática de um pedaço de código em cache.
-2. Para forçar manualmente a re-execução de todos os pedaços de código, o mais fácil de fazer é
+2. Para forçar manualmente a re-execução de todos os pedaços de código, o mais fácil a se fazer é
    excluir o diretório que o R Markdown cria (algo como 
    _filename_`_cache`) para armazenar o estado de todos os pedaços de código.
    
 ### Configuração de padrões para todos os pedaços de código
 
-Você pode dizer para o R definir alguns padrões para se aplicar a todos os pedaços onde você não faz
-especificamente sobrecarregá-los. Aqui estão os que eu geralmente uso:   
+Você pode dizer para o R aplicar alguns padrões a todos os pedaços. Aqui estão os que eu geralmente uso:   
 
 ```{r, eval=FALSE}
 # Precisamos do pacote knitr para definir opções de trechos de código
 library(knitr)
 
-# Seta opções do knitr para gerar código no relatório
+# Opções do knitr para gerar código no relatório
 # - Não imprime código
-# - Salva os resultados para que os blocos de código não sejam executados novamente, a menos que o código mude (cache),
-# _ou_ um bloco de código anterior relevante seja modificado (autodep), mas não o re-executa se o
+# - Salva os resultados de modo que os blocos de código não sejam novamente executados, a menos que o código mude (ele fica no cache),
+# _ou_ um bloco relevante de código anterior seja modificado (autodep), mas não o re-executa se o
 # única coisa que mudou forem comentários (cache.comments)
 # - Não obstrua a saída R com mensagens ou avisos (mensagem, aviso)
    # Isto _deixará_ mensagens de erro aparecendo no relatório gerado
@@ -420,11 +419,11 @@ opts_chunk$set(echo=FALSE,
                message=FALSE, warning=FALSE)
 ```
 
-Assim definimos algumas opções adicionais além das que eu discuti, como não
-re-executar um pedaço se apenas os comentários mudaram (`cache.comments =
-FALSE`), e deixando de receber mensagens e avisos. (Eu só recomendaria
-suprimir avisos se você tem a certeza de que seu código está ok.) Eu, normalmente,
-também atribuiria a este ponto de configuração a opção `include = FALSE`.
+Assim, definimos algumas opções adicionais além das que eu discuti, como não
+re-executar um pedaço se somente comentários foram mudados (`cache.comments =
+FALSE`), deixando de receber mensagens e avisos. (Eu só recomendaria
+suprimir avisos se você tiver certeza de que seu código está ok.) Eu, normalmente,
+também atribuiria a opção `include = FALSE` a este ponto de configuração.
 
 Você pode sobrescrever estes padrões definindo opções para trechos específicos.
 
