@@ -1,5 +1,5 @@
 ---
-title: "Usando R Markdown para aula de Estatística da UNIRIO"
+title: "Uso R Markdown para aula de Estatística da UNIRIO"
 author: "Thiago de Araújo & Steven Dutt Ross"
 output: 
    html_document:
@@ -125,20 +125,15 @@ em branco ao final da linha.
 
 ### Cabeçalhos
 
-O caractere `#` no início de uma linha significa que o resto da linha será interpretado
-como um cabeçalho de seção. O número de `#`s no começo da linha indica, respectivamente,
-o número da seção, sub-seção, sub-sub-seção, etc. do documento. Por exemplo, o `Formatação Básica em R Markdown` acima é precedido por um único `#` mas o `Cabeçalhos` do começo deste
-parágrafo foi precedido por `###`. Não separe cabeçalhos por quebra de linhas.
+O caractere `#` no início de uma linha significa que o resto da linha será interpretado como um cabeçalho de seção. O número de `#`s no começo da linha indica, respectivamente, o número da seção, sub-seção, sub-sub-seção, etc. do documento. Por exemplo, o `Formatação Básica em R Markdown` acima é precedido por um único `#` mas o `Cabeçalhos` do começo deste parágrafo foi precedido por `###`. Não separe cabeçalhos por quebra de linhas.
 
 ### Itálico, Negrito
 
-Para deixar um texto em _itálico_ ele deve ficar dentro de um _único conjunto de underscores_ ou
-*asteriscos*. Para usar **negrito**, coloque o texto dentro de um __duplo conjunto de underscores__ 
+Para deixar um texto em _itálico_ ele deve ficar dentro de um _único conjunto de underscores_ ou *asteriscos*. Para usar **negrito**, coloque o texto dentro de um __duplo conjunto de underscores__ 
 ou **asteriscos**.
 
 ```
-Para deixar um texto em _itálico_ ele deve ficar dentro de um _único conjunto de underscores_ ou
-*asteriscos*. Para usar **negrito**, coloque o texto dentro de um __duplo conjunto de underscores__ 
+Para deixar um texto em _itálico_ ele deve ficar dentro de um _único conjunto de underscores_ ou *asteriscos*. Para usar **negrito**, coloque o texto dentro de um __duplo conjunto de underscores__ 
 ou **asteriscos**.
 ```
 
@@ -154,9 +149,7 @@ Para citar um texto, o parágrafo deve ser iniciado por `>` (sinal maior que):
 
 ### Fonte de console
 
-Para imprimir um texto com fonte de largura fixa (estilo cOOOdigo-fonte), deve-se iniciAAA-lo e termina-lo com
-um sinal de crase, sem quebras de linha no texto. (Por exemplo, `R` vs. R.) 
-Se você quiser exibir várias linhas como um prOOOprio texto, insira três crases no comeCCCO e ao final do texto:
+Para imprimir um texto com fonte de largura fixa (estilo cOOOdigo-fonte), deve-se iniciAAA-lo e termina-lo com um sinal de crase, sem quebras de linha no texto. (Por exemplo, `R` vs. R.) Se você quiser exibir várias linhas como um prOOOprio texto, insira três crases no comeCCCO e ao final do texto:
 
 ```
 O texto a ser impresso em uma fonte de largura fixa, inicia e termina com
@@ -181,8 +174,7 @@ um sinal de crase, sem quebras de linha no texto. (Por exemplo, `R` vs. R.)
 
 ### Título, Autor, Data, Formato de saída, Índice
 
-Você pode especificar conteUUUdos como título, autor e data no **cabeçalho** do seu
-arquivo R Markdown (atributos em inglEEEs). Isso vai no início do arquivo, precedido e seguido por três hIIIfens. 
+Você pode especificar conteUUUdos como título, autor e data no **cabeçalho** do seu arquivo R Markdown (atributos em inglEEEs). Isso vai no início do arquivo, precedido e seguido por três hIIIfens. 
 Assim, o início deste arquivo ficarAAA como:
 
 ```
@@ -198,8 +190,8 @@ HTML (padrão), PDF ou outro formato. Para que ele seja transformado em PDF, por
 
 ```
 ---
-title: Usando R Markdown para anotações de aula
-author: CRS
+title: Uso R Markdown para aula de Estatística da UNIRIO
+author: Carlos
 date: Primeira versAAAo 7 janeiro de 2016, revisado em 22 agosto de 2016
 output: pdf_document
 ---
@@ -208,7 +200,7 @@ VocEEE pode adicionar uma tabela de conteúdos como uma opção para o tipo de s
 
 ```
 ---
-title: Usando R Markdown para anotações de aula
+title: Uso R Markdown para aula de Estatística da UNIRIO
 author: CRS
 date: Primeira versAAAo 7 janeiro de 2016, revisado em 22 agosto de 2016
 output:
@@ -299,7 +291,6 @@ Os pedaços de código (exceto código inline) podem ter um monte de **opções*
 
 Outra opção executa o código, mas não inclui nem o texto do código nem a saída.
  ` ```{r, include=FALSE} `
-  
 Isso pode parecer bobo, mas pode ser útil para pedaços de código que *configuram como carregar arquivos de dados*, ou estimativas do modelo inicial, etc.
 
 Outra opção imprime o código no documento mas não o executa:
@@ -326,8 +317,6 @@ plot(Hwt ~ Bwt, data=cats, xlab="Body weight (kg)",
 plot(Hwt ~ Bwt, data=cats, log="xy", xlab="Body weight (kg)",
      ylab="Heart weight (g)", sub="Logarithmic scale")
 ```
-
-
 
 ### Tabelas
 
@@ -409,9 +398,7 @@ Veja em [http://yihui.name/knitr/options/] para obter uma listagem completa das 
 
 # Matemática no R Markdown
 
-Como esta é uma aula de Estatística, é importante que você seja capaz de escrever expressões matemáticas,
-muitas vezes longas séries delas. O R Markdown oferece a sintaxe para
-tornar fórmulas e derivações matemáticas complexas, e exibi-las _muito_ lindamente. Assim como o código,
+Como esta é uma aula de Estatística, é importante que você seja capaz de escrever expressões matemáticas, muitas vezes longas séries delas. O R Markdown oferece a sintaxe para tornar fórmulas e derivações matemáticas complexas, e exibi-las _muito_ lindamente. Assim como o código,
 a matemática pode ser inline ou como (**apresentações**). <- ???
 
 O código de matemática inline é marcado com um par de dólares
@@ -711,11 +698,12 @@ the computer scientist Leslie Lamport extended `TeX` in ways that made it
 rather more user-friendly, and called the result `LaTeX` (pronounced
 "la-tech").
 
-### Acknowledgments
+#### Biografia dos autores:
 
-Thanks to Prof. [Howard
-Seltman](http://www.stat.cmu.edu/~hseltman/AboutMe.html) for suggestions; to
-Dr. [Uma Ravat](http://www.math.uiuc.edu/~umaravat/) for showing me the trick
-for re-sizing images; and to an old post by Prof. [Jenny
-Bryan](http://www.stat.ubc.ca/~jenny/) on [how to include verbatim R
-chunks](http://rmarkdown.rstudio.com/articles_verbatim.html).
+**Steven Dutt-Ross**<br>
+<br>
+[Steven Dutt-Ross](https://stevendutt.shinyapps.io/pagina/) é um entusiasta do R, professor e pesquisador do Departamento de Métodos Quantitativos da UNIRIO - DMQ/UNIRIO<br>
+<br>
+**Thiago de Araujo Severo dos Santos**<br>
+<br>
+[Thiago de Araujo Severo dos Santos](https://github.com/thiagoassantos/) é estudante de Sistemas de Informação da UNIRIO e bolsista do projeto de extensão [DATAUNIRIO](https://dataunirio.github.io/).
