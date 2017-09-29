@@ -10,6 +10,7 @@ output:
      code_folding: hide
 ---
 
+<!-- 
 * Overview
 * *Mark Up*, Markdown
 * Renderização e Edição
@@ -30,7 +31,7 @@ output:
     * Imagens
     * Includindo Código
     * Trechos de Código e seus Resultados
-    * Código incorporado <!-- MENCIONAR O INLINE -->
+    * Código incorporado 
     * Visto, mas não ouvido
     * Nomeando pedaços de código
     * Alterando Tamanho de Imagens e Alinhamentos
@@ -39,47 +40,44 @@ output:
     * Configuração de Padrões para todos os pedações de código
     * Mais opções
 * Matemática no R Markdown
-    * Elementos da Matemática <!-- Elements of Math Mode -->
+    * Elementos da Matemática <!-- Elements of Math Mode
     * Matemática para ```LaTeX```
     * ```LaTeX``` não verifica corretude
     * Mais recursos avançados de Matemática: Novos Comandos
     * Instalando ```LaTeX```
 * Juntando tudo: Escrevendo seu Relatório em R Markdown
-* Troubleshooting/O que evitar <!-- TRADUZIR TROUBLESHOOTING -->
+* Troubleshooting/O que evitar <!-- TRADUZIR TROUBLESHOOTING 
 * Leitura adicional
     * Agradecimentos
+    -->
     
 # Visão Geral
 
-R Markdown é uma maneira muito simples de escrever relatórios, além de rodar seu código em R automaticamente.
-Ele também permite que você use linguagem matemática, hiperlinks, imagens e outras formatações básicas. O objetivo deste documento é explicar, com exemplos, como usar seus recursos mais essenciais. Não é uma referência abrangente. (Para isso, veja: http://rmarkdown.rstudio.com)
+R Markdown é uma maneira muito simples de escrever relatórios, além de rodar seu código em R automaticamente.  Ele também permite que você use linguagem matemática, hiperlinks, imagens e outras formatações básicas. O objetivo deste documento é explicar, com exemplos, como usar seus recursos mais essenciais. (Para maiores informações, veja: http://rmarkdown.rstudio.com)
 
 Este guia pressupõe que você conheça, ao menos, um pouco de R.
 
 Este guia está em http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.Rmd. Por favor, veja a versão mais recente. Correções e sugestões são bem-vindas.
 
-
-
 # Mark Up, Markdown
 
-Provavelmente Você esteja acostumado a usar programas de processamento de texto, como o Microsoft Word, que empregam o princípio do "o que você vê é o que você obtém" (WYSIWYG): você deseja que algumas palavras sejam impressas em itálico e, com um clique, logo estão em itálico lá na tela. Você quer que outras palavras tenham uma fonte maior e diferente, então você apenas seleciona a fonte e seu tamanho, e assim por diante. Isso funciona bem o suficiente para <del>n00bs</del> leigos, mas não é uma base viável para um sistema de formatação de texto, porque depende de um programa específico: (a) saber o que você quer dizer e (b) implementá-lo bem. Durante várias décadas, os sistemas realmente sérios de escrita basearam-se em um princípio muito diferente, o da marcação de texto. A idéia essencial em uma **linguagem de marcação** é que ela trabalha em texto comum, além de sinais que indicam como alterar a formatação ou o significado do texto. Algumas linguagens de marcação, como o HTML (Hyper-Text Markup Language), utilizam uma sintaxe muito técnica; outras, como o chamado **Markdown**, são mais sutis. Por exemplo, as frases anteriores no Markdown se parecem com isto:
+Provavelmente Você esteja acostumado a usar programas de processamento de texto, como o *Microsoft Word*, que empregam o princípio do "o que você vê é o que você obtém" (WYSIWYG): você deseja que algumas palavras sejam impressas em itálico e, com um clique, logo estão em itálico lá na tela. Você quer que outras palavras tenham uma fonte maior e diferente, então você apenas seleciona a fonte e seu tamanho, e assim por diante. Isso funciona bem o suficiente para <del>n00bs</del> leigos, mas não é uma base viável para um sistema de formatação de texto, porque depende de um programa específico: (a) saber o que você quer dizer e (b) implementá-lo bem. Durante várias décadas, os sistemas realmente sérios de escrita basearam-se em um princípio muito diferente, o da marcação de texto. A idéia essencial em uma **linguagem de marcação** é que ela trabalha em texto comum, além de sinais que indicam como alterar a formatação ou o significado do texto. Algumas linguagens de marcação, como o HTML (Hyper-Text Markup Language), utilizam uma sintaxe muito técnica; outras, como o chamado **Markdown**, são mais sutis. Por exemplo, as frases anteriores no Markdown se parecem com isto:
 
 ```
 Durante várias décadas, os sistemas realmente sérios de escrita basearam-se em um princípio muito diferente, o da marcação de texto. A idéia essencial em uma **linguagem de marcação** é que ela trabalha em texto comum, além de sinais que indicam como alterar a formatação ou o significado do texto. Algumas linguagens de marcação, como o HTML (Hyper-Text Markup Language), utilizam uma sintaxe muito técnica; outras, como o chamado **Markdown**, são mais sutis.
 ```
-Cada linguagem de marcação é *renderizada* em um formato que inclui uma bela formatação, imagens, matemática, códigos, etc., etc., especificadas pela marcação. No caso do HTML, o programa de renderização é chamado de "web browser" (navegador web). A maioria dos computadores que interpretam o Markdown sabe como convertê-lo para HTML (visualizando o documento Markdown no navegador), PDF (visualizand o documento num leitor de PDF, como Acrobat ou outros), ou o Word (finalmente na abominação de Redmond).
+Cada linguagem de marcação é *renderizada* em um formato que inclui uma bela formatação, imagens, matemática, códigos, etc., etc., especificadas pela marcação. No caso do HTML, o programa de renderização é chamado de *"web browser"* (navegador *web*). A maioria dos computadores que interpretam o Markdown sabe como convertê-lo para HTML (visualizando o documento Markdown no navegador), PDF (visualizand o documento num leitor de PDF, como Acrobat ou outros), ou o Word (o que seria muito triste :(  ).
 
-As vantagens das linguagens de marcação são muitas: elas tendem a ser mais portáteis, menos custosas a empresas de software e mais estáveis ao longo do tempo do que os programas de processamento de texto WYSIWYG. R Markdown é gratuito (você nunca pagará um dólar para usá-lo) e livre (a documentação está completamente aberta a todos). Mesmo que você prefira o Word, a pura estabilidade das linguagens de marcação as torna superiores para documentos científicos.
+As vantagens das linguagens de marcação são muitas: elas tendem a ser mais portáteis, menos custosas a empresas de software e mais estáveis ao longo do tempo do que os programas de processamento de texto WYSIWYG. R Markdown é gratuito **(você nunca pagará um dólar para usá-lo)** e livre (a documentação está completamente aberta a todos). Mesmo que você prefira o Word, a pura estabilidade das linguagens de marcação as torna superiores para documentos científicos.
 
-[**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma linguagem de marcação simples inventada por John Gruber. Hoje, existem muitos programas que traduzem documentos escritos em Markdown para documentos em formato HTML, PDF ou mesmo Word (entre outros). 
+[**Markdown**](http://daringfireball.net/projects/markdown/basics) é uma linguagem de marcação simples inventada por John Gruber. Hoje, existem muitos programas que traduzem documentos escritos em Markdown para documentos em formato HTML, PDF ou mesmo Word (entre outros).   
+
 [**R Markdown**](http://rmarkdown.rstudio.com), por sua vez, é uma extensão do Markdown para incorporar código em execução, em R, incluindo o resultado no documento. O presente guia mostra, por sua vez, três aspectos do R Markdown: como incluir formatação básica; como incluir o código R e sua saída; e como incluir código matemático.
 
 
 # Renderizando e Editando
 
-Para escrever em R Markdown, você precisará de um editor de texto: programa que permite ler
-e escreva arquivos de texto simples. Você também precisará do R e do pacote `rmarkdown`
-(bem como todos os pacotes que dependem dele).
+Para escrever em R Markdown, você precisará de um editor de texto: programa que permite ler e escrever arquivos de texto simples. Você também precisará do R e do pacote `rmarkdown` (bem como todos os pacotes que dependem dele).
 
 * A maioria dos computadores vem com um editor de texto (TextEdit no Mac, Notepad em máquinas Windows, etc.).
 * Há também muitos outros editores mais robustos; Eu uso [Emacs](http://www.gnu.org/software/emacs/emacs.html), mas admito que tem uma curva de aprendizado áspera.
@@ -97,24 +95,24 @@ clique no botão "knit".
 
 Use o comando `render` no pacote `rmarkdown`.
 
+<!-- acho que deviamos tirar essa parte-->
+<!--
 ### Renderizando via linha de comando (sistemas tipo Unix)
 
 Se você preferir renderizar via linha de comando, o script Perl [`rmarkdown.pl`] (http://www.stat.cmu.edu/~cshalizi/rmarkdown/rmarkdown.pl)
 Poderá fazer todo o trabalho. O uso é `rmarkdown.pl nome_do_arquivo`, e
 resulta na saída `nome_do_arquivo.html` ou` nome_do_arquivo.pdf`, conforme especificado no
-próprio arquivo. (Ver abaixo.)
+próprio arquivo. (Ver abaixo.)-->
 
 # Formatação Básica em R Markdown
 
-Na maior parte do documento, texto é apenas texto. Uma vantagem do R Markdown é que a
-você digita seu documento como você normalmente faz.
+Na maior parte do documento, texto é apenas texto. Uma vantagem do R Markdown é que você digita seu documento como você normalmente faz.
 
 ### Quebra de Parágrafos e Quebra Forçada de Linhas
 
 Para inserir uma quebra entre os paragráfos, inclua uma linha comum em branco.
 
-Para forçar uma quebra de linha, ponha _dois_ espaços  
-em branco ao final da linha.
+Para forçar uma quebra de linha, ponha _dois_ espaços em branco ao final da linha.
 
 ```
 Para inserir uma quebra entre os paragráfos, inclua uma linha comum em branco.
