@@ -555,126 +555,19 @@ verifique se sua operação matemática está correta, pelo menos se você estiv
 de matemática a qual eles são projetados para lidar. Até onde eu sei, ninguém realmente
 os combinou com `LaTeX`.)
 
-### More Advanced Math-Mode Stuff: New Commands
+# Para avançar em R Markdown...
 
-One of the things you can do in `LaTeX` is create your own commands.
-This is useful if you find yourself writing out the same complicated expression
-repeatedly, or, alternatively, if you want to make sure that the same
-symbol is always used for the same concept.  For instance, in some areas of
-statistics, the generic parameter of a model is $\theta$, in others $\beta$,
-in yet others $\psi$.  If you do something like this early on
-```
-\[
-\newcommand{\MyParameter}{\theta}
-\]
-```
-then in later bits of math mode you can write `\MyParameter`, and `LaTeX` will
-translate this to `\theta`.  If you later decide that you want your parameter
-to be `\beta`, or even `\mathrm{fred}`, you just change that initial definition
-of the new command, rather than having to track down each `\theta`.
+Para maiores informações sobre o R Markdown, o melhor site é [http://rmarkdown.rstudio.com](http://rmarkdown.rstudio.com)
 
-New commands can also take one or more arguments.  Here is a useful command
-for writing expectations:
-```
-\[
-\newcommand{\Expect}[1]{\mathbb{E}\left[ #1 \right]}
-\]
-```
-And here is a command for writing covariances:
-```
-\[
-\newcommand{\Cov}[2]{\mathrm{Cov}\left[ #1, #2\right]}
-\]
-```
+Para maiores informações sobre o `LaTeX`, sugerimos o livro do Leslie Lamport, _LaTeX: A Document Preparation System_ (2nd ed., Reading, Mass.: Addison-Wesley, 1994).
 
-Defining commands like this not only saves you typing, and makes it easier to
-make changes; it also makes your math-mode text easier for you, or others, to
-read even if it isn't rendered.  This is like using comprehensible
-variable and function names in your programs, and for that matter like
-using functions rather than long strings of commands in the first place.
+[_LaTeX_](https://en.wikibooks.org/wiki/LaTeX), do Wikibooks é bastante acessível.
+
+R Markdown é baseado no pacote `knitr` desenvolvido pelo Yihui Xie. Para integrar o R com o `LaTeX`; veja o site http://yihui.name/knitr/, a documentação está no livro do Yihui Xie _Dynamic Documents with R and knitr_ (2nd edition, Boca Raton, Florida; CRC Press, 2016).
+
+Um texto com a explicação de como o Word não é muito eficiente como processador de texto pode ser encontrado aqui. "The word processor is a stupid and grossly inefficient tool for preparing text for communication with others" [http://ricardo.ecn.wfu.edu/~cottrell/wp.html](http://ricardo.ecn.wfu.edu/~cottrell/wp.html).
 
 
-It is also possible to define new function names which act like `\log`,
-new mathematical operators, draw diagrams, etc., etc., but that goes way
-beyond the scope of these notes.
-
-### Installing `LaTeX`
-
-If you render your R Markdown document to HTML, you do not need to install
-`LaTeX` on your computer.  This is because the HTML includes instructions to
-browsers, which say (as it were) "Send the funny-looking bits with all the
-slashes to [mathjax.org](http://www.mathjax.org), and it will send you back
-pretty pictures of equations".  The website actually runs the `LaTeX`.
-
-If you want to produce PDF, you need to have `LaTeX` installed on your
-computer.  How you actually do this depends on the precise kind of computer.
-For Macs, I recommend using the `MacTeX` package, available from
-https://tug.org/mactex/mactex-download.html.  For other systems, follow the
-links from http://www.tug.org/begin.html.
-
-# Putting It All Together: Writing Your Report in R Markdown
-
-* You have installed the `rmarkdown` package and all its dependencies.
-* You have installed `LaTeX`, if you're producing a PDF.
-* You have installed and fired up your favorite text editor.
-* You open it up to a new document.
-    + You give it a title, an author, and a date.
-* You use headers to divide it into appropriate, titled sections, and possibly sub-sections.
-    + One common pattern: "Introduction", "Data and Research Questions", "Analysis", "Results", "Conclusion".
-    + Another common pattern: "Problem 1", "Problem 2", ... , "Extra Credit".
-* You write text.
-* When you need it, you insert math into the text, or even whole mathematical
-  displays.
-* When you need it, you insert code into your document.
-    + The code runs (as needed) when you render the document.
-	+ Figures, tables, and other output are automatically inserted into the document, and track changes in your code.
-* Every so often, try to render your document.
-    + When you (think you) have finished a section is a good time to do so.
-	+ Another good time is once you've made any non-trivial change to the code or the text.
-* Either your document rendered successfully or it didn't.
-    + If it did, and you like the results, congratulate yourself and cheerfully go on to your next task.
-	+ If it rendered but you don't like the results, think about why and try to fix it.
-	+ If it didn't render, R will tell you where it gave up, so try to debug from around there.
-
-# Troubleshooting/Stuff to Avoid
-
-- Do not call `View` or `help` in your document; these are interactive commands which don't work well in scripts.
-- "It worked in the console but it wouldn't knit": You have almost certainly done something somewhat different _before_ the code chunk that's giving you trouble.  Clear your workspace in the console and re-run.
-    + R Studio keeps _two_ environments or workspaces which it uses to evaluate R expressions, look up function or variable names, etc.  One is the "usual" global environment of the console, which builds cumulatively from the start of your session.  (Unless you deliberately manipulate it; don't do that unless you know what you're doing.)  Every time you knit, however, it re-runs your code in clean workspace, as though you had just started R from scratch.  This means knitted code does what you say it should, and _only_ that.  If your code knits, it should work on any computer; getting something to run in the console which you can't reproduce is just dumb luck.
-- "It works when I source it, but it won't knit": This is basically the same problem as "it worked in the console".
-- Avoid `attach` in both the console and in your file; using it is a recipe for creating hard-to-find errors.  You can still shorten expressions using `with` instead.
-- You need LaTeX to create PDFs.  If you are having trouble doing so, try switching the output format to HTML.
-    + Do try to fix your LaTeX installation later, when you don't have such time pressure; it's really useful.
-	+ LaTeX will complain if you try to print out truly enormous things.  Errors about "out of stack", or "pandoc 43", are often caused by this. Don't print out enormous things.  (Suppressing warnings and other messages may help.)
-- When you need to load data files or source someone else's code, use full URLs, rather than creating local copies and loading them from your disk.
-
-
-# Further Reading
-
-For more on R Markdown, see http://rmarkdown.rstudio.com, particularly the
-more detailed help pages (rather than the first-guides).
-
-For `LaTeX`, the classic reference is the book by Leslie Lamport, _LaTeX: A
-Document Preparation System_ (2nd ed., Reading, Mass.: Addison-Wesley, 1994).
-This is not, admittedly, the easiest read in the world.
-[_LaTeX_](https://en.wikibooks.org/wiki/LaTeX), from Wikibooks, is more
-accessible, and free online in easy bite-sized chunks.
-
-R Markdown is based on the `knitr` package, developed by Yihui Xie, for
-integrated R with `LaTeX`; see http://yihui.name/knitr/, and, for
-full documentation, Xie's book _Dynamic Documents with R and knitr_ (2nd
-edition, Boca Raton, Florida; CRC Press, 2016).
-
-For an thorough, entertaining, and completely correct explanation of why "The
-word processor is a stupid and grossly inefficient tool for preparing text for
-communication with others", see http://ricardo.ecn.wfu.edu/~cottrell/wp.html.
-
-[^latex]: In the 1970s, the great computer scientist Donald Knuth wrote a
-mark-up language, and a rendering program for that language, called `TeX`
-(pronounced "tech"), for writing complex mathematical documents.  In the 1980s,
-the computer scientist Leslie Lamport extended `TeX` in ways that made it
-rather more user-friendly, and called the result `LaTeX` (pronounced
-"la-tech").
 
 #### Biografia dos autores:
 
