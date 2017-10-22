@@ -97,7 +97,7 @@ Use o comando `render` no pacote `rmarkdown`.
 
 # Formatação Básica em R Markdown
 
-Na maior parte do documento, texto é apenas texto. Uma vantagem do R Markdown é que você digita seu documento como você normalmente faz.
+Na maior parte do documento, texto é apenas texto. Uma vantagem do R Markdown é que você digita seu documento como você normalmente faria.
 
 ### Quebra de Parágrafos e Quebra de Linhas
 
@@ -113,7 +113,7 @@ Para forçar uma quebra de linha, ponha _dois_ espaços em branco ao final da li
 
 ### Cabeçalhos
 
-O caractere `#` no início de uma linha significa que o resto da linha será interpretado como um cabeçalho de seção. O número de `#`s no começo da linha indica, respectivamente, o número da seção, sub-seção, sub-sub-seção, etc. do documento. Por exemplo, o `Formatação Básica em R Markdown` acima é precedido por um único `#` mas o `Cabeçalhos` do começo deste parágrafo foi precedido por `###`. Não separe cabeçalhos por quebra de linhas.
+O caractere `#` no início de uma linha significa que o resto da linha será interpretado como um cabeçalho de seção. O número de `#`s no começo da linha indica, respectivamente, o número da seção, sub-seção, sub-sub-seção etc., do documento. Por exemplo, o `Formatação Básica em R Markdown` acima é precedido por um único `#`, mas o `Cabeçalhos` do começo deste parágrafo foi precedido por `###`. Não separe cabeçalhos por quebra de linhas.
 
 ### Itálico, Negrito
 
@@ -146,30 +146,30 @@ um sinal de crase, sem quebras de linha no texto. (Por exemplo, `R` vs. R.)
 
 ### Lista de Marcadoress
 
-* Esta é uma lista de marcadores (lista não ordenada) onde os itens são marcos com pontos (*bullets*).
+* Esta é uma lista de marcadores (lista não-ordenada) onde os itens são marcados com pontos (*bullets*).
 * Cada item da lista deve começar com um `*` (asterisco) ou um único hífen (`-`).
 * Cada item deve estar em uma nova linha.
-    + Para sub-bullets, idente as linhas (recue à direita) e as inicie com `+`.
-    + Sub-sub-bullets não são realmente importantes em R Markdown.
+    + Para sub-bullets, idente as linhas (recue à direita; ou use 4 espaços) e as inicie com `+`.
+    + Sub-sub-bullets não são realmente tão usados em R Markdown.
     
 ### Listas Numeradas
 
 1. As linhas que começam com um número (de 0--9), seguido de um texto, serão interpretadas como itens em uma lista enumerada.
-2. O R Markdown lida com a numeração ao processar automaticamente.
+2. O R Markdown lida com a enumeração e a processa automaticamente.
 3. Isso pode ser útil quando você perde a contagem ou não atualiza os números sozinho ao editar. (Consulte atentamente o arquivo .Rmd para este item.)
      a. Você pode criar sub-listas de listas enumeradas com letras para cada sub-item.
-     b. No entanto, são uma coisa frágil, o que é melhor você não forçar demais.
+     b. No entanto, manipule sempre com muito cuidado.
 
 ### Título, Autor, Data, Formato de saída, Índice
 
 Você pode especificar conteúdos como título, autor e data no **cabeçalho** do seu arquivo R Markdown (atributos em inglês). Isso vai no início do arquivo, precedido e seguido por três hífens. 
-Assim, o início deste arquivo ficará como:
+Assim, o início deste arquivo ficaria como:
 
 ```
 ---
 title: Usando R Markdown para anotações de aula
 author: DATAUNIRIO
-date: Primeira versão 7 janeiro de 2016, revisado em 22 agosto de 2016
+date: Primeira versão 7 janeiro de 2016; revisado em 22 de outubro de 2017
 ---
 ```
 
@@ -180,7 +180,7 @@ HTML (padrão), PDF ou outro formato. Para que ele seja transformado em PDF, por
 ---
 title: Uso R Markdown para aula de Estatística da UNIRIO
 author: DATAUNIRIO
-date: Primeira versão 7 janeiro de 2016, revisado em 22 agosto de 2016
+date: Primeira versão 7 janeiro de 2016; revisado em 22 de outubro de 2017
 output: pdf_document
 ---
 ```
@@ -190,7 +190,7 @@ Você pode adicionar uma tabela de conteúdos como uma opção para o tipo de sa
 ---
 title: Uso R Markdown para aula de Estatística da UNIRIO
 author: DATAUNIRIO
-date: Primeira versão 7 janeiro de 2016, revisado em 22 agosto de 2016
+date: Primeira versão 7 janeiro de 2016; revisado em 22 de outubro de 2017
 output:
   html_document:
     toc: true
@@ -206,7 +206,7 @@ cabeçalho; consulte os principais arquivos de ajuda do R Markdown on-line.
 
 ### Hiperlinks
 
-Os hiperlinks (links) são ancorados por URLs e fáceis de usar: basta digitar a URL, como, por exemplo,
+Os hiperlinks (links) são ancorados por URLs e muito fáceis de usar: basta digitar a URL, como, por exemplo,
 https://github.com/DATAUNIRIO/rmarkdown-anotacoes-classe/blob/master/manualTraduzido.Rmd para obter a fonte do arquivo deste documento. 
 
 Os hiperlinks ancorados no texto têm a [âncora entre colchetes e o link
@@ -226,7 +226,7 @@ caso a imagem não possa ser carregada. Em seguida, o endereço do arquivo da im
 ![Uma imagem de um reino remoto](https://raw.githubusercontent.com/DATAUNIRIO/SER2/master/dashboardGOT/imagem/GOT.png)
 ```
 
-Não existe uma maneira de redimensionar imagens usando comandos próprios Markdown.  No R Markdown, no entanto, você pode usar o seguinte hack:
+Não existe uma maneira de redimensionar imagens usando comandos próprios Markdown. No R Markdown, no entanto, você pode usar o seguinte hack:
 
 <pre><code>```{r, fig.retina=NULL, out.width=100, echo=FALSE}
 knitr::include_graphics("https://raw.githubusercontent.com/DATAUNIRIO/SER2/master/dashboardGOT/imagem/GOT.png")
@@ -239,7 +239,7 @@ Esse código chama um comando R incluído no pacote `knitr`, com algumas opçõe
 
 # Incluindo Código
 
-O legal do R Markdown é que ele também permite que você inclua seu código e o executa automaticamente quando seu documento é processado e, de forma incomparável, inclui os resultados desse código em seu documento. O código vem em duas variedades: **chunks** (pedaços) de código ou código **inline**.
+O legal do R Markdown é que ele também permite incluir seu código R e o execytar automaticamente ao processar o documento. De forma incomparável, ele também inclui os resultados desse código em seu documento. O código vem em duas opções: **chunks** (pedaços) de código ou código **inline**.
 
 ### Pedaços de código e seus resultados
 
