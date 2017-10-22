@@ -400,7 +400,7 @@ e^{i \pi} = -1
 ```
 
 Uma vez que seu texto está no modo matemático, o R Markdown faz o trabalho de
-convertê-lo para um programa chamado LaTeX[^latex].
+convertê-lo para um programa chamado LaTeX.
 Ele é o sistema mais usado para a elaboração de documentos matemáticos e científicos, e o tem sido há décadas. Ele é extremamente poderoso, estável, disponível praticamente em todos as plataformas e completamente gratuito. 
 Mas isso também pode torná-lo, em seu poder total, muito complicado. Felizmente, para nossos propósitos, é bastante simples. 
 
