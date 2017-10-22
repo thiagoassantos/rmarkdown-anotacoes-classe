@@ -267,18 +267,18 @@ with(cats, cor(Hwt, Bwt))
 ### Código *Inline*
 
 A saída do seu código também pode ser muito bem incorporada no texto usando o modo **inline**. Este é o código não iniciado em uma linha, mas começando com
-` `r` e terminando com ` ` `. Usar o código inline é como este documento sabe que o conjunto de dados `cats` contém linhas `r nrow (cats)` (` contém ` r nrow(gatos) ` linhas `), e que o peso médio dos corações das fêmeas dos gatos é `r median(cats$Hwt[cats$Sex=="F"])` gramas (` `r median(cats$Hwt[cats$Sex=="F"])` `).
+` `r ` e terminando com ` ` `. Usar o código inline é como este documento sabe que o conjunto de dados `cats` contém as linhas `r nrow (cats)` (` contém ` r nrow(gatos) ` linhas `), e que o peso médio dos corações das fêmeas dos gatos é `r median(cats$Hwt[cats$Sex=="F"])` gramas (` `r median(cats$Hwt[cats$Sex=="F"])` `).
 
 Observe que o código inline não exibe os comandos executados, apenas a saída deles.
 
 ### Visto, mas não ouvido
 
-Os pedaços de código (exceto código inline) podem ter um monte de **opções** que modificam a forma como eles são executados e como eles aparecem no documento. Estas opções vão depois o `r` inicial e antes do fechamento `}` que representa o início de um pedaço código.  Uma das opções mais comuns desativa a impressão do código, porém, deixa os resultados isolados:
+Os pedaços de código (com exceção código inline) têm um monte de **opções** que modificam a forma como eles são executados e como eles aparecem no documento. Estas opções vão após o `r` inicial e antes do fechamento `}`, que representa o início de um pedaço código.  Uma das opções mais comuns desativa a impressão do código, porém, deixa os resultados isolados:
  ` ```{r, echo=FALSE} `
 
 Outra opção executa o código, mas não inclui nem o texto do código nem a saída.
  ` ```{r, include=FALSE} `
-Isso pode parecer bobo, mas pode ser útil para pedaços de código que *configuram como carregar arquivos de dados*, ou estimativas do modelo inicial, etc.
+Isso pode parecer bobo, mas pode ser útil para pedaços de código que carregam arquivos de dados, estimativas do modelo inicial etc.
 
 Outra opção imprime o código no documento mas não o executa:
  ` ```{r, eval=FALSE} `
@@ -286,17 +286,17 @@ Isso também é útil se você quiser comentar sobre o código (de modo que ele 
 
 ### Nomeando pedaços de código
 
-Você pode atribuir nomes aos pedaços de código logo após a abertura, como
+Você pode atribuir nomes aos pedaços de código logo após a abertura deles, como
 ` ``` {r, nomeinteligente} `. Esse nome é usado para as imagens (ou outros arquivos) que são gerados quando o documento é processado.
 
 ### Alterando tamanhos de imagem e alinhamentos
 
 Há muitas opções para ajustar a colocação das figuras que o
-R produz. `fig.align` controla o **alinhamento** horizontal (esquerda, direita, ou centro).
+R produz. `fig.align` controla o **alinhamento** horizontal (esquerda, direita ou centralizado).
 
 Ao produzir PDF, as opções `out.height` e` out.width` permitem que você especifique a altura ou largura desejada da figura em polegadas, centímetros ou múltiplos de comprimentos pré-definidos (do `LaTeX`). Então, por exemplo, ` ``` r,
 out.height = "3in"} ` força a imagem a 3 polegadas de altura, enquanto que ` ```r,
-out.width = "0.48 \\ textwidth"} ` força a largura da imagem a ser um pouco menos do que metade da largura total do texto na página (de modo que duas dessas imagens se encaixam lado a lado). As próximas figuras ilustram isso.
+out.width = "0.48 \\ textwidth"} ` força a largura da imagem a ser um pouco menor do que metade da largura total do texto na página (de modo que duas dessas imagens se encaixem lado a lado). As próximas figuras ilustram isso.
 
 ```{r, echo=FALSE, fig.width=3, fig.align="center"}
 plot(Hwt ~ Bwt, data=cats, xlab="Body weight (kg)",
@@ -307,7 +307,7 @@ plot(Hwt ~ Bwt, data=cats, log="xy", xlab="Body weight (kg)",
 
 ### Tabelas
 
-A impressão padrão de matrizes, tabelas, etc., do R Markdown é, francamente,
+A impressão padrão de matrizes, tabelas etc., do R Markdown é, francamente,
 feia. O pacote `knitr` contém um comando muito básico, `kable`, que irá
 formatar uma matriz ou quadro de dados mais legalmente para exibição.
 
@@ -329,7 +329,7 @@ este não é o momento de discutir dígitos significativos, ou a função `signi
 
 ### "Caching" de pedaços de código (re-executando somente com modificações)
 
-Por padrão, o R Markdown executará de novo seu código toda vez que você renderizar o seu documento. Se algum código do seu código for lento, isso pode aumentar ainda mais o tempo de renderização.
+Por padrão, o R Markdown executará de novo seu código toda vez que você renderizar o seu documento. Se algum código do seu arquivo for lento para executar, isso pode aumentar ainda mais o tempo de renderização.
 
 Você pode, no entanto, pedir ao R Markdown para monitorar se um pedaço de código foi modificado e apenas re-executar este pedaço. Isso é chamado **caching** do pedaço de código.
 
@@ -338,16 +338,15 @@ lm(Hwt ~ Bwt, data=cats)
 ```
 
 A questão é que um pedaço de código que não se alterou pode invocar
-resultados de pedaços anteriores, trechos modificados, e então nós _precisarIIIamos re-executar os pedaços desatualizados. Existem opções para informar manualmente o R Markdown que "este trecho depende desse fragmento anterior", mas geralmente é mais fácil deixar ele mesmo cuidar disso, definindo a opção `autodep = TRUE`.
+resultados de pedaços anteriores, trechos modificados, e então nós precisaríamos re-executar os pedaços desatualizados. Existem opções para informar manualmente ao R Markdown que "este trecho depende desse fragmento anterior", mas geralmente é mais fácil deixar ele mesmo cuidar disso, definindo a opção `autodep=TRUE`.
 
 1. Se você carregar um pacote com os comandos `library()` ou `require()`, o R
- Markdown não é inteligente o suficiente para verificar se o pacote mudou (ou realmente foi instalado, se você sem ele instalado). Então isso não vai lançar uma re-execução automática de um pedaço de código em cache.
-2. Para forçar manualmente a re-execução de todos os pedaços de código, o mais fácil de fazer é excluir o diretório que o R Markdown cria (algo como 
-   _filename_`_cache`) para armazenar o estado de todos os pedaços de código.
+ Markdown não é inteligente o suficiente para verificar se o pacote mudou (ou realmente foi instalado, se você o tem instalado). Então isso não vai lançar uma re-execução automática de um pedaço de código em cache.
+2. Para forçar manualmente a re-execução de todos os pedaços de código, o mais fácil a se fazer é excluir o diretório que o R Markdown cria (algo como  _nomeDoArquivo_`_cache`) para armazenar o estado de todos os pedaços de código.
    
 ### Configuração de padrões para todos os pedaços de código
 
-Você pode dizer para o R definir alguns padrões para se aplicar a todos os pedaços onde você não faz especificamente sobrecarregá-los. Aqui estão os que eu geralmente uso:   
+Você pode dizer para o R definir alguns padrões a se aplicar a todos os pedaços de código. Aqui estão os que eu geralmente uso:   
 
 ```{r, eval=FALSE}
 # Precisamos do pacote knitr para definir opções de trechos de código
@@ -358,18 +357,16 @@ library(knitr)
 # - Salva os resultados para que os blocos de código não sejam executados novamente, a menos que o código mude (cache),
 # _ou_ um bloco de código anterior relevante seja modificado (autodep), mas não o re-executa se o
 # única coisa que mudou forem comentários (cache.comments)
-# - Não obstrua a saída R com mensagens ou avisos (mensagem, aviso)
+# - Não obstrui a saída R com mensagens ou avisos (mensagem, aviso)
 # Isto _deixará_ mensagens de erro aparecendo no relatório gerado
 opts_chunk$set(echo=FALSE,
                cache=TRUE, autodep=TRUE, cache.comments=FALSE,
                message=FALSE, warning=FALSE)
 ```
 
-Assim definimos algumas opções adicionais além das que eu discuti, como não
-re-executar um pedaço se apenas os comentários mudaram (`cache.comments =
-FALSE`), e deixando de receber mensagens e avisos. (Eu só recomendaria
-suprimir avisos se você tem a certeza de que seu código está ok.) Eu, normalmente,
-também atribuiria a este ponto de configuração a opção `include = FALSE`.
+Assim, definimos algumas opções adicionais além das que eu discuti, como não
+re-executar um pedaço se apenas os comentários mudaram (`cache.comments=FALSE`), e deixando de receber mensagens e avisos. (Eu só recomendaria suprimir avisos se você tem a certeza de que seu código está ok.) Eu, normalmente,
+também atribuiria a este ponto de configuração a opção `include=FALSE`.
 
 Você pode sobrescrever estes padrões definindo opções para trechos específicos.
 
@@ -380,13 +377,13 @@ Veja em [http://yihui.name/knitr/options/] para obter uma listagem completa das 
 
 # Matemática no R Markdown
 
-Como esta é uma aula de Estatística, é importante que você seja capaz de escrever expressões matemáticas, muitas vezes longas séries delas. O R Markdown oferece a sintaxe para tornar fórmulas e derivações matemáticas complexas, e exibi-las _muito_ lindamente. Assim como o código,a fórmula matemática pode ser *inline* ou como (**apresentações**). 
+Como esta é uma aula de Estatística, é importante que você seja capaz de escrever expressões matemáticas e, muitas vezes, longas séries delas. O R Markdown oferece sintaxe para gerar fórmulas e derivações matemáticas complexas e exibi-las _muito_ lindamente. Assim como o código, a fórmula matemática pode ser *inline* ou como (**exibições**). 
 
-O código da fórmula matemática *inline* é marcado com um par de cifrão
+O código de fórmula matemática *inline* é marcado com um par de cifrões
 (`$`), as $\pi r^2$ or $e^{i\pi}$.
 
 ```
-O código de matemática inline é marcado com um par de cifrão
+O código de fórmula matemática *inline* é marcado com um par de cifrões
 (`$`), as $\pi r^2$ or $e^{i\pi}$.
 ```
 
@@ -403,25 +400,22 @@ e^{i \pi} = -1
 ```
 
 Uma vez que seu texto está no modo matemático, o R Markdown faz o trabalho de
-converter seu texto matemático para um programa diferente, chamado LaTeX[^latex].
-Ele é o sistema mais comum para a composição de documentos matemáticos
-em todas as ciências, e tem sido há décadas. Ele é extremamente poderoso,
-estável, disponível basicamente em todos as plataformas e completamente gratuito. 
-Mas isso também o torná-lo, em seu poder total, muito complicado. Felizmente, para nossos propósitos, é bastante simples. 
-
+convertê-lo para um programa chamado LaTeX[^latex].
+Ele é o sistema mais usado para a elaboração de documentos matemáticos e científicos, e o tem sido há décadas. Ele é extremamente poderoso, estável, disponível praticamente em todos as plataformas e completamente gratuito. 
+Mas isso também pode torná-lo, em seu poder total, muito complicado. Felizmente, para nossos propósitos, é bastante simples. 
 
 ### Elementos do Modo Matemático
 
 * A maioria das letras será renderizada em itálico (compare: a vs. `a` vs. $a$; apenas
 o último está em modo matemático). O espaçamento entre as letras também segue as convenções da matemática, então não a trate como só outra maneira de obter itálico. (Compare _speed_, em itálico simples, com $speed$, no modo matemático.)
-* Letras gregas podem ser acessadas com a barra na frente de seus nomes, como `\alpha` para $\alpha$. Fazer a primeira letra em maiúscula te dá a letra maiúscula, como em `\Gamma` para $\Gamma$ vs. `\gamma` para $\gamma$. (As maiúsculas alpha e beta são as mesmas que as Romanas A e B, portanto, não precisa de comando especial para elas.)
-* Existem outros comandos "cortados" (ou "escapados") para outros símbolos matemáticos:
+* Letras gregas podem ser acessadas com a barra na frente de seus nomes, como `\alpha` para $\alpha$. Fazer a primeira letra em maiúsculo te dá a própria letra maiúscula, como em `\Gamma` para $\Gamma$ vs. `\gamma` para $\gamma$. (As maiúsculas alpha e beta são as mesmas que as romanas A e B, portanto, não se precisa de comando especial para elas).
+* Existem outros comandos "cortados" (ou "escapados") para demais símbolos matemáticos:
     + `\times` para $\times$
     + `\cdot` para $\cdot$
-    + `\leq` e `\geq` para $\leq$ and $\geq$
-    + `\subset` e `\subseteq` para $\subset$ and $\subseteq$
+    + `\leq` e `\geq` para $\leq$ e $\geq$
+    + `\subset` e `\subseteq` para $\subset$ e $\subseteq$
     + `\leftarrow`, `\rightarrow`, `\Leftarrow`, `\Rightarrow` para $\leftarrow$, $\rightarrow$, $\Leftarrow$, $\Rightarrow$
-    + `\approx`, `\sim`, `\equiv` for $\approx$, $\sim$, $\equiv$
+    + `\approx`, `\sim`, `\equiv` para $\approx$, $\sim$, $\equiv$
     + Veja, também, http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html para uma
 lista completa dos símbolos.  (http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf lista de _todos_ os símbolos disponíveis no `LaTeX`, incluindo muitos caracteres especiais não-matemáticos)
 * Subscritos vêm depois de um caractere underscore, `_`, e sobrescritos vêm depois de um circunflexo, `^`, como `\beta_1` para $\beta_1$ ou `a^2` para $a^2$.
@@ -499,7 +493,7 @@ Y & \sim & \chi^2_{n-p}\\
 R & \equiv & X/Y \sim t_{n-p}
 \end{eqnarray}
 \]
-Observe que `&` envolve o que se passa no meio em cada linha e cada linha (exceto a última) é encerrada com `\\`. O lado esquerdo ou direito da equação pode estar em branco que o espaço será feito:
+Observe que `&` envolve o que se passa no meio em cada linha e cada linha (exceto a última) é encerrada com `\\`. O lado esquerdo ou direito da equação pode estar em branco e o espaço será feito:
 ```
 \[
 \begin{eqnarray}
