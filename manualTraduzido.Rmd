@@ -517,21 +517,21 @@ P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\
 ### Traduzindo Matemática para `LaTeX`
 
 O `LaTeX` é projetado para que cada parte de uma expressão matemática tenha uma
-relação razoavelmente <-- direta ao que você escreve. Ainda assim, ele pode ser um
-um pouco intimidador no início. O que muitas pessoas acham útil é começar com
-alguma página com código matemático impresso ou manuscrito e depois traduzi-la,
+relação razoavelmente direta ao que você escreve. Ainda assim, de início, ele pode ser um
+um pouco intimidador. O que muitas pessoas acham útil é começar a praticar
+em alguma página com código matemático impresso ou manuscrito e depois traduzi-la,
 linha por linha, no `LaTeX`, processando para ver se ele saiu
-direito (e, caso contrário, entender onde consertar coisas). Se você precisa fazer expressões matemáticas para um
+direito (e, caso contrário, entender onde consertar). Se você precisa fazer expressões matemáticas para um
 trabalho, pode ser uma boa ideia escrever as contas à mão e depois aproveitá-lo 
 no `LaTeX`, se a aula o exige (como este), ou não.
-Eventualmente, com a prática, a tradução se tornará fluida e automática.
-Algumas pessoas inovam ainda a matemática escrevendo no `LaTeX`.
+Eventualmente, com a prática, o desenvolvimento se tornará fluido e automático.
+Algumas pessoas inovam a matemática escrevendo no `LaTeX`.
 
 ### `LaTeX` não verifica a correção
 
-`LaTeX` não verifica se sua matemática está _certa_; ele apenas verifica se
-descobre o que você está tentando dizer bem o suficiente para digitar e configurá-lo.
-Assim, por exemplo, não tem nenhum problema com o seguinte:
+O `LaTeX` não verifica se sua matemática está _certa_; ele apenas tenta
+descobrir o que você está tentando dizer (bem o suficiente para digitar e configurá-lo).
+Assim, por exemplo, não tem nenhum problema com o seguinte exemplo:
 
 \[
 \begin{eqnarray}
@@ -544,8 +544,8 @@ n^2 -1 & = & n^2\\
 \]
 
 (Existem programas de computador para matemática simbólica que, de fato,
-verifique se sua operação matemática está correta, pelo menos se você estiver trabalhando na sub-área
-de matemática a qual eles são projetados para lidar. Até onde eu sei, ninguém realmente
+verificam se sua operação matemática está correta — isso se você estiver trabalhando na sub-área
+de matemática, a qual eles são projetados para lidar. Até onde eu sei, ninguém realmente
 os combinou com `LaTeX`.)
 
 # Para avançar em R Markdown...
@@ -554,11 +554,11 @@ Para maiores informações sobre o R Markdown, o melhor site é [http://rmarkdow
 
 Para maiores informações sobre o `LaTeX`, sugerimos o livro do Leslie Lamport, _LaTeX: A Document Preparation System_ (2nd ed., Reading, Mass.: Addison-Wesley, 1994).
 
-[_LaTeX_](https://en.wikibooks.org/wiki/LaTeX), do Wikibooks é bastante acessível.
+Já o [_LaTeX_](https://en.wikibooks.org/wiki/LaTeX), do Wikibooks, é bastante simples e objetivo.
 
-R Markdown é baseado no pacote `knitr` desenvolvido pelo Yihui Xie. Para integrar o R com o `LaTeX`; veja o site http://yihui.name/knitr/, a documentação está no livro do Yihui Xie _Dynamic Documents with R and knitr_ (2nd edition, Boca Raton, Florida; CRC Press, 2016).
+O R Markdown é baseado no pacote `knitr`, desenvolvido por Yihui Xie. Para integrar o R com o `LaTeX`, veja o site http://yihui.name/knitr/. A documentação está no livro do Yihui Xie _Dynamic Documents with R and knitr_ (2nd edition, Boca Raton, Florida; CRC Press, 2016).
 
-Um texto com a explicação de como o Word não é muito eficiente como processador de texto pode ser encontrado aqui. "The word processor is a stupid and grossly inefficient tool for preparing text for communication with others" [http://ricardo.ecn.wfu.edu/~cottrell/wp.html](http://ricardo.ecn.wfu.edu/~cottrell/wp.html).
+Um texto com a explicação do porquê o Word não é muito eficiente, como processador de texto, pode ser encontrado aqui. "The word processor is a stupid and grossly inefficient tool for preparing text for communication with others" [http://ricardo.ecn.wfu.edu/~cottrell/wp.html](http://ricardo.ecn.wfu.edu/~cottrell/wp.html).
 
 
 
