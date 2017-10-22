@@ -198,7 +198,7 @@ output:
 ```
 
 * Para criar PDFs, um programa chamado `LaTeX` (veja abaixo) deve ser instalado no seu computador.
-* Outros formatos de saída podem estar disponíveis. Veja `help (render)` no pacote `rmarkdown`.
+* Outros formatos de saída podem estar disponíveis. Veja `help(render)` no pacote `rmarkdown`.
 * Existem muitas, muitas outras opções de formatação que podem ser dadas no
 cabeçalho; consulte os principais arquivos de ajuda do R Markdown on-line.
 
