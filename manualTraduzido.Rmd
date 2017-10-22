@@ -554,7 +554,7 @@ Para maiores informações sobre o R Markdown, o melhor site é [http://rmarkdow
 
 Já para mais detalhes do `LaTeX`, sugerimos o livro do Leslie Lamport, _LaTeX: A Document Preparation System_ (2nd ed., Reading, Mass.: Addison-Wesley, 1994).
 
-O [LaTeX](https://en.wikibooks.org/wiki/LaTeX), do Wikibooks, é bastante simples e objetivo.
+O guia [LaTeX](https://en.wikibooks.org/wiki/LaTeX) do Wikibooks é bastante simples e objetivo.
 
 O R Markdown é baseado no pacote `knitr`, desenvolvido por Yihui Xie. Para integrar o R com o `LaTeX`, veja o site http://yihui.name/knitr/. A documentação está no livro do Yihui Xie _Dynamic Documents with R and knitr_ (2nd edition, Boca Raton, Florida; CRC Press, 2016).
 
