@@ -267,7 +267,7 @@ with(cats, cor(Hwt, Bwt))
 ### Código *Inline*
 
 A saída do seu código também pode ser muito bem incorporada no texto usando o modo **inline**. Este é o código não iniciado em uma linha, mas começando com
-` `r ` e terminando com ` ` `. Usar o código inline é como este documento sabe que o conjunto de dados `cats` contém linhas `r nrow (cats)` (` contém ` r nrow(gatos) ` linhas `), e que o peso médio dos corações das fêmeas dos gatos é `r median(cats$Hwt[cats$Sex=="F"])` gramas (` `r median(cats$Hwt[cats$Sex=="F"])` `).
+` `r` e terminando com ` ` `. Usar o código inline é como este documento sabe que o conjunto de dados `cats` contém linhas `r nrow (cats)` (` contém ` r nrow(gatos) ` linhas `), e que o peso médio dos corações das fêmeas dos gatos é `r median(cats$Hwt[cats$Sex=="F"])` gramas (` `r median(cats$Hwt[cats$Sex=="F"])` `).
 
 Observe que o código inline não exibe os comandos executados, apenas a saída deles.
 
